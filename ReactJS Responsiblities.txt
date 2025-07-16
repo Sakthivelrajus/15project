@@ -1,0 +1,34 @@
+ob description
+
+Role & responsibilities
+
+Work Mode - Hybrid(Weekly)
+
+Team and Position Summary:A seasoned React Developer with 6-7 years of experience, proficient in building complex web applications using React.js, encompassing a deep understanding of core React principles, state management libraries like Redux or Context API, and expertise in front-end development best practices, capable of leading projects from design to deployment, while collaborating effectively with cross-functional teams to deliver high-quality user interfaces. 
+
+Position Responsibilities:
+
+Design, develop, and maintain complex React applications with a focus on scalability, performance, and user experience. 
+Lead the front-end development efforts on projects, including architecture decisions, code reviews, and mentoring junior developers. 
+Implement clean, maintainable, and well-documented React components, leveraging advanced features like hooks and custom hooks. 
+Integrate with backend APIs using RESTful services and handle data fetching and management effectively. 
+Proactively identify and implement performance optimizations to ensure smooth application functionality. 
+Stay updated on the latest React ecosystem trends, libraries, and frameworks to incorporate new technologies into projects. 
+Position Requirements:
+
+Minimum qualifications:
+
+Strong proficiency in JavaScript and React.js
+Expertise in using Redux, Context API, or other state management solutions for complex application logic  
+Proficiency in HTML, CSS, and advanced CSS frameworks (e.g., Bootstrap, Material UI) 
+Experience with unit testing frameworks (Jest, React Testing Library) and integration testing practices 
+Familiarity with modern build tools (Webpack, Babel), version control systems (Git), and deployment workflows 
+Experience consuming RESTful APIs and managing data flow within React applications 
+Excellent communication skills to work effectively with designers, product managers, and backend developers
+Additional Qualifications:
+
+Experience with React Native for mobile app development
+At least 1 full cycle SAP implementation (React frontend and backend SAP)
+Knowledge of server-side rendering (SSR) with Next.js or similar frameworks
+Familiarity with accessibility standards and best practices
+Experience with performance optimization techniques for large-scale React applications 

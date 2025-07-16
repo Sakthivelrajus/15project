@@ -1,0 +1,297 @@
+
+
+First Interview
+
+Capgemini - ReactJS Interview | Frontend Developer | 5+ Years | JavaScript Interview Questions 2022
+
+Q1. Difference between let, var and const.
+Q2. // Get output 1,2 without using let.
+for(var i=0; i<=2; i++){
+    setTimeout(function(){console.log(i)}, 1000);
+}
+Answer::
+function print(i){
+    setTimeout(function(){console.log(i)}, 1000)
+}
+
+for(var i=0; i<=2; i++){print(i)}
+
+Q3. Types of copy (Shallow vs Deep)
+Q4. map vs filter
+Q5. Prototype and how it works?
+Q6. Arrow function and advantages of arrow function
+- Don't have this scope. Closer parent will have access. If no then target to global. No argument objects, use rest operator, Arrow functions are not hoisted. 
+Q7. When we use bind VS call apply and bind
+Q8. Difference between spread and rest operator.
+Q9. //Get second last element from array. 
+
+let arr = ["a", "b", "c", "d", "e", "f"];
+output = "e"
+
+console.log(arr[arr.length-2]);
+
+Q10. Output?
+console.log(3+"3")
+console.log(3-"3")
+
+Q11 NodeJS Middleware? 
+
+Q12 React Element vs Component
+
+Q13 What are pure components? 
+
+Q14 What are refs in React?
+
+Q15 forwardRefs in React?
+
+Q16 React Virtual DOM
+
+Q17 Intereceptor :: Intercept request and response before going to backend. Eg, Strictly check API before going to backend. Part of middleware. Depends upon status responses we can do some navigation
+
+Q18 React fibre?
+
+Q19. React lifecycles? 
+
+Q20 In which case you will use HOC? :: 
+
+Q21 Lazy loading ?
+
+Q22 How to manage nested routes in terms of role based routing?
+
+Q23 Ask to interview :: What are roles, project etc.
+
+
+========================================== End the interview==============================================================================
+2nd Interview
+
+6,063 views  13 Feb 2023  Reactjs Interviews
+Reactjs and Javascript Questions asked in this interview are:
+00:00 ReactJS Interview
+00:30 1). What is Reactjs?
+01:13 2). What is VirtualDom in Reactjs?
+02:00 3). What is Diffing Algorithm?
+02:22 4). What is state in Reactjs?
+02:34 5). What are the lifecycle in Reactjs?
+03:03 6). How lifecycle method used in functional component?
+04:10  What is props?
+04:28  7). What is Redux?
+05:20 8.) what are the controlled and uncontrolled components?
+05:48 9). What is refs?
+06:40 What will be the output of this Javascript code?
+11:50 Reactjs small task
+44:42  Solved this Javascript algorithm 
+
+console.log(2+"2")
+console.log(2-"2")
+----------------
+var  name = "ankit"
+if(true){
+ var name = "joshi"
+ console.log(name)
+ 
+}
+console.log(name) 
+
+----------------------
+my own quesiton
+
+let  name = "ankit"
+if(true){
+ let name = "joshi"
+ console.log(name)
+ 
+}
+console.log(name)
+
+-------------------------
+swap a1 and b1 => a1=10,b1=20
+
+what is this , swap a1 and b1 => a1=10,b1=20
+
+To swap the values of a1 and b1 in JavaScript, you can use a temporary variable:
+
+javascript
+
+let a1 = 10;
+let b1 = 20;
+
+// Swapping values using a temporary variable
+let temp = a1;
+a1 = b1;
+b1 = temp;
+
+console.log("After swapping: a1 =", a1, ", b1 =", b1);
+This will output:
+
+mathematica
+Copy code
+After swapping: a1 = 20 , b1 = 10
+Now, the values of a1 and b1 have been successfully swapped.
+
+---------------------------------------------
+
+3 && 2 && 1 && 0 && false
+let num = [2,15,7,8,20,55,3] => num.sort() => num[2]
+let num = [2,15,7,8,20,55,3]
+num.sort()
+console.log(num[2]) 
+o/p ans: 20
+
+---
+please give me answer, 3 && 2 && 1 && 0 && false
+let num = [2,15,7,8,20,55,3] => num.sort() => num[2] ?? 
+ChatGPT
+Let's break down the expressions:
+
+3 && 2 && 1 && 0 && false
+
+The && (logical AND) operator returns the first falsy value or the last truthy value. In this case, it evaluates to 0 because it is the first falsy value encountered.
+num = [2, 15, 7, 8, 20, 55, 3]
+
+An array is defined with the values [2, 15, 7, 8, 20, 55, 3].
+num.sort()
+
+The sort() method is called on the array. Note that sort() by default converts elements to strings and performs lexicographic (dictionary order) sorting.
+num[2] ??
+
+The nullish coalescing operator (??) returns the right-hand operand when the left-hand operand is null or undefined. In this case, it is checking num[2] (the third element after sorting) and returning it if it is not null or undefined.
+Now, let's evaluate the expressions:
+
+3 && 2 && 1 && 0 && false evaluates to 0.
+num = [2, 15, 7, 8, 20, 55, 3].
+num.sort() sorts the array in lexicographic order, resulting in [2, 15, 20, 3, 55, 7, 8].
+num[2] refers to the third element after sorting, which is 20.
+So, the final result is 20.
+
+
+
+------------------------------------------
+ReactJS
+
+Get posts API:https://jsonplaceholder.typicode.com/posts
+Get comments for particular post:https://jsonplaceholder.typicode.com/posts
+Create a front app, with following tasks
+
+Task -1)
+
+-Fetch post and show it in a card(by using <ui/> and <li/>)
+-Each element of the list should show , little and body
+Task -2)
+-Get Comments (by calling the API) for clicking the post from the list
+-Show the comments in a list below the selected post
+-each element of the list should show name and body
+
+
+import React, { useState, useEffect } from 'react';
+
+const App = () => {
+  const [posts, setPosts] = useState([]);
+  const [selectedPost, setSelectedPost] = useState(null);
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    // Fetch posts from API
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => response.json())
+      .then((data) => setPosts(data));
+  }, []);
+
+  const handlePostClick = (postId) => {
+    // Fetch comments for the selected post
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
+      .then((response) => response.json())
+      .then((data) => setComments(data));
+
+    setSelectedPost(postId);
+  };
+
+  return (
+    <div>
+      <h1>ReactJS Post and Comments App</h1>
+
+      <div>
+        <h2>Posts</h2>
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id} onClick={() => handlePostClick(post.id)}>
+              <div>
+                <strong>{post.title}</strong>
+              </div>
+              <div>{post.body}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {selectedPost && (
+        <div>
+          <h2>Comments for Post {selectedPost}</h2>
+          <ul>
+            {comments.map((comment) => (
+              <li key={comment.id}>
+                <div>
+                  <strong>{comment.name}</strong>
+                </div>
+                <div>{comment.body}</div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default App;
+
+
+-------------------------------------------------------
+
+[1,2,3,5,6,7,9,12,13,16]=> in this sorted array find the missing number => 
+output => [4,8,10,11,14,15]
+
+solve the program, "[1,2,3,5,6,7,9,12,13,16]=> in this sorted array find the missing number => 
+output => [4,8,10,11,14,15]"
+ChatGPT
+To find the missing numbers in the given sorted array, you can iterate through the array and identify the gaps between consecutive numbers. Here's a JavaScript program to achieve this:
+
+javascript
+Copy code
+function findMissingNumbers(sortedArray) {
+  const missingNumbers = [];
+
+  for (let i = 1; i < sortedArray.length; i++) {
+    const currentNum = sortedArray[i];
+    const prevNum = sortedArray[i - 1];
+
+    // Check for a gap between consecutive numbers
+    if (currentNum - prevNum > 1) {
+      for (let j = prevNum + 1; j < currentNum; j++) {
+        missingNumbers.push(j);
+      }
+    }
+  }
+
+  return missingNumbers;
+}
+
+const inputArray = [1, 2, 3, 5, 6, 7, 9, 12, 13, 16];
+const result = findMissingNumbers(inputArray);
+
+console.log(result); // Output: [4, 8, 10, 11, 14, 15]
+This program defines a function findMissingNumbers that takes a sorted array as input and returns an array of missing numbers. It iterates through the input array, identifies gaps between consecutive numbers, and adds the missing numbers to the result array.
+
+In the example provided, the input array is [1, 2, 3, 5, 6, 7, 9, 12, 13, 16], and the output is [4, 8, 10, 11, 14, 15], which represents the missing numbers in the given range.
+-----------------------------------------------------------------------the end the interview -------------------------------
+
+3) interview
+
+var foo = 100
+function bar(){
+ console.log(foo)
+ var foo=200
+}
+bar()
+
+o/p
+= undefined

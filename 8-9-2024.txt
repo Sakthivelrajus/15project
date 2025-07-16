@@ -1,0 +1,427 @@
+1)How to fetch the data from API
+import React,{useState, useEffect} from 'react';
+import axios from 'axios'
+
+function App(){
+
+const [users , setUsers] = useState(null)
+useEffect(()=>{
+   axios.get("https://jsonplaceholder.typicode.com/users")
+   .then(set => setUsers(set.data))
+   .catch(err => console.log(err))
+},[])
+
+    return(
+        <>
+            {users && users.map(user => <div key={user.name}>{user.company.name}</div> )}
+        </>
+    )
+
+}
+export default App
+
+=====================================
+2)Increase the value
+import React,{useState} from 'react';
+function App(){
+
+    const [value, setValue] = useState(0)
+    const clickHandler1 = () =>{
+        setValue(value+1)
+    }
+    const clickHandler2 = () =>{
+        setValue(value-1)
+    }
+    const clickHandler3 = () =>{
+        setValue(0)
+    }
+    return(
+        <div>
+            <h3>{value}</h3>
+          <button onClick={clickHandler1}>Increase</button>
+          <button onClick={clickHandler3}>Reset</button>
+          <button onClick={clickHandler2}>Decrease</button>
+          
+        </div>
+    )
+}
+
+export default App
+
+
+=====================================
+3) Redux
+Review the Flow
+
+1=State: The initial state is defined in the reducer.
+2=Action: User or system events trigger actions.
+3=Reducer: The reducer listens for actions and returns a new state based on the action.
+4=Store: The store holds the state and dispatches actions to the reducer.
+   React Integration: React components connect to the Redux store using useSelector and useDispatch.
+------------
+❖Redux is an open-source JavaScript library used for state management.
+❖Redux provides a centralized store that holds the entire state of an application and allows components to access and update the state in a predictable manner.
+---------------
+1. Setting Up the Redux Store
+Create a store.js file to set up the Redux store.
+
+
+// store.js
+import { createStore } from 'redux';
+
+// Initial state
+const initialState = {
+  count: 0
+};
+
+// Actions
+const INCREMENT = 'INCREMENT';
+const DECREMENT = 'DECREMENT';
+
+export const increment = () => ({
+  type: INCREMENT
+});
+
+export const decrement = () => ({
+  type: DECREMENT
+});
+
+// Reducer
+const counterReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case INCREMENT:
+      return {
+        ...state,
+        count: state.count + 1
+      };
+    case DECREMENT:
+      return {
+        ...state,
+        count: state.count - 1
+      };
+    default:
+      return state;
+  }
+};
+
+// Create store
+const store = createStore(counterReducer);
+
+export default store;
+-----------------------------
+
+2. React Component with Redux Integration
+Create a Counter.js file for the counter component that interacts with the Redux store.
+
+
+// Counter.js
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement } from './store';
+
+function Counter() {
+  const count = useSelector((state) => state.count);
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <h2>Counter</h2>
+      <p>Count: {count}</p>
+      <button onClick={() => dispatch(increment())}>Increment</button>
+      <button onClick={() => dispatch(decrement())}>Decrement</button>
+    </div>
+  );
+}
+
+export default Counter;
+
+------------
+3. Integrating Redux with React
+In your index.js or App.js file, wrap your React application with the Provider from react-redux and pass the store to it.
+
+javascript
+Copy code
+// index.js or App.js
+import React from 'react';
+
+import { Provider } from 'react-redux';
+import store from './store';
+import Counter from './Counter';
+
+function App() {
+  return (
+    <Provider store={store}>
+      <Counter />
+    </Provider>
+  );
+}
+
+export default App;
+
+=====================================
+todolist
+
+import React, { useState } from 'react';
+
+function TodoList() {
+  const [tasks, setTasks] = useState([]);
+  const [input, setInput] = useState('');
+
+  const addTask = () => {
+    setTasks([...tasks, { text: input, completed: false }]);
+    setInput('');
+  };
+
+  const toggleComplete = (index) => {
+    const newTasks = [...tasks];
+    newTasks[index].completed = !newTasks[index].completed;
+    setTasks(newTasks);
+  };
+
+  const deleteTask = (index) => {
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+  };
+
+  return (
+    <div>
+      <h2>Todo List</h2>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+	  
+      <button onClick={addTask}>Add Task</button>
+	  
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>
+            <input
+              type="checkbox"
+              checked={task.completed}
+              onChange={() => toggleComplete(index)}
+            />
+            {task.completed ? <s>{task.text}</s> : task.text}
+            <button onClick={() => deleteTask(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+	  
+    </div>
+  );
+}
+
+export default TodoList;
+
+
+
+
+=====================================
+Router:
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
+function Home() {
+  return <h2>Home Page</h2>;
+}
+
+function About() {
+  return <h2>About Page</h2>;
+}
+
+function Contact() {
+  return <h2>Contact Page</h2>;
+}
+
+function NotFound() {
+  return <h2>404 Not Found</h2>;
+}
+
+function AppRouter() {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+export default AppRouter;
+======================================
+mounting unmountin updating 
+import React from 'react';  
+  
+class App extends React.Component {  
+   constructor(props) {  
+      super(props);  
+      this.state = {hello: "JavaTpoint"};  
+      this.changeState = this.changeState.bind(this)  
+   }    
+   render() {  
+      return (  
+         <div>  
+             <h1>ReactJS component's Lifecycle</h1>  
+             <h3>Hello {this.state.hello}</h3>  
+             <button onClick = {this.changeState}>Click Here!</button>          
+         </div>  
+      );  
+   }  
+   componentWillMount() {  
+      console.log('Component Will MOUNT!')  
+   }  
+   componentDidMount() {  
+      console.log('Component Did MOUNT!')  
+   }  
+   changeState(){  
+      this.setState({hello:"All!!- Its a great reactjs tutorial."});  
+   }  
+   componentWillReceiveProps(newProps) {      
+      console.log('Component Will Recieve Props!')  
+   }  
+   shouldComponentUpdate(newProps, newState) {  
+      return true;  
+   }  
+   componentWillUpdate(nextProps, nextState) {  
+      console.log('Component Will UPDATE!');  
+   }  
+   componentDidUpdate(prevProps, prevState) {  
+      console.log('Component Did UPDATE!')  
+   }  
+   componentWillUnmount() {  
+      console.log('Component Will UNMOUNT!')  
+   }  
+}  
+export default App; 
+
+=============================================
+ Search Filter
+
+import React, { useState } from 'react';
+
+function SearchFilter() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const items = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry', 'Fig', 'Grape'];
+
+  const filteredItems = items.filter((item) =>
+    item.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div>
+      <h2>Search Filter</h2>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <ul>
+        {filteredItems.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default SearchFilter;
+
+=======================================
+17. Higher-Order Component (HOC)
+javascript
+Copy code
+import React from 'react';
+
+function withLogger(WrappedComponent) {
+  return function Logger(props) {
+    console.log('Props:', props);
+    return <WrappedComponent {...props} />;
+  };
+}
+
+function HelloWorld({ name }) {
+  return <h2>Hello, {name}!</h2>;
+}
+
+const HelloWorldWithLogger = withLogger(HelloWorld);
+
+function App() {
+  return <HelloWorldWithLogger name="React" />;
+}
+
+export default App;
+======================
+20. Custom Hook
+javascript
+Copy code
+import React, { useState, useEffect } from 'react';
+
+function useFetch(url) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [url]);
+
+  return { data, loading, error };
+}
+
+function App() {
+  const { data, loading, error } = useFetch('https://jsonplaceholder.typicode.com/posts');
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  return (
+    <div>
+      <h2>Custom Hook Example</h2>
+      <ul>
+        {data.map((item) => (
+          <li key={item.id}>{item.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+============================================

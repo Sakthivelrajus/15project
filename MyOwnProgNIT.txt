@@ -1,0 +1,4814 @@
+
+//NareshIT //SrinuSir
+//18-3-2023 HYML start date   
+
+
+Program for Block level and inline element 
+//hello.html program:
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <span>sachin</span>
+        <div>dhoni</div>
+		<div style="display: inline-block;">This is an inline-block element</div>
+        <p>Kohli</p>
+        <h1>UI</h1>
+        <h3>panth</h3>
+        <i>pointing</i>
+        <b>lara</b>
+        <a class="gb_q" aria-label="Gmail (opens a new tab)" data-pid="23" href="https://mail.google.com/mail/?tab=rm&amp;authuser=0&amp;ogbl" target="_top">Gmail</a>
+
+    </body>
+</html>
+
+--------------------------------------------------------
+attribute:
+<button id="btnNewSolutions" data-toggle="dropdown" aria-expanded="false" class="highLight">Solutions<span class="whiteBarArrow arrow slideRight"><img alt="" src="https://st1.zoom.us/static/6.3.11954/image/icon/icon-arrow-down-blue.svg"></span>
+</button>
+
+
+---------------------------------------------------- 
+video July 15
+
+console tap use:
+
+Prog:
+
+function check(no){
+    if(no%2==0){
+        console.log('event')
+    } else{
+        console.log('odd')
+    }
+}
+
+debugger coding :
+function check(no){
+      debugger;
+    if(no%2==0){
+        console.log('event')
+    } else{
+        console.log('odd')
+    }
+}
+check(10)/check(11)
+
+
+-----------------------------------------
+function check(no){
+    if(no%2==0){
+        console.log('event')
+    } else{
+        console.log('odd')
+    }
+}
+
+check(10)
+
+check(11)
+
+--------------------------------------------
+July 18Video:
+
+register.html //
+<h1>Register</h1>
+<p>
+    <b>Name</b>
+    <input type="text">
+</p>
+
+<p>
+    <b>User Id:</b>
+    <input type="text">
+</p>
+<p>
+    <b>Password</b>
+    <input type="text">
+</p>
+
+<p>
+    <b>Gender</b>
+    <input type="radio" name="gen"> Male
+    <input type="radio" name="gen"> Female
+</p>
+
+
+<p>
+    <b>Hobbies</b>
+    <input type="checkbox"> Cricket
+    <input type="checkbox"> Hocky
+    <input type="checkbox"> Football
+    <input type="checkbox"> VollyBall
+    <input type="checkbox"> Tennis
+</p>
+
+
+<p>
+        <b>Country</b>
+        <select name="" id="">
+            <option value="">India</option>
+            <option value="">America</option>
+            <option value="">London</option>
+            <option value="">China</option>
+        </select>      
+   </p>
+   <p>
+        <b>Address</b>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </p>
+   <p>
+       <b>Photo</b>
+       <input type="file">
+
+   </p>
+<div>
+    <input type="button" value="Register">
+</div>
+--------------------------------------------------------------------
+July 19 video:
+
+program table.html:
+<table border="2px">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Runs</th>
+        </tr>
+    </thead>
+    
+    <tbody  >
+        <tr>
+            <td>Sachin</td>
+            <td> Mumbai </td>
+            <td>20000</td>
+        </tr>
+        <tr>
+            <td>Dhoni</td>
+            <td> Ranchi </td>
+            <td>10000</td>
+        </tr>
+
+    </tbody>
+    
+</table>
+---------------------------------------------------------------------------
+program list.html:
+<ol>
+    <li>Sachin</li>
+     <li>Dhoni</li>
+     <li>Kohli</li>
+     <li>Panth</li>
+
+</ol>
+
+<ul>
+        <li>Sachin</li>
+        <li>Dhoni</li>
+        <li>Kohli</li>
+        <li>Panth</li>
+
+</ul> 
+HTML topic compeleted 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CSS - topic startd
+
+program-inline.html
+
+<h1 style="color:red; font-size: 50px"  >Sachin</h1> 
+<div style="color:red; font-size: 50px"  >Sachin</div> 
+<h3 style="color:red; font-size: 50px"  >Sachin</h3> 
+
+-------------------------
+internal.html
+<style>
+    h1,div,h3{
+    color:blue;
+    font-size: 50px;
+    }
+ </style>
+
+<title>Internal</title>
+<h1>Sachin</h1> 
+<div>Sachins</div> 
+
+<h3>Sachin</h3>  
+-----------------------------
+July 20 video: 
+
+border: 1px solid red;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+or
+border: 1px solid red;
+padding:40px;
+-------------------------
+padding: 10 20; 
+padding: 10 20 30; 
+padding: 10 20 30 40;
+
+------------------------
+
+margin:
+element.style {
+    border: 1px solid red;
+    margin-left: 36px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+or
+    border: 1px solid red;
+    margin: 35px;
+
+-----------------------------
+<html>
+<head>
+</head>
+<body>(elemet in developer tools)
+<div style="border: 1px solid red;">
+Sachin</div>(elemet in developer tools)
+<div style="border: 3px dotted blue;">
+Dhoni
+</div>
+</body>
+</html>
+--------------------------------------------
+
+<div style="
+    border: 1px solid red;
+    margin-bottom: 38px;
+">Sachin</div>
+
+<div style="
+    border: 3px dotted blue;
+    margin-top: 32px;
+">Dhoni</div>
+
+---------------------------------------
+
+selectors.html
+
+<style>
+    div,h1,p{
+        color:red
+    }
+</style>
+
+<div>Sachin</div>
+<h1>Dhoni</h1>
+<p>Kohli</p>
+
+---------------------
+(class selector)
+
+<style>
+    .cr{
+        color:red
+    }
+</style>
+
+<div class="cr">Sachin</div>
+<h1 class="cr">Dhoni</h1>
+<p class="cr">Kohli</p>
+<b class="cr">UV</b>
+
+
+selector.html program
+<style>
+        .cr{
+            color:red
+        }
+    
+       #lara{
+            font-size: 100px;
+            font-style:italic;
+            color: blue;
+        }
+    </style>
+    
+    <div class="cr">Sachin</div>
+    <h1 class="cr">Dhoni</h1>
+    <p class="cr">Kohli</p>
+    <b class="cr">UV</b>
+    
+    <span id="lara">Lara</span>
+	
+------------------------------------------
+pseudo selectors
+
+selector.html program
+// I want sachin only redcolor//
+<style>
+div:first-child{
+    color: red
+} 
+ </style>
+   
+    <div class="cr">Sachin</div>
+    <div class="cr">Dhoni</div>
+    <p class="cr">Kohli</p>
+    <b class="cr">UV</b>
+    
+    <span id="lara">Lara</span>
+-----------------------
+// I want Panth only redcolor//
+<style>  
+    span:last-child{
+    color: red
+} 
+(OR) 15.2.24
+#lara:nth-child(2) {
+  color: red; /* Setting the color of the second 'lara' span to red */
+}
+ </style>
+    
+    <div class="cr">Sachin</div>
+    <div class="cr">Dhoni</div>
+    <p class="cr">Kohli</p>
+    <b class="cr">UV</b>
+    
+    <span id="lara">Lara</span>
+    <span id="lara">Panth</span>
+-----------------------------
+	<!-- I want dhoni is  redcolor -->
+<style>
+    div:first-of-type{
+    color: red
+} 
+ </style>
+    <p class="cr">Kohli</p>
+    <div class="cr">Sachin</div>
+    <div class="cr">Dhoni</div>
+    
+    <b class="cr">UV</b>
+    <span id="lara">Lara</span>
+    <span id="lara">Panth</span>
+	
+-----------------------------
+	<!-- I want all element red color except -->
+<style>
+ span{
+     color:red;
+ }   
+ 
+ 
+ </style>
+ <div>
+<span> Sachin </span>    
+<span>Kohli</span>
+<span>UV</span>
+<p>
+    <span>Lara</span>
+</p>
+</div>
+<span>Panth</span>
+<b>Dravid</b>
+
+-------------------------------------
+
+<!-- I want sachin,kohli,uv only  red color except -->
+<style>
+div > span{
+     color:red;
+ }   
+ 
+ 
+ </style>
+ <div>
+<span> Sachin </span>    
+<span>Kohli</span>
+<span>UV</span>
+<p>
+    <span>Lara</span>
+</p>
+</div>
+<span>Panth</span>
+<b>Dravid</b>
+
+---------------------------------------
+
+<style>
+div  span{
+     color:red;
+ }   
+ 
+ 
+ </style>
+ <div>
+<span> Sachin </span>    
+<span>Kohli</span>
+<span>UV</span>
+<p>
+    <span>Lara</span>
+</p>
+</div>
+<span>Panth</span>
+<b>Dravid</b>
+
+-------------------------------------------
+<!-- I want sachin, panth red color except -->
+<style>
+    div>span {
+        color: red;
+    }
+</style>
+
+<div>
+    <span> Sachin </span>
+    <b>UV</b>
+</div>
+<div>
+    <span>Panth</span>
+    <b>Dravid</b>
+</div>
+----------------------------------------------
+<!-- I want sachin, panth red color except -->
+<style>
+    span:first-of-type {
+        color: red;
+    }
+</style>
+
+<div>
+    <span> Sachin </span>
+    <b>UV</b>
+</div>
+<div>
+    <span>Panth</span>
+    <b>Dravid</b>
+</div>
+-----------------------------------------
+
+Positions : 
+
+static position:
+
+element.style {
+    color: red;
+    font-size: 50px;
+    /*top: 100;
+    right: 100;
+    left: 100;
+    bottom: 100; */ not effected  top , right , left , bottom
+}
+
+
+absolute:
+
+element.style {
+    color: red;
+    right: 100;
+    position: absolute; 
+}
+---------------
+
+element.style {
+    position: absolute;
+    top: 80px;
+    bottom: 30;(not work)
+    left: 30;
+    right: 80;(not work)
+    color: blue;
+--------------------
+ relative
+element.style {
+    position: relative;
+    left: 91px;
+    color: blue;
+    top: 50px;
+-------------------
+program
+selectors.html
+
+
+<style>
+    div:nth-child(2){
+        border:1px solid red;
+        height: 100px;
+    }
+
+</style>
+<div>Sachin</div>
+
+<div>
+    <span>Lara</span>
+    <span>pollard</span>
+</div>
+
+<div>Kohli</div>
+
+
+-------
+(under span) 
+element.style {
+    position: absolute;
+    bottom: 0;
+}
+
+under <div>
+element.style {
+    position: relative;
+}
+
+div:nth-child(2) {
+    border: 1px solid red;
+    height: 100px;
+}
+------------------------------
+
+fixed:
+
+position.html
+
+<div> Sachin </div>
+<div> Dhoni </Dlg> </div>
+<div>Kohli</div>
+
+
+under sachin element
+step 1: 
+element.style {
+    position: fixed;
+    bottom: 0;
+}
+
+step 2: 
+element.style {
+    position: fixed;
+    right: 0;
+    top: 50px;
+}
+
+under dhoni element
+element.style {
+    height: 1000px;
+	
+	
+--------------------
+sticky
+
+webpage.html
+
+<link rel="stylesheet" href="styles.css">
+<div>My First Web Page </div>
+<ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Service</li>
+</ul>
+<div>Content</div>
+<div>&copy; Belongs to me </div>
+
+
+continue (July 25-7-22 video )
+Program:
+webpage.html
+<link rel="stylesheet" href="styles.css">
+<div>My First Web Page </div>
+<ul class="menu">
+    <li>Home</li>
+    <li>About</li>
+    <li>Service</li>
+</ul>
+<div class="conten">Content</div>
+<div>&copy; Belongs to me </div>
+--------------
+styles.css:
+body{
+    margin: 0px;
+}
+div:first-child{
+    text-align: center;
+    font-size: 30px;
+    background: yellow;
+    font-weight: bold
+}
+
+
+.menu{
+        position: sticky;
+        top: 0;
+        list-style-type: none;
+        margin: 0;
+        text-align: right;
+        background: #9b9b58;
+        line-height: 40px;
+  
+}
+.menu>li{
+    display: inline;
+    margin-right: 15px;
+    letter-spacing: 5px;
+    font-size: 20px;   
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu+div{
+    font-size: 50px;
+    text-align: center;
+    height: 1000px;
+}
+
+
+div:last-child{
+    background: yellow;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+
+}
+--------------------------
+
+mediaqueries.html
+<style>
+/* 1 */
+   @media screen and (min-width:1200px){
+      div{
+          color:red;
+          font-size: 100px;
+      }
+   }
+
+/* 2 */
+   @media screen and (min-width:1000px) and (max-width:1200px){
+    div{
+          color:blue;
+          font-size: 70px;
+      } 
+    }
+
+/* 3 */
+    @media screen and (min-width:800px) and (max-width:1000px) {
+        div{
+          color:green;
+          font-size: 50px;
+      } 
+    }
+
+/* 4 */
+    @media screen  and (max-width:800px){
+        div{
+          color:yellow;
+          font-size: 25px;
+      }
+    }
+    
+</style>
+
+<div>Sachin </div>
+
+---------------------------------------
+titles.html
+<style>
+    div{
+        height: 100px;
+        border:1px solid red;
+        position: relative;
+    }
+        /* 1 */
+           @media screen and (min-width:1200px){
+              div{
+                width: 32%;
+                display: inline-block;
+              }
+           }
+        
+        /* 2 */
+           @media screen and (min-width:900px) and (max-width:1200px){
+            div:nth-child(1),div:nth-child(2) {
+                 width: 49%;
+                 display:inline-block;
+              } 
+              img{
+                  position: absolute;
+                  bottom:0;
+                  left:0;
+              }
+            }
+        
+        /* 3 */
+            @media screen and (min-width:600px) and (max-width:900px) {
+                div:nth-child(2),div:nth-child(3) {
+                 width: 49%;
+                 display:inline-block;
+              } 
+              img{
+                  position: absolute;
+                  bottom:0;
+                  right:0;
+              }
+            }
+                    
+        </style>
+        
+        <div>
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" width="50px" height="50px" alt="google">
+         </div>
+        <div><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" width="50px" height="50px" alt="google"> </div>
+        <div> <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" width="50px" height="50px" alt="google"></div>		
+		------------------------------------------
+
+
+
+
+July 27 Vide:
+
+register.html(This program for bootstrap only and function  working properly kindly watch again same video plz 2-4-2023)
+
+
+
+<link rel="stylesheet"   href="bootstrap.css" >
+
+
+<h1 class="text-center bg-primary text-white  py-3 mb-5">Register</h1>
+<div class="container-fluid">
+    <div class="row mb-3">
+        <div class="col-4 col-md-5 text-end">
+            <b>Name:</b>
+        </div>
+        <div class="col-7 col-md-4 col-lg-3">
+            <input class="form-control" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4 col-md-5 text-end">
+            <b>User Id:</b>
+        </div>
+        <div class="col-7 col-md-4 col-lg-3">
+            <input class="form-control" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4 col-md-5 text-end">
+            <b>Password:</b>
+        </div>
+        <div class="col-7 col-md-4 col-lg-3">
+            <input type="password" class="form-control" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4 col-md-5 text-end">
+            <b>Gender:</b>
+        </div>
+        <div class="col-7 col-md-4 col-lg-3">
+            <input class='me-2' type="radio" name="gen" >Male
+             <input class='me-2 ms-3' type="radio" name="gen" >Female
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4 col-md-5 text-end">
+            <b>Gender:</b>
+        </div>
+        <div class="col-7 col-md-4 col-lg-3">
+            <input class='me-2' type="checkbox" >Cricket
+            <input class='me-2 ms-3' type="checkbox" >Hockey
+            <input class='me-2 ms-3' type="checkbox" >FootBall
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4 col-md-5 text-end">
+            <b>Country:</b>
+        </div>
+        <div class="col-7 col-md-4 col-lg-3">
+            <select class="form-control">
+                <option>India</option>
+                <option>Pak</option>
+                <option>China</option>
+               </select>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4 col-md-5 text-end">
+            <b>Address:</b>
+        </div>
+        <div class="col-7 col-md-4 col-lg-3">
+            <textarea class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4 col-md-5 text-end">
+            <b>Photo:</b>
+        </div>
+        <div class="col-7 col-md-4 col-lg-3">
+           <input type="file" >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="offset-5 col-7">
+            <input class="btn btn-primary" type="button" value="Register" />
+        </div>
+    </div>
+</div>
+
+
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ JAVASCRIPT:
+ 
+ 
+//Linkedin program
+
+const a = '5' + 5;
+x = a - 5
+console.log(x) 
+--------------------
+const obj = { a : 1 , b : 2 , c : 3 }
+console.log(obj.length)
+--------------------
+
+
+let a = 10;
+let b = 20;
+let c = () => {
+let a = 5;
+let b = 15;
+console.log(a, b);
+};
+c();
+console.log(a, b);
+o/p 5 15
+o/p 10 20
+
+--------------------------------------------
+Diff b/w document.write, alert, console.log 
+
+const a = 5 + "9";
+document.write(a);
+
+const a = 5 + "9";
+alert(a);
+
+const a = 5 + "9";
+console.log(a);
+
+------------------------------------------------------------------------------------------------------
+
+July 28 Video://
+Program:1)
+
+// Data
+var amount = 1000;
+console.log(amount);
+
+//VVVI
+var amount = 1000;
+console.log("amount is :",amount)
+o/p: amount is : 1000
+
+//String
+var name = 'sachin';
+console.log(name);
+
+//Boolean
+var isHeRetired = false 
+console.log(isHeRetired);
+
+//Array
+var players = ['Sachin', 'Dhoni', 'Kohli' 'Rohit sharma']
+console.log(players);
+
+//object
+var players = {
+    name: 'Sachin',
+    location: 'Mumbai',
+    runs: 20000,
+
+}
+
+console.log(players);
+
+
+
+---------------------------------------------------------------------------
+
+
+Program: 2)
+var n1 = 10;
+var n2 = 20;
+var sum = n1+n2;
+console.log(sum);
+
+----------------------------------------------------------------------------
+
+Program:3)
+function fnSum(){
+    var n1 = 10;
+    var n2 = 20;
+    var sum = n1+n2;
+    console.log(sum);
+    
+}
+Program:4)
+
+fnSum()
+fnSum()
+fnSum()
+(OR)
+function fnSum(n1=10, n2=20){
+    var sum = n1+n2
+    console.log(sum)
+}
+fnSum()
+fnSum()
+fnSum()
+----------------------------------------------------------------------------
+Write a function to hide the gmail?
+
+// document.querySelector('[https://mail.google.com/mail/?tab=rm&authuser=0&ogbl]')
+
+Prog:
+function fnHideGmail(){
+  var ele = document.querySelector('[href="https://mail.google.com/mail/?tab=rm&authuser=0&ogbl"]')
+    ele.style.display = 'none'
+}
+fnHideGmail()
+----------------------------------------------------------------------------
+Program: 5)
+function fnSum(n1,n2){
+  var sum = n1+n2;
+  console.log(sum);
+  
+}
+fnSum(1,2)
+fnSum(22,33)
+fnSum(100,200)
+fnSum(67,56793)
+
+----------------------------------------------------------------------------
+How to change google image name (sachin)?
+
+Ex-1
+function fnChangeText(name){
+    var ele = document.querySelector('[href="https://www.google.co.in/imghp?hl=en&amp;tab=ri&amp;authuser=0&amp;ogbl"]');
+    ele.innerText = name;
+    }
+fnChangeText('sachin')
+
+Ex-2
+
+function fnChangeText(name){
+    var ele = document.querySelector('[href="https://mail.google.com/mail/?tab=rm&authuser=0&ogbl"]');
+    ele.innerHTML=name;
+    }
+fnChangeText('sachin')
+
+
+----------------------------------------------------------------------------
+
+Gmail change the color:
+
+function fnChangeClr(c,s){
+  var ele = document.querySelector('[href="https://mail.google.com/mail/?tab=rm&authuser=0&ogbl"]')
+    ele.style.color=c;
+    ele.style.fontSize= s+'px'
+}
+fnChangeClr()
+fnChangeClr('blue',30)
+
+----------------------------------------------------------------------------
+July 29 Video 
+
+Program:6)
+	function f1(a1,a2){
+    console.log(a1);
+    console.log(a2);
+    }
+f1(10,20,30)
+--------------------------------------------------------------------------
+Program:7)
+
+undefined -The undefined property indicates that a variable has not been assigned a value, or not declared at all.(OR)
+"undefined" indicates that a variable has been declared but not given a value
+
+var program; 
+console.log(program);
+O/P : undefined
+----------------------------------------------------------------------------
+
+not defined-"not defined" indicates that a variable does not exist
+
+
+var program= "cricket";
+console.log(notprogram);
+
+O/P :  notprogram is not defined:
+
+exercise 2:
+var program = 'Javascript' ; 
+console.log(pr);
+
+---------------------------------------------------------------------------
+Program:8)
+function f1(name){
+    console.log(name.length);  //length is property
+  
+}
+f1('sachin')
+
+O/P :6
+
+function f1(name){
+ console.log(name.length);
+}
+f1() 
+
+O/P  Cannot read properties of undefined (reading 'length')
+
+--------------------------------------------------------------------------
+function f1(a, b){
+    console.log(a);
+    console.log(b);
+    
+    
+}
+f1(10, 'sachin')
+f1([],{})
+f1(true, 10)
+
+
+---------------------------------------------------------------------------
+
+function f1(a, b){
+    console.log(a-b);
+    
+}
+f1('sachin' , 'dhoni')
+f1([] , [])
+f1(10,20)
+o/p:
+NaN
+ 0
+-10
+
+
+---------------------------------------------------------------------------
+function f1(a){
+    a()
+}
+f1(10) 
+f1('sachin')
+f1([])
+f1(true)
+f1({})
+O/P : a is not a function
+
+
+--------------------------------------------------------------------------
+
+call back function and HOF
+coding by srini sir:
+
+
+//  exercise 1
+
+function f1(a){
+    a()
+}
+function f2(){
+    alert('f2 called ');
+}
+f1(f2)
+
+
+//  exercise 2
+
+function f1(){
+    alert('am called');
+   } 
+   function f2(f){
+      f();
+   }
+   f2(f1);
+   
+   
+   
+ Here   f1: HOF
+ Here   f2: callbacks
+ 
+ 
+----------------------
+ prog -3 
+ 
+ callbacks function :
+ 
+ function f1(a,b,c){
+    a(1)
+    b(2)
+    c(3)
+}
+f1(
+    function(data){
+        alert(data)
+    },
+    function(data){
+        alert(data)
+    },
+    function(data){
+        alert(data)
+    },
+)
+ 
+ -----------------------------------
+ 
+ function f1(){
+   console.log(100)
+}
+var x= f1
+undefined
+
+ ----------------------
+ function f1(){
+    console.log(100);
+    return 1
+}
+var x=f1()
+console.log(x);
+
+o/p :100 ,1
+
+ƒ f1(){
+    console.log(100)
+}
+
+below program is  my own thinging
+
+var x=f1()    
+return 1
+
+function f1(){
+    
+}
+console.log(100)
+console.log(x)
+---------------
+var x=f1()    
+function f1(){
+return 1    
+}
+console.log(x)
+console.log(100)
+---------------------
+var x=f1()    
+console.log(x)
+console.log(100)
+function f1(){
+return 1    
+}
+-----------------
+//My own thing program//
+
+------------
+function f1(){
+    return (
+        alert("welcome")
+    )
+    console.log(100)
+}
+f1()
+
+------------
+function f1(a){
+    return "welcome to javascript"
+    console.log(100)
+}
+f1()
+------
+function f1(){
+    var sum = "dhoni"
+    return (
+        console.log(sum)
+    )
+    console.log(100)
+}
+f1()
+-----end -----------------------
+----------------------------
+
+function f1(){
+    console.log(100);
+    
+}
+var x=f1()
+
+----------------------------------------
+function f1(){
+    console.log(100)
+    return 34
+}
+f1()
+o/p: 100, 34
+
+
+-------------------------------
+function f1(){
+    console.log(100);
+    return 10
+}
+var x=f1()  
+console.log(x);
+
+--------------------------------------
+Video July :29-
+
+VVI
+Call back function:
+Pro:
+function f1(a,b){
+    a('sachin')
+    b()
+    return function(){
+        alert('dhoni')
+    }
+}
+
+var x = f1(
+    function(name){
+      alert(name)
+    },
+    function(){
+        alert('Kohli')
+        
+    }
+    
+)
+x()
+
+(OR)
+ 
+function f1(a,b){  
+    a('Sachin')
+    b()
+    return function(){
+        alert('Kohli')
+    }
+}
+
+f1(
+    function(name){
+        alert(name)
+    },
+    function(){
+        alert('Dhoni')
+    }
+)()
+
+-----------------------------------
+
+August 2 video:
+
+<script>
+
+    //content
+var  content = 'hello worlds ';
+
+//container
+var containerRef= document.querySelector('h1')
+
+//render content inside the container
+
+containerRef.innerText = content
+
+</script>
+
+---------------------------------------------------
+August 2 -Video
+-------------
+codeSandbox program:
+import "./styles.css";
+
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen! </h2>
+    </div>
+  );   
+}
+
+
+-----------------------
+normal React program:
+import React from 'react'
+
+const App = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default App
+-------------------------------------
+Program -React - Babel
+
+hello.html (for reactjs)
+ 
+<script src="react.development.js">  </script>
+<script src="babel.min.js"> </script>
+<script src="react-dom.development.js"></script>
+<div id="root"></div>
+
+<script type="text/babel">
+//content 
+function Hellow(){
+    
+    return  <h1> hellow world </h1>;
+}        
+
+//container 
+
+var root = ReactDOM.createRoot(document.querySelector('#root'))
+// var root = ReactDOM.createRoot(document.getElementById('root'))
+
+//render content inside the container
+root.render(<Hellow />)
+
+</script>  
+
+--------------------------------------------
+//for class componenet
+
+class Hellow extends React.Component{
+  constructor(){
+    super()
+  }
+      render(){
+          return <h1>hello world</h1>
+      }
+  }
+    var root = ReactDOM.createRoot(document.querySelector('#root'))
+    root.render(<Hellow/>)
+
+
+
+-------------------------------------------------
+August-3-video
+Program : name5.html
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+<div id="root"> </div>
+
+<script type="text/babel">
+   
+   
+  function Name(){
+      return <h1>NIT</h1>
+  }
+
+    function App(){
+       return <div>
+        <Name />
+        <Name />
+        <Name />
+        <Name />
+        <Name />
+        </div>
+        }
+       //VVI
+    var root = ReactDOM.createRoot(document.querySelector('#root')) 
+       //render content inside the container
+   root.render(<App />)
+
+</script>
+
+
+
+
+//for class componenet
+
+class Name extends React.Component{
+      render(){
+          return<div>
+              <h1> NIT</h1>
+            </div>
+      }
+  }
+
+class App extends React.Component{
+      render(){
+          return<div>
+            <Name />
+            <Name />
+            <Name />
+            <Name />
+            <Name />
+            </div>
+      }
+  }
+
+----------------------------------------------------
+
+app.js code
+
+
+import React from 'react';
+
+const box = {
+  height: '100px',
+  width: '100px',
+  border: '1px solid red',
+  display: 'inline-block',
+  textAlign: 'center',
+  lineHeight: '100px'
+};
+
+const Box = ({ no }) => {
+  return (
+    <div style={box}>
+      {no}
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <div>
+      <div><Box no="1"/> <Box no="2"/></div>
+      <div><Box no="3"/> <Box no="4"/></div>
+    </div>
+  );
+};
+
+export default App;
+--------------------------------
+
+box4.html
+
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+//import './App.css';
+
+<style>
+    .box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid red;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+}
+</style>
+<div id="root"> </div>
+
+<script type="text/babel">
+
+    function Box(x){
+        return <div className='box'>{x.no}</div>
+    }
+
+    function App(){
+        return <div> 
+            <div> <Box no="1"/><Box no="2"/></div>
+            <div> <Box  no="3"/><Box  no="4"/></div>
+
+            </div>
+    }
+     
+    var root=   ReactDOM.createRoot(document.getElementById("root"))
+    root.render(<App />)
+    </script>
+	
+------------------------------------------------------
+August 4 video
+
+var sachinObject ={} // chrome developer console only
+sachinObject
+--------------------------
+insert program:
+
+var sachinObj={}
+sachinObj
+sachinObj.name = 'sachin'
+'sachin'
+sachinObj
+sachinObj.log = 'Mumbai'
+'Mumbai'
+sachinObj
+sachinObj['full name'] = 'SRT'
+sachinObj
+sachinObj['runs'] = 20000
+O/P:{name: 'sachin', log: 'Mumbai', fullname: 'SRT', fullame: 'SRT', fullName: 'SRT', …}
+sachinObj['runs']=20000
+
+
+update program:
+sachinObj.fif = 79
+o/p 79
+sachinObj
+o/p {name: 'sachin', log: 'Mumbai', full name: 'SRT', fif: 79}
+sachinObj.fif = 900
+o/p 900
+sachinObj
+o/p {name: 'sachin', log: 'Mumbai', full name: 'SRT', fif: 900}
+sachinObj["full name"] = 'Sachin Ramesh Tendulkar'
+'Sachin Ramesh Tendulkar'
+sachinObj
+{name: 'sachin', log: 'Mumbai', full name: 'Sachin Ramesh Tendulkar', fif: 900}
+sachinObj.hasOwnProperty('runs')
+true
+sachinObj.hasOwnProperty('runssss')
+false
+
+
+Object.keys(sachinObj)
+Object.keys(sachinObj).length
+
+
+Delete program:
+delete sachinObj.runs
+delete sachinObj['full name']
+
+
+Reterive or get the data program:
+sachinObj
+sachinObj.name
+sachinObj['full name']
+
+
+
+------------------------------------------------------
+(OR) VS code 
+var sachinObject={
+    name:'sachin',
+    location:'Mumbai',
+    ['full name'] : 'sakthivel raju',
+    ['Full details']: 'sakthivel from chennai', 
+    runs :2000
+} 
+console.log(sachinObject);
+ 
+
+
+------------------------------------------------------
+ players.html
+ --------
+ import React from 'react';
+const  box = {
+  width:'100px',
+  height: '100px',
+  border:'1px solid red',
+  textAlign: 'center',
+  display:'inline-block',
+  lineHeight: '100px'
+}
+const Box = (data) =>{
+  return(
+    <div style={box}>
+      {data.no}
+      </div>
+  )
+}
+const App = () =>{
+  return(
+    <div>
+      <div>  <Box no="1" /><Box no="2"/>  </div>
+      <div>  <Box no="3"/><Box no="4"/>  </div>
+
+    </div>
+  )
+ }
+export default App
+ 
+ --------------------
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+function Players(data){
+    return  <h1>Hi This is {data.name} , I am from{data['loc']} </h1>
+  }
+    
+
+  function App(){ 
+      return <div>
+           <Players name='Sachin' loc="Mumbai" ></Players>
+           <Players  name='Dhoni' loc="Ranchi"></Players>
+           <Players  name='Kohli' loc="Delhi"></Players>
+        </div>
+        
+  }
+
+  var root = ReactDOM.createRoot(document.getElementById("root"))
+  root.render(<App/>)
+</script>
+
+
+
+------------------------------------------------------
+
+Children Program:
+
+
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<style>
+
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+function Players(data){
+    return  <h1>Hi This is {data.name} , I am from{data['loc']} , my runs are {data.children} </h1>
+  }
+    
+
+  function App(){ 
+      return <div>
+           <Players name='Sachin' loc="Mumbai" > 20000</Players>
+           <Players  name='Dhoni' loc="Ranchi">15000</Players>
+           <Players  name='Kohli' loc="Delhi">10000</Players>
+        </div>
+        
+  }
+
+  var root = ReactDOM.createRoot(document.getElementById("root"))
+  root.render(<App/>)
+</script>
+
+
+----------------------------------------------------
+August Video - 5
+
+Inheritance method:
+
+function Bus(){
+    this.fw=2;
+    this.bw=4
+    this.totalWheels = function(){
+        console.log(this.fw+this.bw);
+        
+    }
+    this.getBusColor = function(){
+        return 'red'
+    }
+}
+new Bus()
+var obj = new Bus()
+obj
+obj.fw
+obj.bw
+obj['bw']
+obj.totalWheels()
+obj.getBusColor()
+
+
+
+
+----------------------------------------------------
+
+Prog:
+
+function Bus(){
+    this.fw= 2
+    this.totalWheels = function(){
+        console.log(this.fw+this.bw)
+    
+}
+    this.getBusColor = function(){
+        return 'red'
+    }
+}
+var obj = new Bus()
+obj.totalWheels()
+OutPut: NaN
+
+-----------------------------------------------------
+Prog:(inheritance , prototype)
+
+function Bus(){
+    this.fw =2
+    this.totalWheels = function(){
+        console.log(this.fw+this.bw)
+    }
+    this.getBusColor = function(){
+        return 'red'
+    }
+}
+Bus.prototype.bw = 4
+var obj = new Bus()
+obj.totalWheels()
+O/P = 6
+
+-----------------------------------------------------
+function Bus(){
+    this.fw = 2
+    this.totalWheels = function(){
+        console.log(this.fw+ this.bw)
+    }
+}
+Bus.prototype.bw = 4
+Bus.prototype.getBusColor= function(){
+    console.log('red')
+}
+var obj = new Bus()
+obj.totalWheels()
+obj.getBusColor()
+
+----------------------------------------------------
+
+class Bus{
+    fw=2
+    bw=4
+    totalWheels(){
+        console.log(this.fw+this.bw)
+    }
+}
+var obj = new Bus()
+obj.fw
+obj.bw
+obj.totalWheels()
+
+o/p 6
+-------------------------------------------------
+
+class Bus{
+    fw=2
+    
+    totalWheels(){
+        console.log(this.fw+this.bw)
+    }
+}
+var obj = new Bus()
+obj.totalWheels()
+o/p = NaN
+-----------------------------------------------------
+
+class Bus{
+    fw=2
+        totalWheels(){
+        console.log(this.fw+this.bw)
+    }
+}
+Bus.prototype.bw = 4
+var obj = new Bus()
+obj.totalWheels()
+o/p = 6
+
+------------------------------------------------------
+
+class Wheels{
+    bw=4
+}
+class Bus extends Wheels{
+    fw=2
+
+    totalWheels(){
+        console.log(this.fw+this.bw)
+    }
+}
+var obj = new Bus()
+obj.totalWheels()
+
+o/p=6
+-----------------------------------------------------
+
+function wheels(){
+ this.bw=4
+}
+class Bus extends wheels{
+    fw=2
+    totalWheels(){
+        console.log(this.fw+this.bw)
+    }
+}
+var obj = new Bus()
+obj.totalWheels()
+
+o/p=6
+------------------------------------------------------
+
+August 8 Video:
+
+Program
+
+function F1(){
+    this.n1= 10
+    this.n2= 20
+}
+F1.prototype.sum = function(){
+    return this.n1+this.n2
+}
+F1
+F1.prototype
+
+---------------------------------------------------------
+Program:
+
+function A(){
+    this.n2 = 20
+}
+class Arth extends A{
+    n1=10
+    sum(){
+        console.log(this.n1 + this.n2)
+    }
+}
+var obj = new Arth()
+obj
+obj.sum()
+
+o/p: 30
+
+---------------------------------------------------------
+Constructor Class:
+Prog:
+
+function Arth(){
+    this.n1 = 10
+    this.n2 = 20
+    this.sum = function(){
+        console.log(this.n1+this.n2)
+    }
+}
+Arth.prototype
+-------------------------------------------
+
+function Arth(){
+    console.log('Arth called')
+    this.n1 = 10
+    this.n2 = 20
+    this.sum = function(){
+        console.log(this.n1+this.n2)
+    }
+}
+var obj = new Arth()
+----------------
+class Arth{
+    n1=10
+    n2=20
+    sum(){
+        console.log(this.n1 + this.n2)
+    }
+}
+var obj = new Arth()
+Arth.prototype
+
+---------------------------------------------------------
+constructor :
+Program:
+
+class Arth{
+    n1=10
+    n2=20
+    constructor(){
+        console.log('constructor called')
+    }
+    sum(){
+        console.log(this.n1 + this.n2)
+    }
+}
+var obj = new Arth()
+----------------------------------------------------
+
+class A{
+    n2 = 20
+}
+class Arth extends A{
+    n1=10
+    constructor(){
+        super()
+        console.log("Arth con")
+    }
+    sum(){
+        console.log(this.n1+this.n2)
+    }
+}
+var obj = new Arth()
+obj.sum()
+o/p   
+Arth con
+30
+--------------------------------------------------------
+This program for learning purpose only:
+class Arth{
+    sum(n1,n2,n3){
+        console.log(n1+n2+n3)
+    }
+     sum(n1,n2){
+        console.log(n1+n2)
+    }
+     sum(n1){
+        console.log(n1)
+    }
+}
+var obj = new Arth()
+obj.sum(10,20,30)
+
+o/p :
+10
+
+---------------------------------------------
+
+var arr=[22,33,11,10]
+arr
+(4) [22, 33, 11, 10]
+arr.length
+4
+arr.push(55)
+5
+arr
+(5) [22, 33, 11, 10, 55]
+arr.push(1,2,23)
+8
+arr
+(8) [22, 33, 11, 10, 55, 1, 2, 23]
+arr.push(10)
+9
+arr
+(9) [22, 33, 11, 10, 55, 1, 2, 23, 10]
+Array
+/*ƒ Array() { [native code] }
+Array.prototype
+[constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …]*/
+Array.prototype.push=function(){
+    console.log("hey i overtided")
+}
+arr.push(1000)
+2 hey i overtided
+arr
+(9) [22, 33, 11, 10, 55, 1, 2, 23, 10]
+---------------------------------------------------------
+August 9 Video:
+
+undefined and not defined
+
+var loc;
+undefined
+age
+Uncaught ReferenceError: age is not defined
+    at <anonymous>:1:1
+
+hello_c.html:
+
+<script src="react.development.js">  </script>
+<script src="babel.min.js"> </script>
+<script src="react-dom.development.js"></script>
+<div id="root"></div>
+
+<script type="text/babel">
+//prepare content 
+//props , refs, updater, context, isReactComponent, setState, forceUpdate
+//setState, forceUpdate- these two are like function only remaining normal variable
+
+class Hellow extends React.Component {
+    render(){
+      return  <h1>Hellow world this is class component</h1>
+    }
+
+}
+
+
+// how to create the object
+
+// var obj = new Hellow()
+// var content = obj.fnPrepareContent()
+
+//container 
+
+ 
+var root = ReactDOM.createRoot(document.querySelector('#root'))
+
+//render content inside the container
+root.render(<Hellow />)
+
+</script>  
+
+---------------------------------------------------
+
+box4_c.html:
+
+<script src="react.development.js"></script>
+<script src= "react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+<style>
+   .box{
+       height: 100px;
+       width: 100px;
+       border:1px solid red;
+       display: inline-block;
+       text-align: center;
+       line-height: 100px
+       
+   }
+</style>
+<div id="root"></div>
+<script type="text/babel">
+
+  
+ class Box extends React.Component{
+     render(data){
+         return <div className='Box'>{this.props.no}</div>
+     }
+ }
+
+  class App extends React.Component {
+//     constructor(){
+//     super()
+//     console.log('App con')
+// }
+
+       render(){
+           console.log("render called")
+         return <div>
+        <div><Box  no="1"/>  <Box no="2" /> </div>
+        <div><Box  no="3"/> <Box  no="4"/> </div>
+        </div>
+    }
+   }
+    var root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />)
+</script>
+-------------------------------------------------------------------------------------------
+players_c.html
+
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    
+    class Players extends React.Component{
+     render(data){
+     return <h1>Hi this is {this.props.name}, I am from {this.props.loc}, my runs are {this.props.children}</h1>
+          }
+    }
+
+ class App extends React.Component{
+    render(){
+        return  <div>
+            <Players name="Sachin" loc="Mumbai"> 20000 </Players>
+            <Players name="Dhoni" loc="Ranchi">15000</Players>
+            <Players name="Kohli" loc="Delhi">12000</Players>
+          </div>
+    }
+         
+   }
+     var root = ReactDOM.createRoot(document.getElementById("root"))
+    root.render(<App/>)
+</script>
+
+-------------------------------------------------------------
+name5_c.html 
+
+<script src="react.development.js" ></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"> </script>
+<div id="root"></div>
+<script type="text/babel">
+   
+
+class Name extends React.Component{
+         render(){
+        return <h1>NareshITtechnologies</h1>
+}
+}
+
+
+class App extends React.Component{
+    render(){
+        return<div>
+         <Name />
+         <Name />
+         <Name />
+         <Name />
+
+       </div>
+    }  
+       
+   }
+
+  var root = ReactDOM.createRoot(document.querySelector('#root'))
+   root.render(<App/>)
+
+   
+
+</script>
+
+
+
+
+
+
+---------------------------------------------------------
+August 10 Video:
+
+sum.html:
+
+<script src="react.development.js">  </script>
+<script src="babel.min.js"> </script>
+<script src="react-dom.development.js"></script>
+<div id="root"></div>
+<script type="text/babel">
+//content
+
+function App(){
+function fnFindSum(){
+    var no1 = document.querySelector('p:first-child>input').value
+	var no2 = document.querySelector('p:nth-child(2)>input').value
+    var sum = Number(no1)+parseFloat(no2)
+    document.querySelector('span').innerText=sum
+}
+   return  <div> 
+         <p>
+         <b> No:1</b> <input />
+         </p>
+
+         <p>
+         <b> No:2</b> <input />
+         </p>
+        
+         <p>
+         <button onClick={fnFindSum}> Sum </button>
+         <h3>Sum: <span></span></h3>
+         </p>
+
+     </div>; 
+}
+
+
+//container 
+var root = ReactDOM.createRoot(document.querySelector('#root'))
+//render content inside the container
+root.render(<App />)
+</script>  
+
+---------------------------------------------------------
+sum_c.html :
+
+<script src="react.development.js">  </script>
+<script src="babel.min.js"> </script>
+<script src="react-dom.development.js"></script>
+<div id="root"></div>
+
+<script type="text/babel">
+//content 
+class App extends React.Component{
+    
+    fnFindSum(){
+    var no1 = document.querySelector('p:first-child>input').value
+    var no2 = document.querySelector('p:nth-child(2)>input').value
+    var sum = Number(no1)+parseFloats(no2)
+    document.querySelector('span').innerText=sum
+}
+    render(){
+        return <div>
+            <p>
+                <b> No:1 </b><input />
+            </p>
+            <p>
+                <b> No:2 </b><input />
+            </p>
+            
+            <p>
+                <button  onClick = {this.fnFindSum} > sum </button>
+            </p>
+            <h3>Sum:<span></span></h3>
+        </div>
+    }
+}
+
+ 
+
+//container 
+
+var root = ReactDOM.createRoot(document.querySelector('#root'))
+
+//render content inside the container
+root.render(<App />)
+
+</script>  
+
+
+----------------------------------------------------------------------
+August 11 Video:
+
+prime_c.html :
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent,setState,forceUpdate
+   class App extends React.Component{
+     
+        fnClick=()=>{
+            var no= document.querySelector('#no').value
+            var msg='Not Prime'
+            var primes=[]
+            if(this.fnCheckPrime(no)){
+                msg='Prime'
+            }
+            document.querySelector('h3>span').innerText=msg;
+            for(var i=1;i<=no;i++){
+                if(this.fnCheckPrime(i)){
+                    primes.push(i)
+                }
+            }
+            document.querySelector('h4>span').innerText=primes.join()
+        }
+
+        // fnClick(){
+        //     var no= document.querySelector('#no').value
+        //     var msg='Not Prime'
+        //     var primes=[]
+        //     if(this.fnCheckPrime(no)){
+        //         msg='Prime'
+        //     }
+        //     document.querySelector('h3>span').innerText=msg;
+        //     for(var i=1;i<=no;i++){
+        //         if(this.fnCheckPrime(i)){
+        //             primes.push(i)
+        //         }
+        //     }
+        //     document.querySelector('h4>span').innerText=primes.join()
+        // }
+
+        fnCheckPrime(no){
+            var factors=0
+            for(var i=1;i<=no;i++){
+                if(no%i==0){
+                    factors++
+                } 
+            }
+            if(factors==2){
+                return true
+            }
+            return false
+        }
+        render(){
+            return <div>
+                    <p>
+                        <b>No:</b><input id="no" />
+                    </p>
+                   
+                    <p>
+                        <button onClick={this.fnClick}>Submit</button>
+                    </p>
+                    <h3>Result:<span></span> </h3>
+                    <h4>Primes:<span></span> </h4>
+
+
+                </div>
+        }
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+--------------------------
+reverse.html:
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent,setState,forceUpdate
+   class App extends React.Component{
+
+       function fnKeyUp(){
+            var name= document.querySelector('#name').value
+            var revName=name.split('').reverse().join('');
+            document.querySelector('h3>span').innerText=revName;
+        }
+
+    
+        render(){
+            return <div>
+                    <p>
+                        <b>Name:</b><input id="name" onKeyUp={this.fnKeyUp} />
+                    </p>
+                  
+                    <h3>Result:<span></span> </h3>
+
+                </div>
+        }
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+Intervew Questions
+
+Reverse string:
+Hello How Are You 
+
+var name = "Hello How Are You"
+var revName=name.split('').reverse().join('');
+console.log(revName)
+
+
+
+--------------------------------------------------------------------------------------------
+August 12 Video:
+
+var and let topic:
+
+function f1(){
+    var a = 10;  "var" is functional scope
+}
+f1()
+console.log(a)
+-------------------------
+
+function f1(){
+ a = 10;//here "a" is global variable.
+}
+f1()
+console.log(a)
+o/p 10
+---------------------
+function f1(){
+ if(true){
+    var a =10     
+ }
+console.log(a)
+}    
+f1()
+o/p 10
+-------------------
+
+function f1(){
+    if(true){
+        let a = 10 //here let is block scope
+    }
+    console.log(a)
+}
+
+f1()
+o/p Uncaught ReferenceError: a is not defined
+--------------------
+function f1(){
+    let a = 10
+    if(true){
+        a=100
+    }
+    console.log(a)
+}
+f1()
+o/p 100
+
+-------------  
+function f1(){
+    if(true){
+    const a = 10//here const also block scope
+    }
+    console.log(a)
+}
+
+f1()
+o/p :Uncaught ReferenceError: a is not defined
+-------------------  
+  function f1(){
+    const a = 10 //const is can not reassign value
+    if(true){
+    a=100
+    }
+    console.log(a) 
+}
+
+f1()
+o/p Uncaught TypeError: Assignment to constant variable.
+   
+   
+-----------------------
+let  keyword using:
+let f=function(){
+    console.log("f called")
+}
+f()
+o/p f called
+f=10
+10
+f()
+o/p f is not a function
+    at <anonymous>:1:1
+	
+-----------------------
+const f=function(){
+    console.log("f called")
+}
+f()
+o/p f called
+f=10
+o/p  Assignment to constant variable.
+   
+------------------------  
+
+ arrow function : //see the note 
+   
+   
+   
+--------------------------------------------------------------------------------------------
+
+August 13 Video:
+
+
+
+every thing in note please use and write it.
+
+
+forEach method :
+
+var arr = [1,22,11,33,13]
+
+arr.forEach(
+    function(){
+        console.log('called')
+    }
+)
+o/p called
+----------
+arr.forEach(
+    function(val, index){
+        console.log(val)
+    }
+)
+--------
+arr.forEach(
+    function(val, index){
+        console.log(val,index)
+    }
+)
+----------
+arr.every(
+    function(v,i){
+        return v>10
+    }
+)
+false
+-----------------
+var marks=[400,300,450,500,343]
+
+marks
+(5) [400, 300, 450, 500, 343]
+marks.map(function(v,i) {
+    
+})
+-----------------
+
+marks.map(function(v,i){
+    return 1
+})
+
+---------------------
+diff between forEach and map method?
+
+marks.forEach(function(v,i){
+    return 1
+    
+})
+----------
+marks.map(function(v,i){
+    return 1
+})
+still so many topic pending kindly look at note .
+------------------------------
+August 16 Video:
+
+pending 
+sum.html
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent,setState,forceUpdate
+  
+        function App(){
+            function fnFindSum(){
+            //   var no1=  document.querySelector('p:first-child>input').value
+            //   var no2=document.querySelector('p:nth-child(2)>input').value ;
+            //   var sum=Number(no1)+parseInt(no2)
+            //   document.querySelector('span').innerText=sum;
+            }
+            return <div>
+                    <p>
+                        <b>No1:</b><input />
+                    </p>
+                    <p>
+                        <b>No2:</b><input />
+                    </p>
+                    <p>
+                        <button onClick={fnFindSum}>sum</button>
+                    </p>
+                    <h3>Sum: <span></span></h3>
+                </div>
+        }
+   
+
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+-------------------------------
+sum1.html
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent,setState,forceUpdate
+  
+        function App(){
+            function fnFindSum(){
+              var no1=  document.querySelector('p:first-child>input').value
+              var no2=document.querySelector('p:nth-child(2)>input').value ;
+              var sum=Number(no1)+parseInt(no2)
+              document.querySelector('span').innerText=sum;
+            }
+            return <div>
+                    <p>
+                        <b>No1:</b><input />
+                    </p>
+                    <p>
+                        <b>No2:</b><input />
+                    </p>
+                    <p>
+                        <button onClick={fnFindSum}>sum</button>
+                    </p>
+                    <h3>Sum: <span></span></h3>
+                </div>
+        }
+   
+
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+
+
+-------------------------------
+
+sum2.html
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent,setState,forceUpdate
+  
+         const App=()=>{
+            let ref1= React.useRef()
+            let ref2=React.useRef()
+            let ref3=React.useRef()
+            const fnFindSum=()=>{
+              debugger;
+              var no1= ref1.current.value;
+              var no2=ref2.current.value;
+              var sum=Number(no1)+parseInt(no2)
+              ref3.current.innerText=sum;
+            }
+            return <div>
+                    <p>
+                        <b>No1:</b><input ref={ref1} />
+                    </p>
+                    <p>
+                        <b>No2:</b><input ref={ref2} />
+                    </p>
+                    <p>
+                        <button onClick={fnFindSum}>sum</button>
+                    </p>
+                    <h3>Sum: <span ref={ref3}></span></h3>
+                </div>
+        }
+   
+
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+
+-------------------------------
+sum2_c.html
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+Cannot read properties of undefined (reading 'ref1')
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent,setState,forceUpdate
+   class App extends React.Component{
+            ref1= React.createRef()
+            ref2=React.createRef()
+            ref3=React.createRef()
+            constructor(){
+                super()
+                console.log('con',this)
+               this.fnFindSum=this.fnFindSum.bind(this)
+
+            }
+        //  fnFindSum=()=>{
+        //     debugger;
+        //       var no1=this.ref1.current.value
+        //       var no2=this.ref2.current.value 
+        //       var sum=Number(no1)+parseInt(no2)
+        //       this.ref3.current.innerText=sum;
+        // }
+
+        fnFindSum(){
+              console.log('fnFindSum',this)
+              var no1=this.ref1.current.value
+              var no2=this.ref2.current.value 
+              var sum=Number(no1)+parseInt(no2)
+              this.ref3.current.innerText=sum;
+        }
+        render(){
+            console.log('render',this)
+            return <div>
+                    <p>
+                        <b>No1:</b><input ref={this.ref1} />
+                    </p>
+                    <p>
+                        <b>No2:</b><input ref={this.ref2} />
+                    </p>
+                    <p>
+                       <button onClick={this.fnFindSum}>sum</button>
+                    </p>
+                    <h3>Sum:<span ref={this.ref3}></span> </h3>
+                </div>
+        }
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+-----------------------------------
+August 17 Video:
+
+sum3_c.html
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent, setState,forceUpdate
+   class App extends React.Component{
+
+        state={
+            sum:''
+        }
+
+        // constructor(){
+        //     super();
+        //     this.state={
+        //         sum:''
+        //     }
+        // }
+        fnFindSum=(eve)=>{
+             const result=Number(this.n1)+Number(this.n2)
+             this.setState({
+                sum:result
+            })
+            
+        }
+        fnChange=(eve)=>{
+           this[eve.target.id]=eve.target.value
+        }
+        
+        render(){
+            console.log('5k render called')
+            return <div>
+                    <p>
+                        <b>No1:</b><input id='n1' onChange={this.fnChange}   />
+                    </p>
+                    <p>
+                        <b>No2:</b><input id='n2' onChange={this.fnChange} />
+                    </p>
+                    <p>
+                       <button onClick={this.fnFindSum}>sum</button>
+                    </p>
+                    <h3>Sum: {this.state.sum} </h3>
+                </div>
+        }
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+---------------------------------------------------
+August 19  Video:
+
+sum3.html
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   
+         const App=()=>{
+            
+            let data={}
+
+            const [result,setResult]=React.useState('')
+            const [clr,setClr]=React.useState('')
+            
+            const fnChange=(eve)=>{
+                  data[eve.target.id]=eve.target.value
+            }
+            const fnFindSum=()=>{
+                  let sum=Number(data.n1)+Number(data.n2)
+                  setResult(sum)
+                  let _clr='red'
+                  if(sum < 100){
+                    _clr='blue'
+                  }
+                  setClr(_clr)
+            }
+            return <div>
+                    <p>
+                        <b>No1:</b><input type='number' id='n1' onChange={fnChange}   />
+                    </p>
+                    <p>
+                        <b>No2:</b><input type='number' id='n2' onChange={fnChange} />
+                    </p>
+                    <p>
+                       <button onClick={fnFindSum}>sum</button>
+                    </p>
+                    <h3>Sum: <span  style={{color: clr}} >{result}</span> </h3>
+                </div>
+        }
+   
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+
+
+--------------------------------------------------------------------------------------------------
+August 21  Video:
+function f1(){
+    n1=10
+    function f2(){
+        var n2= 20
+        console.log(n1+n2)
+    }
+	f2()
+}
+
+
+-----------------
+sum3_c.html
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent, setState,forceUpdate
+   class App extends React.Component{
+
+        state={
+            sum:'',
+            clr:''
+        }
+
+        // constructor(){
+        //     super();
+        //     this.state={
+        //         sum:''
+        //     }
+        // }
+        fnFindSum=(eve)=>{
+             const result=Number(this.n1)+Number(this.n2)
+             let _clr='red'
+             if(result<100){
+                _clr='blue'
+             }
+             this.setState({
+                sum:result,
+                clr:_clr
+            })
+        }
+        fnChange=(eve)=>{
+            const {id,value}=eve.target
+            this[id]=value
+        }
+        
+        render(){
+            console.log('5k render called')
+            const {clr,sum}=this.state
+            return <div>
+                    <p>
+                        <b>No1:</b><input id='n1' onChange={this.fnChange}   />
+                    </p>
+                    <p>
+                        <b>No2:</b><input id='n2' onChange={this.fnChange} />
+                    </p>
+                    <p>
+                       <button onClick={this.fnFindSum}>sum</button>
+                    </p>
+                    <h3>Sum: <span style={{color:clr}}>{sum}</span> </h3>
+                </div>
+        }
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+
+------------------
+
+sum2.html 
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+Cannot read properties of undefined (reading 'ref1')
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent,setState,forceUpdate
+   class App extends React.Component{
+            ref1= React.createRef()
+            ref2=React.createRef()
+            ref3=React.createRef()
+            constructor(){
+                super()
+                console.log('con',this)
+               this.fnFindSum=this.fnFindSum.bind(this)
+
+            }
+        //  fnFindSum=()=>{
+        //     debugger;
+        //       var no1=this.ref1.current.value
+        //       var no2=this.ref2.current.value 
+        //       var sum=Number(no1)+parseInt(no2)
+        //       this.ref3.current.innerText=sum;
+        // }
+
+        fnFindSum(){
+              console.log('fnFindSum',this)
+              var no1=this.ref1.current.value
+              var no2=this.ref2.current.value 
+              var sum=Number(no1)+parseInt(no2)
+              this.ref3.current.innerText=sum;
+        }
+        render(){
+            console.log('render',this)
+            const {ref1,ref2,fnFindSum,ref3}=this
+            return <div>
+                    <p>
+                        <b>No1:</b><input ref={ref1} />
+                    </p>
+                    <p>
+                        <b>No2:</b><input ref={ref2} />
+                    </p>
+                    <p>
+                       <button onClick={fnFindSum}>sum</button>
+                    </p>
+                    <h3>Sum:<span ref={ref3}></span> </h3>
+                </div>
+        }
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+note: so many program is pending in note. kindly look over it.
+
+
+-----------------------------------------------------------------------------------------
+
+August 23  Video:
+
+listAndKeys.html
+
+
+default program of arrow function for functional componenet:
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+ 
+<script type="text/babel" >
+
+const App = () =>{
+    return(
+        <div> 
+        <h1> hello world </h1>
+         </div>
+    )
+
+}
+
+var root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(<App />)
+
+
+</script>
+
+-------------------------------
+
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   
+   const App=()=>{
+        const students=[
+            {
+                n:'S1',
+                m:100,
+                l:'Hyd'
+            },
+            {
+                n:'S2',
+                m:90,
+                l:'VSKP'
+            },
+            {
+                n:'S3',
+                m:80,
+                l:'Pune'
+            }
+        ]
+        const players=['Sachin','Dhoni','Kohli','UV','Lara','Dravid']
+
+        const fnClick=(obj)=>{
+            console.log(obj)
+        }
+        return <div>
+               <h3>Players:DDL</h3>
+               <select>
+                   {
+                    players.map((val,index)=>{
+                        return <option key={index}>{val}</option>
+                    })
+                   }
+               </select>
+               
+			   <h3>Players:OL</h3>
+               <ol>
+                 {
+                    players.map((val,index)=>{
+                         return <li key={index}>{val}</li>
+                    })
+                 }
+               </ol>
+               
+			<h3>Players:UL</h3>
+               <ul>
+                 {
+                    players.map((val,index)=>{
+                         return <li key={index}>{val}</li>
+                    })
+                 }
+               </ul>
+               <h3>Players:Bold with Line by Line</h3>
+               {
+                players.map((val,index)=>{
+                      return <h4 key={index}>{val}</h4>
+                })
+               }
+               <h3>Players:table</h3>
+               <table border='1px'>
+                  <thead>
+                     <tr>
+                        <th>S.No</th>
+                        <th>Player Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                       {
+                        players.map((val,index)=>{
+                                return <tr key={index}>
+                                       <td>{index+1}</td>
+                                       <td>{val}</td>
+                                    </tr>
+                        })
+                       }
+                  </tbody>
+               </table>
+               <h3>Student:table</h3>
+               <table border='1px'>
+                  <thead>
+                     <tr>
+                        <th>Name</th>
+                        <th>Marks</th>
+                        <th>Location</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                       {
+                        students.map((obj,index)=>{
+                                const {n,m,l}=obj
+                                return <tr key={index}>
+                                       <td>{n}</td>
+                                       <td>{m}</td>
+                                       <td>{l}</td>
+                                       <td><button onClick={(eve)=>fnClick(obj)}>E</button></td>
+                                       <td><button onClick={(eve)=>{
+                                          fnClick(obj)
+                                       }}>D</button></td>
+                                    </tr>
+                        })
+                       }
+                  </tbody>
+               </table>
+            </div> 
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+--------------------------------------------------------------------------------------------------------
+
+August 24 Video:
+
+ol.html -program
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   const List=(props)=>{
+    
+        const {data,header}=props
+        return <div>
+            <h3>{header.toUpperCase()}</h3>
+            <ul>
+                 {
+                   data.map((val,index)=>{
+                           return <li key={index}>{val}</li>
+                    })
+                 }
+              </ul>
+            </div>
+   }
+  
+   const App=()=>{
+        const players=['Sachin','Dhoni','Kohli']
+        const students=['S1','S2','S3','S4']
+        const employees=['E1','E2']
+        return <div>
+              
+              <List data={players} header='players' />
+
+             
+              <List data={students} header='Students' />
+             
+              
+              <List data={employees} header='employees' />
+      
+            </div> 
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+---------------
+program
+select.html 
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   const Select=(props)=>{
+    
+        const {data,header}=props
+        return <div>
+            <h3>{header.toUpperCase()}</h3>
+            <select>
+                 {
+                   data.map((val,index)=>{
+                           return <option key={index}>{val}</option>
+                    })
+                 }
+              </select>
+            </div>
+   }
+  
+   const App=()=>{
+        const players=['Sachin','Dhoni','Kohli']
+        const students=['S1','S2','S3','S4']
+        const employees=['E1','E2']
+        return <div>
+              
+              <Select data={players} header='players' />
+
+             
+              <Select data={students} header='Students' />
+             
+              
+              <Select data={employees} header='employees' />
+      
+            </div> 
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+August 25 Video:
+
+program 
+
+table.html
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+  
+   const Table=(props)=>{
+       const [dataObj,setDataObj]=React.useState({})
+
+       const {headers,data,columns}=props
+       const fnClick=(data)=>{
+          setDataObj(data)
+       }
+       return <div>
+         <table border='2px'>
+            <thead>
+                <tr>
+                    {
+                        headers.map((v,i)=>{
+                            return <th key={i}>{v}</th>
+                        })
+                    } 
+                    <th>View</th>
+                </tr>
+            </thead>
+           
+            <tbody>
+                {
+                    data.map((obj,index)=>{
+                        return <tr key={index}>
+                                 {
+                                    columns.map((k,i)=>{
+                                        return <td key={k}>{obj[k]}</td>
+                                    })
+                                 }
+                                 <td><button onClick={()=>fnClick(obj)}>view</button></td>
+                            </tr>
+                    })
+                }
+            </tbody>
+        </table>
+        <table border='2px'>
+            <tbody>
+            {
+                Object.keys(dataObj).map((val,i)=>{
+                    return <tr key={i}>
+                            <td>{val}</td>
+                            <td>{dataObj[val]}</td>
+                        </tr>
+                })
+            }
+            </tbody>
+        </table>
+    </div>
+   }
+  
+   const App=()=>{
+        const playersHeaders=['Name','Location','Runs']
+        const stdHeaders=['Student Name','Student Marks']
+
+        const players=[
+            {
+                n:'Sachin',
+                l:'Mumbai',
+                r:20000
+            },
+            {
+                n:'Dhoni',
+                l:'Ranchi',
+                r:10000
+            }
+        ]
+
+        const students=[
+            {
+                name:'s1',
+                marks:343
+            },
+            {
+                name:'s2',
+                marks:444
+            },
+            {
+                name:'s3',
+                marks:235
+            }
+        ]
+        const playersColumns=['n','l','r']
+        const stdColumns=['name','marks']
+        return <div>
+                <h3>Players</h3>
+                <Table columns={playersColumns} headers={playersHeaders} data={players} />
+                <h3>Students</h3>
+                <Table columns={stdColumns} headers={stdHeaders} data={students} />
+            </div> 
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+-------------------------------------------------------------------------------------------------------------------
+August 26 Video:
+
+program
+webpage.html
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+<style>
+  body{
+    margin:0
+  }
+  .header{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    background: yellow;
+  }
+  .menu{
+    text-align: right;
+    background: #b3b3a8;
+    line-height: 40px;
+  }
+  .mobile-menu{
+    width: 120px;
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+    position: absolute;
+    transition: left 1s;
+    background: #b3b3a8;
+    line-height: 40px;
+    top: 70px;
+  }
+  .menu > a{
+    margin-right: 15px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: white;
+  }
+  .mobile-menu > a{
+    display: block;
+    margin-right: 15px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: white;
+  }
+  .footer{
+    background: yellow;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .mobile-menu-btn{
+    position: absolute;
+    right: 0;
+    top: 70px;
+  }
+</style>
+<script type="text/babel">
+    const Home =()=>{
+      return <h1>This is Home Component</h1>
+    }
+    const About =()=>{
+      return <h1>This is About Component</h1>
+    }
+    const Contact =()=>{
+      return <h1>This is Contact Component</h1>
+    }
+    const Header =()=>{
+        return <div className='header'>My First Web Page</div>
+    }
+    const Footer=()=>{
+        return <div className='footer'>&copy; rights belongs to me.</div>
+    }
+    const Menu=()=>{
+        let timeoutId;
+        const [isMobileView,setIsMobileView]=React.useState(document.body.offsetWidth<600 ? true: false)
+        const [left,setLeft]=React.useState(0)
+        const [menuName ,setMenuName]=React.useState('home')
+        window.addEventListener('resize',()=>{
+             clearTimeout(timeoutId)
+             timeoutId=setTimeout(() => {
+                fnResize()
+             }, 500);
+        })
+        const fnResize=()=>{
+          setIsMobileView(document.body.offsetWidth<600 ? true: false)
+        }
+        const fnMobileMenuBtnClick=()=>{
+             setLeft(left==0 ? -140 : 0)
+        }
+        const fnMenuClick=(eve)=>{
+          setMenuName(eve.target.id)
+          setLeft(-140)
+        }
+        return <div>
+               {isMobileView && <button onClick={fnMobileMenuBtnClick} className='mobile-menu-btn'>menu</button>}
+               
+               <div onClick={fnMenuClick}  style={{left:left}} className={isMobileView ? 'mobile-menu': 'menu'}>
+                  <a id='home'>Home</a> 
+                  <a id='about'>About</a>
+                  <a id='contact'>Contact</a>
+               </div>
+                {menuName  == 'home' && <Home />}
+                {menuName  == 'about' && <About />}
+                {menuName  == 'contact' && <Contact />}
+            </div>
+    }
+    const App=()=>{
+        return <div>
+                <Header />
+                <Menu />
+
+              
+
+                <Footer />
+            </div>
+    }
+
+    const root=ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<App />)
+
+</script>
+
+---------------------------------------------------------------------------------------------------
+
+August 27-Video
+
+this Program program not belongs to august 27 video
+
+webpage.html
+
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+<style>
+  body{
+    margin:0
+  }
+  .header{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    background: yellow;
+  }
+  .menu{
+    text-align: right;
+    background: #b3b3a8;
+    line-height: 40px;
+  }
+  .mobile-menu{
+    width: 120px;
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+    position: absolute;
+    transition: left 1s;
+    background: #b3b3a8;
+    line-height: 40px;
+    top: 70px;
+  }
+  .menu > a{
+    margin-right: 15px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: white;
+  }
+  .mobile-menu > a{
+    display: block;
+    margin-right: 15px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: white;
+  }
+  .footer{
+    background: yellow;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .mobile-menu-btn{
+    position: absolute;
+    right: 0;
+    top: 70px;
+  }
+</style>
+<script type="text/babel">
+    const Home =()=>{
+      return <h1>This is Home Component</h1>
+    }
+    const About =()=>{
+      return <h1>This is About Component</h1>
+    }
+    const Contact =()=>{
+      return <h1>This is Contact Component</h1>
+    }
+    const Header =()=>{
+        return <div className='header'>My First Web Page</div>
+    }
+    const Footer=()=>{
+        return <div className='footer'>&copy; rights belongs to me.</div>
+    }
+    const Menu=()=>{
+        let timeoutId;
+        const [isMobileView,setIsMobileView]=React.useState(document.body.offsetWidth<600 ? true: false)
+        const [left,setLeft]=React.useState(0)
+        const [menuName ,setMenuName]=React.useState('home')
+        window.addEventListener('resize',()=>{
+             clearTimeout(timeoutId)
+             timeoutId=setTimeout(() => {
+                fnResize()
+             }, 500);
+        })
+        const fnResize=()=>{
+          setIsMobileView(document.body.offsetWidth<600 ? true: false)
+        }
+        const fnMobileMenuBtnClick=()=>{
+             setLeft(left==0 ? -140 : 0)
+        }
+        const fnMenuClick=(eve)=>{
+          setMenuName(eve.target.id)
+          setLeft(-140)
+        }
+        return <div>
+               {isMobileView && <button onClick={fnMobileMenuBtnClick} className='mobile-menu-btn'>menu</button>}
+               
+               <div onClick={fnMenuClick}  style={{left:left}} className={isMobileView ? 'mobile-menu': 'menu'}>
+                  <a id='home'>Home</a> 
+                  <a id='about'>About</a>
+                  <a id='contact'>Contact</a>
+               </div>
+                {menuName  == 'home' && <Home />}
+                {menuName  == 'about' && <About />}
+                {menuName  == 'contact' && <Contact />}
+            </div>
+    }
+    const App=()=>{
+        return <div>
+                <Header />
+                <Menu />
+
+              
+
+                <Footer />
+            </div>
+    }
+
+    const root=ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<App />)
+
+</script>
+
+
+---------------------------------------------------------------------------------------------------
+
+August 29
+
+Program
+
+debouncing.html
+<div>
+    Search: <input onkeyup="fnGetProducts(event)" />
+</div>
+
+
+<script>
+    var timeoutId;
+    function fnGetProducts(eve){
+        clearTimeout(timeoutId)
+        timeoutId=setTimeout(()=>{
+            console.log('sending the requiest to get the '+ eve.target.value + ' product ' )
+        },5000)
+    }
+
+</script>
+
+fnGetProducts called 
+
+
+
+
+after 2 sec fnGetProducts called
+
+timeoutId=3
+coudn
+
+-------------------
+
+
+eventBubbling.html
+<style>
+    div{
+        border:1px solid red;
+        padding:30px
+    }
+</style>
+<div onclick="f1()">
+    <div onclick="f2()">
+        <div onclick="f3(event)">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function f1(){
+        alert('div1')
+    }
+    function f2(){
+        alert('div2')
+    }
+    function f3(eve){
+        alert('div3')
+        eve.stopPropagation()
+    }
+</script>
+
+
+
+
+--------------------
+
+eventCapturing.html
+<style>
+    div{
+        border:1px solid red;
+        padding:30px
+    }
+</style>
+<div id="div1">
+    <div id="div2">
+        <div id="div3">
+
+        </div>
+    </div>
+</div>
+
+<script>
+   var divs=document.getElementsByTagName('div')
+   for(var i=0;i<divs.length;i++){
+     divs[i].addEventListener('click',function(){
+          alert(this.id)
+     },true)
+   }
+</script>
+---------------------
+ptoc.html :
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   
+   class A extends React.Component{
+       render(){
+        return <div>
+                <h3>A :{this.props.n}</h3>
+            </div>
+       }
+   }
+
+
+   /*
+   function A(props){
+        const {n}=props
+        return <div>
+                <h3>A :{n}</h3>
+            </div>
+   }
+   */
+   const App=()=>{
+    const name='Sachin'
+    return <div>
+            <h1>App</h1>
+            <A  n={name} />
+        </div>
+   }
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+------------------------
+program
+ctop1.html
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   
+   const A=(props)=>{
+        const name='Sachin'
+        props.n(name)
+        return <div>
+                <h3>A </h3>
+            </div>
+   }
+   
+   const App=()=>{
+
+    const f2=(name)=>{
+        alert('App f2 called ' + name)
+    }
+   
+    return <div>
+            <h1>App</h1>
+            <A n={f2} />
+        </div>
+   }
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+------------
+ctop2.html
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   
+   const A=(props)=>{
+        const nameRef=React.useRef()
+        const fnClick=()=>{
+            let name=nameRef.current.value
+            props.x(name)
+        }
+        return <div>
+                <h3>A </h3>
+                <p>
+                    Name:<input ref={nameRef} />
+                </p>
+                <button onClick={fnClick}>click</button>
+            </div>
+   }
+   
+   const App=()=>{
+    const [name,setName]=React.useState('Not yet received')
+    const fn=(data)=>{
+        setName(data)
+    }
+    return <div>
+            <h1>App:{name}</h1>
+            <A x={fn} />
+        </div>
+   }
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+
+
+--------------
+
+
+siblings.html
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   
+   const A=(props)=>{
+        const nameRef=React.useRef()
+        const fnClick=()=>{
+            let name=nameRef.current.value
+            props.x(name)
+        }
+        return <div>
+                <h3>A </h3>
+                <p>
+                    Name:<input ref={nameRef} />
+                </p>
+                <button onClick={fnClick}>click</button>
+            </div>
+   }
+   const B=(props)=>{
+       return <div>
+            <h3>B:{props.n}</h3>
+        </div>
+   }
+   const App=()=>{
+    const [name,setName]=React.useState('Not yet received')
+    const fn=(data)=>{
+        setName(data)
+    }
+    return <div>
+            <h1>App</h1>
+            <A x={fn} />
+            <B n={name} />
+        </div>
+   }
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+
+
+--------------------------------------------------------------------------------------------------
+August 30
+ctop2_c.html
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    //props,refs, updater, context , isReactComponet setState , forceUpdate
+    class A extends React.Component {
+        nameRef=React.createRef()
+
+        fnClick=()=>{
+           const name= this.nameRef.current.value
+           this.props.x(name)
+        }
+
+        render(){
+            return <div>
+                  <h3>A</h3>
+                  <p>
+                    Name: <input ref={this.nameRef} />
+                  </p>
+                  <button onClick={this.fnClick}>click</button>
+                </div>
+        }
+    }
+
+    class App extends React.Component {
+        state={
+            data:'No Data'
+        }
+        fn=(data)=>{
+            this.setState({
+                data
+            })
+        }
+        render(){
+            return <div>
+                   <h1>App : {this.state.data} </h1> 
+                   <A x={this.fn} />
+                </div>
+        }
+    }
+
+    const root=ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<App />)
+</script>
+
+-------------
+context_c
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    //1. create context
+    const ctx=React.createContext();
+    
+    //props,refs, updater, context , isReactComponet setState , forceUpdate
+    class E extends React.Component {
+      
+      render(){
+          return <div>
+                { /*4. cosume the data from context */}
+                 <h1>E :{this.context[0]}</h1> 
+              </div>
+      }
+  }
+  E.contextType=ctx
+
+
+    class D extends React.Component {
+      
+      render(){
+          return <div>
+                 <h1>D:{this.context[1]}</h1> 
+              </div>
+      }
+  }
+  D.contextType=ctx
+    class C extends React.Component {
+      
+      render(){
+          return <div>
+                 <h1>C</h1> 
+                 {
+                    this.context.map((v)=>{
+                        return <div >{v}</div>
+                    })
+                 }
+                 <E />
+              </div>
+      }
+  }
+  C.contextType=ctx
+    class B extends React.Component {
+      
+      render(){
+          return <div>
+                 <h1>B</h1> 
+                 <C  />
+                 <D />
+              </div>
+      }
+  }
+    class A extends React.Component {
+      
+      render(){
+          return <div>
+                 <h1>A</h1> 
+                 <B />
+              </div>
+      }
+  }
+    class App extends React.Component {
+        state={
+            name:['Sachin','Dhoni','Kohli']
+        }
+        render(){
+            return <div>
+                   <h1>App</h1> 
+                   {/*2. provide the data to the context */}
+                   <ctx.Provider value={this.state.name} >
+                    {/*3. make  the data availbel to the component */}
+                       <A />
+                   </ctx.Provider>
+                  
+                </div>
+        }
+    }
+
+    const root=ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<App />)
+</script>
+
+------------------
+context.html 
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    //1. create context
+    const ctx=React.createContext()
+      
+      function E (){
+          const ctxData=React.useContext(ctx)
+          return <div>
+                 <h1>E :{ctxData[0]}</h1> 
+              </div>
+      }
+      
+      function D(){
+        const ctxData=React.useContext(ctx)
+          return <div>
+                 <h1>D:{ctxData[1]}</h1> 
+              </div>
+      }
+      
+      function C(){
+        //4. consume the data from context
+        const ctxData=React.useContext(ctx)
+
+          return <div>
+                 <h1>C</h1> 
+                 {
+                    ctxData.map((v)=>{
+                        return <div >{v}</div>
+                    })
+                 }
+                 <E />
+              </div>
+      }
+      
+      function B(){
+          return <div>
+                 <h1>B</h1> 
+                 <C  />
+                 <D />
+              </div>
+      }
+      
+      function A(){
+          return <div>
+                 <h1>A</h1> 
+                 <B />
+              </div>
+      }
+   
+      function  App(){
+            const players=['Sachin','Dhoni','Kohli','UV']
+            //const [players]=React.useState(['Sachin','Dhoni','Kohli','UV'])
+            return <div>
+                   <h1>App</h1> 
+                   {/*2. provide the data to the context*/}
+                   <ctx.Provider value={players} >
+                   {/*2. make the data avaibale to the components*/}
+
+                       <A />
+                   </ctx.Provider>
+                  
+                </div>
+        }
+    
+
+    const root=ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<App />)
+</script>
+
+---------------------------------------------------------------------------------------------
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<
+--------------------------------------------------------------------------------------------------
+
+September 1
+No coding only theoery
+------------------------------------------------------------------------------------------------
+September 2
+No coding only theoery
+------------------------------------------------------------------------------------------------
+
+September 3
+No coding only theoery
+------------------------------------------------------------------------------------------------
+September- 5
+ajax.html
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="axios.min.js"></script>
+<div id="root"></div>
+
+
+<script type="text/babel">  
+   //prepare content
+   const Table=(props)=>{
+
+       const {headers,data,columns}=props
+      
+       return <div>
+         <table border='2px'>
+            <thead>
+                <tr>
+                    {
+                        headers.map((v,i)=>{
+                            return <th key={i}>{v}</th>
+                        })
+                    } 
+                </tr>
+            </thead>
+           
+            <tbody>
+                {
+                    data.map((obj,index)=>{
+                        return <tr key={index}>
+                                 {
+                                    columns.map((k,i)=>{
+                                        return <td key={k}>{obj[k]}</td>
+                                    })
+                                 }
+                            </tr>
+                    })
+                }
+            </tbody>
+        </table>
+       
+    </div>
+   }
+   const App=()=>{
+        const [tblData,setTblData]=React.useState({d:[],h:[],c:[]})
+        const fnGetComments=()=>{
+            axios.get('https://jsonplaceholder.typicode.com/comments')
+            .then((res)=>{
+                const result=res.data;
+                setTblData({
+                    h:['NAME','EMAIL','BODY'],
+                    d:result,
+                    c:['name','email','body']
+                })
+                console.log(result)
+            })
+            .catch((res)=>{
+                console.log(res.data)
+            })
+        }
+        const fnGetPhotos=()=>{
+             let httpObj=new XMLHttpRequest()
+             //prepare the req
+             httpObj.open('get','http://jsonplaceholder.typicode.com/photos')
+             //send the req
+             httpObj.send()
+             //req completed with success response
+             httpObj.onload=()=>{
+                let res=  httpObj.response
+                    res=JSON.parse(res)
+                    setTblData({
+                    h:['ID','TITLE','URL','THUMBNAIL URL'],
+                    d:res,
+                    c:['id','title','url','thumbnailUrl']
+                })
+             }
+             //req completed with failure response
+             httpObj.onerror=()=>{
+                let res=  httpObj.responseText
+
+                console.log(res)
+             }
+
+        }
+        const fnGetPosts=async ()=>{
+          const res=  await fetch('http://jsonplaceholder.typicode.com/posts',{
+              method:'get'   
+            })
+            const result=await res.json()
+            setTblData({
+                    h:['ID','TITLE'],
+                    d:result,
+                    c:['id','title']
+                })
+
+            /*fetch('http://jsonplaceholder.typicode.com/posts',{
+              method:'get'   
+            })
+            .then(
+                (res)=>{
+                   return res.json()
+                },
+                (res)=>{
+
+                }
+            )
+            .then(
+                (res)=>{
+                    console.log(res)
+                   
+                },
+                (res)=>{
+
+                }
+            )*/
+            
+        }
+        return <div>
+              <p>
+                 <button onClick={fnGetPhotos}>Get Photos</button>
+                 <button onClick={fnGetPosts}>Get Posts</button>
+                 <button onClick={fnGetComments}>Get Comments</button>
+
+              </p>
+              <Table 
+              headers={tblData.h}
+              data={tblData.d}
+              columns={tblData.c}
+              />
+            </div>
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+--------------------------------------------------------------------------
+
+September- 6
+
+Ajax.html
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="axios.min.js"></script>
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   const Table=(props)=>{
+
+       const {headers,data,columns}=props
+      
+       return <div>
+         <table border='2px'>
+            <thead>
+                <tr>
+                    {
+                        headers.map((v,i)=>{
+                            return <th key={i}>{v}</th>
+                        })
+                    } 
+                </tr>
+            </thead>
+           
+            <tbody>
+                {
+                    data.map((obj,index)=>{
+                        return <tr key={index}>
+                                 {
+                                    columns.map((k,i)=>{
+                                        return <td key={k}>{obj[k]}</td>
+                                    })
+                                 }
+                            </tr>
+                    })
+                }
+            </tbody>
+        </table>
+       
+    </div>
+   }
+   const App=()=>{
+        const [tblData,setTblData]=React.useState({d:[],h:[],c:[]})
+        const fnGetComments=()=>{
+            axios.get('https://jsonplaceholder.typicode.com/comments')
+            .then((res)=>{
+                const result=res.data;
+                setTblData({
+                    h:['NAME','EMAIL','BODY'],
+                    d:result,
+                    c:['name','email','body']
+                })
+                console.log(result)
+            })
+            .catch((res)=>{
+                console.log(res.data)
+            })
+        }
+        const fnGetPhotos=()=>{
+             let httpObj=new XMLHttpRequest()
+             //prepare the req
+             httpObj.open('get','http://jsonplaceholder.typicode.com/photos')
+             //send the req
+             httpObj.send()
+             //req completed with success response
+             httpObj.onload=()=>{
+                let res=  httpObj.response
+                    res=JSON.parse(res)
+                    setTblData({
+                    h:['ID','TITLE','URL','THUMBNAIL URL'],
+                    d:res,
+                    c:['id','title','url','thumbnailUrl']
+                })
+             }
+             //req completed with failure response
+             httpObj.onerror=()=>{
+                let res=  httpObj.responseText
+
+                console.log(res)
+             }
+
+        }
+        const fnGetPosts=async ()=>{
+          const res=  await fetch('http://jsonplaceholder.typicode.com/posts',{
+              method:'get'   
+            })
+            const result=await res.json()
+            setTblData({
+                    h:['ID','TITLE'],
+                    d:result,
+                    c:['id','title']
+                })
+
+            /*fetch('http://jsonplaceholder.typicode.com/posts',{
+              method:'get'   
+            })
+            .then(
+                (res)=>{
+                   return res.json()
+                },
+                (res)=>{
+
+                }
+            )
+            .then(
+                (res)=>{
+                    console.log(res)
+                   
+                },
+                (res)=>{
+
+                }
+            )*/
+            
+        }
+        return <div>
+              <p>
+                 <button onClick={fnGetPhotos}>Get Photos</button>
+                 <button onClick={fnGetPosts}>Get Posts</button>
+                 <button onClick={fnGetComments}>Get Comments</button>
+
+              </p>
+              <Table 
+              headers={tblData.h}
+              data={tblData.d}
+              columns={tblData.c}
+              />
+            </div>
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+-----------------------------------------------------------------------
+
+September- 7
+
+mounting.html
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   
+   const App=()=>{
+        
+        React.useEffect(()=>{
+            console.log('Mouting...')
+        },[])
+
+        return <h1>Hellow World</h1>; 
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+----------------------
+updating.html
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   
+   const App=()=>{
+
+       const [name,setName]= React.useState('Sachin')
+       const [cnt,setCnt]=React.useState(0)
+        React.useEffect(()=>{
+            console.log('Mouting...')
+        },[])
+
+        React.useEffect(()=>{
+            if(name !='Sachin'){
+              console.log('name Updating related code')
+            }
+        },[name])
+
+        React.useEffect(()=>{
+            if(cnt !=0){
+              console.log('cnt Updating related code')
+            }
+        },[cnt])
+
+        const fnClick=()=>{
+            setName('Dhoni')
+        }
+        debugger;
+        return <div>
+            <h1>Hellow {name}</h1>; 
+            <button onClick={fnClick}>Name change</button>
+            <h3>{cnt}</h3>
+            <button onClick={()=>setCnt(cnt+1)}>cnt change</button>
+
+            </div>
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+----------------------
+unmount.html
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   const A=()=>{
+        React.useEffect(()=>{
+            console.log('A mounted')
+        },[])
+
+        React.useEffect(()=>{
+             return ()=>{
+                console.log('I am going to unmount')
+             }
+        },[])
+
+        return <div>
+               <h3>A Component</h3>
+            </div>
+   }
+   const App=()=>{
+        const [isShow,setIsShow]=React.useState(true)
+        const fnClick=()=>{
+            setIsShow(!isShow)
+        }
+        return <div>
+               <h1>App Component</h1>
+               {isShow && <A />}
+               <button onClick={fnClick}>Toggle</button>
+            </div>
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+-----------------------------------------------------------------------
+
+September- 8
+mounting_c.html (componenetDidMount)
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent,setState,forceUpdate
+   class App extends React.Component {
+         constructor(a,b){
+            super()
+            console.log('con')
+         }
+         componentDidMount(){
+            console.log('did mount')
+         } 
+         render(){
+            console.log('render')
+            return <h1>Hellow World</h1>
+         }   
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+--------------------------------
+updating_c.html (componentDidupdate)
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent,setState,forceUpdate
+   class App extends React.Component {
+         constructor(a,b){
+            super()
+            console.log('con')
+            this.state={
+                name:'Sachin'
+            }
+            
+         }
+         componentDidMount(){
+            console.log('did mount')
+         } 
+         fnClick=()=>{
+            this.setState({
+                name:'Dhoni'
+            })
+         }
+         render(){
+            console.log('render')
+            return <div>
+                <h1>Hellow {this.state.name}</h1>
+                 <button onClick={this.fnClick}>Change Name</button>
+                </div>
+         } 
+         componentDidUpdate(){
+            console.log('componentDidUpdate')
+         }  
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+
+-------------------------------------------
+unmounting_c.html (componenetwillUnmount)
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+   //prepare content
+   //props, refs, updater,  context, isReactComponent,setState,forceUpdate
+   class A extends React.Component {
+        render(){
+           return <div>
+                <h1>A component</h1>
+               </div>
+        } 
+        componentDidMount(){
+           console.log('componentDidMount')
+        } 
+
+        componentWillUnmount(){
+            console.log('componentWillUnmount')
+        } 
+  }
+   class App extends React.Component {
+        state={
+            isShow:true
+        }
+        fnClick=()=>{
+             this.setState({
+                isShow:!this.state.isShow
+             })
+        }
+         render(){
+            const {isShow}=this.state
+            return <div>
+                 <h1>App</h1>
+                 {isShow && <A /> }
+                 <button onClick={this.fnClick}>Toggle</button>
+                </div>
+         } 
+        
+   }
+   
+   //container
+
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+
+   //render content inside the container
+
+   root.render(<App />)
+
+</script>
+------------------------------------------------------------------
+
+
+September- 9
+
+NPM INSTALL AND THEORY ONLY NO CODING
+
+------------------------------------------------------------------
+
+September- 10
+Only theoery:
+
+
+------------------------------------------------------------------
+
+September- 11
+
+ONLY theory explain - Github, git, how to deploy , heroko, aws, godaddy
+----------------------------------------------------------------
+
+September- 12
+
+
+Redux topic started only theory
+
+----------------------------------------------------------------
+
+September- 13

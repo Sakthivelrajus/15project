@@ -1,0 +1,1038 @@
+
+ React Interview  Coding Question 
+ 
+ 
+ model json link :https://dummyjson.com/products
+ 
+ 
+ 
+
+1) Call API with React Hooks ❤️ | React Interview Questions
+
+App.js
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './App.css'
+export default function App() {
+  const [users, setUsers] = useState(null);
+
+
+  useEffect(() => {
+    axios.get('https://jsonplaceholder.typicode.com/users')
+      .then((res) => setUsers(res.data))
+      .catch(err => console.log(err));
+  }, []);
+
+  return (
+    <div className='user'>
+      {users && users.map(user => <div key={user.id}>{user.company.name}</div>)}
+    </div>
+  );
+}
+
+-------------
+
+App.css
+
+.user{
+  text-align: center;
+}
+=======================================================
+
+
+2) Pass Data From Child To Parent? 
+
+
+App.js
+
+import React, { useState } from "react";
+import Child from "./Child";
+
+const Parent = () => {
+  const [childText, setChildText] = useState("Type something here");
+
+  const dataParent = (event) => {
+   setChildText(event.target.value);
+  };
+
+  return (
+    <>
+      <h2> {childText} </h2>
+      <Child dataChild={dataParent} />
+    </>
+  );
+};
+
+export default Parent;
+
+----------------
+
+child.js
+
+import React from 'react';
+
+const Child = ({ dataChild }) => {
+  return (
+    <>
+      <h2>Child</h2>
+      <input onChange={dataChild} />
+    </>
+  );
+};
+
+export default Child;
+
+==================================================================
+
+3) Synthetic Events 
+
+App.js
+
+import React, { useState } from 'react';
+
+function SyntheticEventExample() {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert('Submitted value: ' + inputValue);
+  };
+
+  return (
+    <div>
+      <h2>Synthetic Events Example</h2>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Enter some text:
+          <input type="text" value={inputValue} onChange={handleChange} />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+}
+
+export default SyntheticEventExample;
+
+==============================================================
+4) Search 
+
+App.js
+
+import React, { useState } from 'react';
+
+export default function Search() {
+  const [list, setList] = useState(['apple', 'kiwi', 'pears',"sakthivel","Saravanan"]);
+  const [searchText, setSearchText] = useState('');
+
+  let searchResult = list.filter((item) =>
+    item.toLowerCase().includes(searchText.toLowerCase())
+  );
+
+  return (
+    <div>
+      <input
+        placeholder="type to search"
+        onChange={(e) => setSearchText(e.target.value)}
+      />
+
+      <ul>
+        {searchResult.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+
+
+======================================================
+
+5)Print the all user of the name in reactJS?
+
+https://jsonplaceholder.typicode.com/users
+
+
+
+import ReactDOM from 'react-dom'
+import React,{useState, useEffect} from "react";
+import axios from "axios";
+
+//export default function App() {
+ function App() {
+const [users, setUsers]= useState(null)  
+
+useEffect(() =>{
+  axios.get("https://jsonplaceholder.typicode.com/users")
+  .then(res => setUsers(res.data))
+  .catch((err) => console.log(err))
+},[])
+
+  return (
+    users && users.map(user => <div key={user.id}>{user.company.name}</div>)
+  );
+}
+
+ReactDOM.render(<App/> ,document.getElementById('root'));
+-------------------------
+
+Using button 
+import ReactDOM from 'react-dom';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+function App() {
+  const [users, setUsers] = useState(null);
+  const [buttonClicked, setButtonClicked] = useState(false); // New state to track button click
+
+  useEffect(() => {
+    if (buttonClicked) {
+      axios.get('https://jsonplaceholder.typicode.com/users')
+        .then((res) => setUsers(res.data))
+        .catch((err) => console.log(err));
+    }
+  }, [buttonClicked]);
+
+  return (
+    <div>
+      <button onClick={() => setButtonClicked(true)}>Fetch Users</button>
+      {buttonClicked && users && users.map((user) => <div key={user.id}>{user.company.name}</div>)}
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+===============================================================
+
+6)Hiting button continusly count the number in reactJS?(MosuWebX)
+for functional component
+
+import "./styles.css";
+import React,{useState} from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0)
+  const handleCount = () =>{
+    setCount(count+1)
+  }
+
+  return (
+    <div className="App">
+      <span>count: {count} </span>
+      <button onClick={handleCount}> count</button>
+
+    </div>
+  );  
+}
+export default Counter
+==============
+import React,{useState} from 'react'
+function Comment(){
+    const [title, handleTitle] = useState(0)
+    //console.log(obj);
+    return(
+        <div>
+            <h1>{title}</h1>
+            <button onClick={() =>handleTitle(title+1)}>change</button>
+        </div>
+    )
+}
+export default Comment
+
+=============
+import React,{useState} from 'react';
+export default function App(){
+  const [count, setCount] = useState(0)
+
+  return(
+    <div>
+      <h3>{count}</h3>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <button onClick={()=>setCount(count-1)}>Decrement</button>
+      <button onClick={()=>setCount(0)}>Reset</button>
+    </div>
+  )
+}
+==============
+-----------
+
+for class component :
+import React, { Component } from 'react';
+
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+
+  incrementCount = () => {
+    this.setState(prevState => ({
+      count: prevState.count + 1
+    }));
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Counter: {this.state.count}</h1>
+        <button onClick={this.incrementCount}>Increase</button>
+      </div>
+    );
+  }
+}
+
+export default Counter;
+
+
+==========================================================
+
+
+
+7)I want password validation program: Dashborad.js,LoginForm.js
+
+Index.js
+
+import React from "react";
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import LoginForm from './LoginForm';
+import Dashboard from './Dashboard';
+
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <Route exact path="/" component={LoginForm} />
+        <Route path="/dashboard" component={Dashboard} />
+      </div>
+    </Router>
+  );
+};
+
+export default App;
+
+ReactDOM.render(<App/> ,document.getElementById('root'));
+
+
+
+---------------
+Dashboard.js
+
+import React from 'react';
+
+const Dashboard = () => {
+  return (
+    <div>
+      <h2>Dashboard</h2>
+      <p>Welcome to the dashboard!</p>
+    </div>
+  );
+};
+
+export default Dashboard;
+
+
+-------------
+LoginForm.js
+
+
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
+const LoginForm = () => {
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const history = useHistory();
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Password validation logic
+    if (password === 'password123') {
+      // If password is correct, navigate to the dashboard
+      history.push('/dashboard');
+    } else {
+      setErrorMessage('Invalid password. Please try again.');
+    }
+  };
+
+  return (
+    <div>
+      <h2>Login Form</h2>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Password:
+          <input
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+			required
+          />
+        </label>
+        <button type="submit">Login</button>
+      </form>
+      {errorMessage && <p>{errorMessage}</p>}
+    </div>
+  );
+};
+
+export default LoginForm;
+=======================================================================
+
+8)Reverse data [101, 102.3, 105, 10606]?
+Remove the "0" and reverse the data
+
+
+import React from "react";
+import ReactDOM from 'react-dom'
+
+
+const App = () => {
+let data = [101, 102.3, 105, 10606]
+
+// const data2 = data.map((a)=>{
+//     let val = a.toString()
+//     return val.replace("0","").replace(".","")
+// })
+// console.log(data2);
+
+
+  return (
+      <div className="App">
+         {data.reverse().map((dat)=>{
+             return<div>{dat}</div>
+         })}
+      </div>
+  );
+};
+
+ReactDOM.render(<App/> ,document.getElementById('root'));
+
+===================================================================
+
+9)How to fetch data in reactJS
+
+import React, { useState, useEffect } from 'react';
+
+const Product = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the API
+    fetch('https://fakestoreapi.com/products')
+      .then(data => data.json())
+      .then(result => setProducts(result))
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
+  return (
+    <>
+      <h1>Product Dashboard</h1>
+      {JSON.stringify(products)}
+    </>
+  );
+};
+
+export default Product;
+
+=========================================================================
+
+10) to-do List in React
+
+import React, { useState } from 'react';
+
+export default function Todo() {
+  const [todos, setTodos] = useState(['React', 'interview']);
+
+  //Optimise later
+  function addTask(text) {
+    if (!todos.includes(text) && text.length > 0) {
+      setTodos([...todos, text]);
+    }
+  }
+
+  function deleteTodo(i) {
+    setTodos(todos.filter((j) => j != i));
+  }
+
+  let updatedInput;
+  return (
+    <>
+      <input
+        ref={(input) => (updatedInput = input)}
+        onKeyPress={(e) => {
+          if (e.key === 'Enter') {
+            addTask(e.target.value);
+          }
+        }}
+      />
+      <button onClick={() => addTask(updatedInput.value)}>Add Task</button>
+
+      <ul>
+        {todos.map((i) => (
+          <li key={i}>
+            {i} <button onClick={() => deleteTodo(i)}>delete</button>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+========================================================================================
+
+
+
+
+Life Cycle Methods Of Component In React JS?
+
+Definition of lifecyle :
+Each and every class component in react, has their own lifeCycle, which we can monitor in 3 phases Mounting, Updating ,UnMounting,  All lifeCycle methods inherited from React.Component class.
+---------------
+Mounting,   the mounting phase refers to the lifecycle methods that are called when a component is being created and inserted into the DOM.
+
+ (Working in VS code-NIT )
+import React from 'react';
+class App extends React.Component{
+            
+    constructor(props){
+        super();
+        this.state={
+            n2:20
+        }
+       console.log('constructor executed');
+    }
+    static getDerivedStateFromProps(props,state){
+        console.log('getDerivedStateFromProps executed');
+		return null;
+    }
+    render(){
+        console.log('render executed');
+        return <h1>Hellow</h1> 
+    }
+    componentDidMount(){
+        console.log('componentDidMount executed');
+		return null;
+    }
+     
+}
+export default App;
+---------------
+Updating:(Working in VS code-NIT)
+
+the updating phase refers to the lifecycle methods that are called when a component is re-rendered due to changes in its props or state.
+
+import React from 'react';
+import ReactDOM from 'react-dom'
+class App extends React.Component{
+
+    constructor(props){
+        super();
+        this.state={
+            n2:20
+        }
+
+    console.log('constructor executed');
+
+    setTimeout(() => {
+
+          this.setState({
+              n2:30
+          })
+
+          console.log('state updated')
+      }, 5000);
+    }
+
+    static getDerivedStateFromProps(props,state){
+        console.log('getDerivedStateFromProps executed');
+    }
+
+    render(){
+        console.log('render executed');
+        return <h1>Life cycle methods</h1> 
+    }
+
+    componentDidMount(){
+        console.log('componentDidMount executed');
+    }
+
+    shouldComponentUpdate(props,state){
+        console.log('shouldComponentUpdate called')
+        return true;
+    }
+
+    getSnapshotBeforeUpdate(prevProps,prevState){
+        console.log('getSnapshotBeforeUpdate called')
+    }
+
+    componentDidUpdate(prevProps, prevState){
+        console.log('componentDidUpdate called')
+    }
+    
+}
+ReactDOM.render(<App n1='10' />,document.getElementById('root'));
+
+
+
+
+------------------------------------
+UnMounting :(Working in VS code-NIT)
+
+In ReactJS, the unmounting phase refers to the lifecycle methods that are called when a component is being removed from the DOM
+
+import React from 'react';
+import ReactDOM from 'react-dom'
+
+class App extends React.Component {
+
+    constructor() {
+        super();
+      this.state = {show: true};
+    }
+
+    toggle = () => {
+      this.setState({show: !this.state.show});
+    }
+
+    render() {
+      return (
+        <div>
+        {this.state.show && <Child />}
+        <button type="button" onClick={this.toggle}>Delete Header</button>
+        </div>
+      );
+    }
+
+  }
+  
+  class Child extends React.Component {
+
+    componentWillUnmount() {
+      alert("The component unmounted.");
+    }
+
+    render() {
+      return (
+        <h1>Hello World!</h1>
+      );
+    }
+
+  }
+
+
+
+---------------------------------------------------
+ Difference between controlled component vs uncontrolled component ?
+
+     In React, there are two main approaches to handle form inputs: controlled components and uncontrolled components. Let's see examples of both:
+
+Controlled Components:
+Controlled components are inputs whose value is controlled by React state. The value of the input is passed as a prop, and onChange event handler is used to update the state. Here's an example:
+
+Here's an example of a controlled input:
+
+index.js (working VS code)
+
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+const ControlledInput = () => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  return (
+    <input
+      type="text"
+      value={value}
+      onChange={handleChange}
+    />
+  );
+};
+
+ReactDOM.render(<ControlledInput/>, document.getElementById('root'));
+
+In this example, the ControlledInput component renders an input element. The value of the input is controlled by the value state, and any changes to the input trigger the handleChange function, which updates the value state accordingly.
+--------------------------------------------------
+
+Uncontrolled Components:
+
+Uncontrolled components allow the form input to manage its own state internally without using React state. We can obtain the input value through the ref attribute. Here's an example:
+
+index.js (working VS Code)
+
+import React, { useRef } from 'react';
+import ReactDOM from 'react-dom';
+
+const UncontrolledInput = () => {
+  const inputRef = useRef();
+  const handleClick = () => {
+    console.log('Input value:', inputRef.current.value);
+  };
+
+  return (
+    <div>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleClick}>Get Value</button>
+    </div>
+  );
+};
+
+ReactDOM.render(<UncontrolledInput/>, document.getElementById('root'));
+--------------
+In this example, the UncontrolledInput component renders an input element. The inputRef is created using the useRef hook to obtain a reference to the input element. When the "Get Value" button is clicked, the handleClick function logs the current value of the input by accessing inputRef.current.value.
+
+Uncontrolled components are useful in scenarios where you don't need to manage the input value through React state, or when working with third-party libraries that require direct access to the DOM element.
+
+Both approaches have their use cases, and the choice depends on the specific requirements of your application. Controlled components offer more control and validation, while uncontrolled components can be simpler to set up in certain scenarios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================================================================================================================================================
+React Coding Interview Prep – 30 Questions and Answers-freeCodeCamp.orgs
+
+
+
+(0:00:00) Introduction
+⌨️ (0:00:43) Map and Filter
+
+-------------------------------------------------------------------------------------
+⌨️ (0:20:06) States in React
+
+
+-------------------------------------------------------------------------------------
+⌨️ (0:33:33) Props in React
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (0:40:34) Inline Conditional Expressions
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (0:52:04) Event Handling in React
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (0:57:41) Keys in React
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (1:03:25) Forms in React
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (1:18:04) Dynamic Inputs in React
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (1:26:02) CSS Styling in React
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+
+⌨️ (1:36:47) Uncontrolled v/s Controlled Components
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+
+⌨️ (1:44:10) Virtual DOM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+
+⌨️ (1:46:05) InnerHTML in React
+
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (1:55:23) React Fragments
+
+
+
+
+-------------------------------------------------------------------------------------
+
+⌨️ (2:00:02) Stateless v/s Stateful Components
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (2:01:57) REST API Requests
+
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (2:27:05) Debouncing in React
+
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (2:38:43) Context API in React
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (2:49:33) Class v/s ClassNames in React
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (2:52:59) Higher Order Components
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (3:06:18) Lazy Loading in React
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (3:14:34) Helper Functions in React
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (3:24:21) Implementing Recursion in React
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (3:27:10) Running Arrays of Functions
+
+
+-------------------------------------------------------------------------------------
+⌨️ (3:33:08) Custom Hooks in React
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (3:37:22) Promises and Async/Await
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (3:51:52) Code Splitting in React(Dynamic Imports)
+
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (3:58:18) Creating a Search Filter in React
+
+
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (4:13:10) Adding TypeScript to 
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------React
+⌨️ (4:16:36) React Testing Library
+
+
+
+-------------------------------------------------------------------------------------
+⌨️ (4:30:41) Caching an API Response
+
+
+
+
+-------------------------------------------------------------------------------------
+
+
+
+
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------

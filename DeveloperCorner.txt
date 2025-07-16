@@ -1,0 +1,25 @@
+=>npx create-react-app admin-app
+
+=>npm i react-icons
+
+=>npm i react-router-dom
+
+=>npm i antd
+-------------------------------------
+<>components
+=>pages
+  ->Dashboard.js
+  ->login.js
+  ->Forgotpassword
+  ->ResetPassword
+  npm i antd
+---------------------------------------------
+  =>fonts.google.com/spcieman/roboto
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
+
+
+--------------------------------------------
+https://ant.design/components/overview

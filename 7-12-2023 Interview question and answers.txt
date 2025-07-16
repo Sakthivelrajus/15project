@@ -1,0 +1,467 @@
+1) Dom vs VirtualDom
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+</head>
+<body>
+  <h2>Javasript </h2>
+   
+ 
+  <div id="container1"></div>
+  
+   <div id="container2"></div>
+  
+  <script src="app.js">
+
+
+
+</script>
+</body>
+</html>
+</html>
+
+----------------------------
+//Dom
+
+//app.js
+//Dom
+function setTimer(){
+const element1 = `
+   <div>
+      <h1> Javascript</h1>
+       <input type="text" />
+       <p> ${new Date().toLocaleTimeString()}</p>
+   </div>
+  
+`;
+document.getElementById('container1').innerHTML= element1
+
+const element2 = React.createElement(
+'div',
+ null,
+ React.createElement('h1',null,'React'),
+ React.createElement('div',null,
+ React.createElement('input',{type: 'text'})
+ ),
+React.createElement('p',null,new Date().toLocaleTimeString())
+
+);
+ReactDOM.render(element2, document.getElementById('container2'))
+}
+setInterval(setTimer,1000)
+
+====================================================================
+
+2) HOC
+
+index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client'
+import Person1 from './Person1';
+import Person2 from './Person2';
+import "./App.css"
+
+function ParentComponent() {
+  
+  return (
+    <div className='App'>
+      <h1>Auction</h1>
+      <Person1 />
+      <Person2 />
+      
+    </div>
+  );
+}
+const container = document.getElementById('root');		
+const root = ReactDOM.createRoot(container);		
+root.render(<ParentComponent />);		
+
+----------------------------------------------
+
+Person1.js
+
+import React from 'react'
+import UpdatedComponent from "./HOC"
+
+const Person1 = ({money , handleIncrease}) => {
+  return (
+    <div>
+        <h2>Jimmy is offering $ {money} </h2>
+         <button onClick={handleIncrease}> Increase Money</button>
+    </div>
+  )
+}
+
+export default UpdatedComponent (Person1)
+
+
+-------------------------------------------------
+
+Person2.js
+
+import React from 'react'
+import UpdatedComponent from './HOC'
+
+function Person2({money, handleIncrease}) {
+  return (
+    <div>
+        <h2> John is offering $ {money} </h2>
+        <button onClick={handleIncrease}>Increase Money</button>
+    </div>
+  )
+}
+
+export default UpdatedComponent (Person2)
+---------------------------------------------------
+HOC.js
+
+
+import React, { useState } from "react";
+function UpdatedComponent(OrignalComponent ){
+    function NewComponent(){
+         const [money, setMoney] = useState(1)
+         const handleIncrease = () =>{
+            setMoney(money * 2)
+         };
+
+        return <OrignalComponent handleIncrease={handleIncrease} money={money} />
+    }
+   return NewComponent;
+}
+
+export default UpdatedComponent; 
+=============================================================================
+Hooks
+useState?
+
+index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom/client'
+import Comment from './Hooks/Comment';
+import "./App.css"
+
+function ParentComponent() {
+    return (
+    <div>
+      <h3>useState</h3>
+      <Comment />
+      
+    </div>
+  ); 
+}
+const container = document.getElementById('root');		
+const root = ReactDOM.createRoot(container);		
+root.render(<ParentComponent />);		
+-----------------------------------------------
+Comment.js
+
+import React,{useState} from 'react'
+function Comment(){
+    const [title, handleTitle] = useState("Good Morning")
+    //console.log(obj);
+    return(
+        <div>
+            <h1>{title}</h1>
+            <button onClick={() =>handleTitle("Goodevening")}>change</button>
+        </div>
+    )
+}
+export default Comment
+
+============================================
+
+
+
+react life cycle with example
+ChatGPT
+In React, components go through a lifecycle that includes several phases, from initialization to destruction. The lifecycle methods allow you to perform certain actions at specific points during the existence of a component. As of React 16.3, the lifecycle methods have been divided into three phases: Mounting, Updating, and Unmounting.
+
+Here are the main lifecycle methods for each phase along with a simple example:
+
+Mounting Phase:
+constructor:
+
+The constructor is called when the component is being created and initialized.
+It's a good place to set the initial state and bind event handlers.
+jsx
+Copy code
+import React, { Component } from 'react';
+
+class ExampleComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: 'Hello, React!',
+    };
+  }
+  // ...
+}
+render:
+
+The render method is responsible for rendering the component.
+jsx
+Copy code
+render() {
+  return (
+    <div>
+      <h1>{this.state.message}</h1>
+    </div>
+  );
+}
+componentDidMount:
+
+This method is called after the component has been rendered to the DOM.
+It's a good place to perform actions that require the DOM, such as network requests or subscriptions.
+jsx
+Copy code
+componentDidMount() {
+  console.log('Component has been mounted to the DOM.');
+}
+Updating Phase:
+componentDidUpdate:
+
+This method is called after the component has been updated.
+It's useful for performing actions after a component re-renders.
+jsx
+Copy code
+componentDidUpdate(prevProps, prevState) {
+  console.log('Component has been updated.');
+}
+Unmounting Phase:
+componentWillUnmount:
+
+This method is called before the component is removed from the DOM.
+It's a good place to clean up resources such as timers or subscriptions.
+jsx
+Copy code
+componentWillUnmount() {
+  console.log('Component is about to be unmounted.');
+}
+Example Component:
+Putting it all together:
+
+jsx
+Copy code
+import React, { Component } from 'react';
+
+class LifecycleExample extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: 'Hello, React!',
+    };
+  }
+
+  componentDidMount() {
+    console.log('Component has been mounted to the DOM.');
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('Component has been updated.');
+  }
+
+  componentWillUnmount() {
+    console.log('Component is about to be unmounted.');
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>{this.state.message}</h1>
+        <button onClick={() => this.setState({ message: 'Updated Message' })}>
+          Update Message
+        </button>
+      </div>
+    );
+  }
+}
+
+export default LifecycleExample;
+This example demonstrates the lifecycle methods in action. When the component is mounted, it logs a message. When the component is updated (e.g., when the button is clicked), it logs another message. Finally, when the component is about to be unmounted, it logs a message.
+
+==============
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------

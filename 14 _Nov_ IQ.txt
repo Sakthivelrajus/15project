@@ -1,0 +1,183 @@
+HTML:
+
+1) Have you worked on Accessibilty? Like disable one maintaining some standard  in HTML?
+2) So you know the  form element in HTML 5 right? You know the form element , select box?
+3) Do you  the know about local storage and session storage ?
+4) Do you know about different between  web worker and service worker?
+5) Have you used SVG?
+6) How are you maintaining your authorization?
+7) What is local storage and session storage?
+8) what is cookies?
+9)
+
+
+
+-------------------------------------------------------------------------------------------------
+CSS:
+
+1) Can you explain the Flex styling? Or About the Flex box styling?
+2) How your styling in your React Component?
+3) What is BOX Model in CSS?
+4) Can you explain the position and different between position for DOM element? and
+   you have experience with normall CSS and javascript?
+5) What is a absolute in CSS?
+6) Suppose you have React Component, suppose there is one setting icon in it. So how is your style those one?
+7) Are you supporting the multiple view port the response behaviour? What about Mobile Responsive?
+8) How we can report css specific
+9) Have you use media query?
+10) In CSS you have use position right. So tell me what are the different type of position you are used?
+11) What is different between relative and absolute?
+12) Do you know about Box model?
+13) How you will design response design webpage?
+14) Tell me some of the break points you remember?
+15) Have you heard about gradient , I mean linear gradient and radial gradient?
+16) you know Box model?
+17)
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------
+
+
+
+JAVASCRIPT:
+
+1) How we can define Object? What are all the different ways of we can able to define Object in JavaScript?
+2) What is the inheritance ? How we can achive ?
+3) What is Prototype?
+4) What is different between let and const ? Have you worked on ES6?
+5) What is this keyword?
+6) What is Hoisting?
+7) What is different between var, let and const ?(Repeat)
+8) What about arrow function?
+9) What is JavaScript bind function?
+10) Have you use the Map method ? What is different between for loop and Map method?
+11) Can be used for loop in array?
+12) What situation we can use for loop?
+13) Have you heard about ternary operator?
+14) What is nullish coalescing operator?
+15) What is optional chaining?
+16) What is OR  operator ?
+17) Do you know about Promises?
+18) Do you know default parameter value which is introduce ES6?
+19) What about  rest and spread operator?
+20) What do is Array includes() method?
+21) typeof null?
+22) Do you know the different between call , bind and apply?  
+23) Have you worked on promises? Why we are use in promises? (REPEATED)
+24) What is different between const , let , var? (REPEATED)
+25) Can we update the value of const?
+26) Do know about event delegation and event bubbling? And how we can resolve it ?
+27) We want to like we have in object and I want it to be immutable? How can do it? (OR) How to Create a Frozen Object in JavaScript. ?
+28) What is == in JavaScript?
+28 A)What is === in JavaScript?
+29) What is a window object?(My)
+30) Lexical scope in JavaScript?(My)
+31) What is different between let ,var, const? (REPEATED)
+32) Can you tell me some of ES6 latest features?
+33) What is arrow function?How it is beneficial compare to normall function?
+34) What is spread operator?
+35) What is prototype in javascript?(REPEATED)
+36) What is Generator function?
+37) How can a copy a object in javascript?
+38) What is shallow copy and deep copy?
+39) what is async and await?
+40) what is promise? what is promise.rece()? what is promise.all?
+41) Why JavaScript is called as interpreted language ?
+42) JavaScript is single thread language or multi thread language? Then how can manage multithread are synchronous operation?
+43) How to handle aynchronous operator in JavaScript?
+44) How to  promise work? (REPEATED)
+
+45) What is an event loop in JavaScript?
+46) What are the ES6 features? (REPEATED)
+47) Why we need arrow function?
+48) what is prototype inheritance?
+49) What is hoisting ?(REPEATED)
+50) Can hoisting work for function?        
+51) What is different between let, var?(REPEATED)
+52) What is lexical scope in javascript? var?(REPEATED)
+53) Can you give me example of Closure?
+54) What is the use Strict in javascript?
+55) What is different between json and object?
+56) What is the javascript primitive and non primitive?
+57) What is typeof NULL?(REPEATED)
+58) What is Hoisting in JavaScript?(REPEATED)
+59) What is different between Shallow copy and deep copy?JavaScript?(REPEATED)
+60) What is Spread operator?(REPEATED Q-34)
+61) Different between the Shallow copy or deep copy? (REPEATED Q-38)
+62) If spread operator create shallow copy means how do we make deep copy in javascript? (Later)
+63) Shallow copy syntax? (Later)
+64) What is hoisting?(REPEATED)
+65) Do you know Armstrong number?
+66) In HTML we have different different element . How to access any HTML element using JavaScript?
+67) Do you know different between undefined and not defined?
+68) Do you know different between call and appy?
+69) What is the difference between Debounce and throttle in JavaScript?
+70) Can you explaining Destructuring  in ES6? 
+71) Can you tellme about what is the different between value type and reference type in javascript?     
+
+71-A) Primitive type and reference type?         
+72) Are you aware about Rest operator in ES6?     
+73) What is higher order function in javascript?
+    
+74) Can you explain me what are call back function?
+75) Can you explain me what call back function and promises and async and await?
+76) Explain me prototype in javascript?( REPEATED Q-3, 35)
+77) Can you write function on  Closure? (REPEATED Q-53)
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------
+
+
+ReactJS :
+
+1) What is different between Functional Component and Class Component ?
+2) Statefull Component and Stateless Component(My Question)?
+3) How to pass the data from one Component to another Component? what are the different ways?
+4) In what scenario we will use Context?
+5) How can we pass the data from Child to Parent?
+6) If you work with React then Have you worked on form Element? Like submitting for CRED operations?
+7) In React How we can call an API? suppose we have n point we have get the data from particular point right?
+8) What are the all life cycle methods?
+9) for Routing and navigation which liberay using in your project
+10) What is Super inside class?
+11) Coming to devops what is CICD?
+12) Have you use Jenkins?
+13) Have you use any JSUNIT ?
+14) What is ReactJS?
+15) What is different between Virtual DOM and real DOM?
+16) What is different between basic Functional component and Class Component?
+17) what is the LifeCycle going to use Class Component ? Going with the Order?
+18) Tell me about all Hooks?
+19) If you want use UnMount means How to write?
+20) Have you use useRef and useContext?
+21) What is different between useMemo and useCallBack?
+22) What about useCallBack?
+23) what is Redux?
+24) what is basic flow method of Redux? Like If you want have something , If you want state change , Just give me brief part? How to trigger state
+    change like What should be process to call any API something like that?
+How do you call the API? you want store the result of any API to reducer? How you will do that ?
+25) Have you heard about Redux Saga , Redux Thunk? What is basic flow , If you want call the API to Reducer?
+26) How to work virtual DOM working in React?
+26) Can you explain the React Hooks ? which we have?
+27) Tell me What is the difference between control and uncontrolled in inputs?
+28) Is there performance issued on controlled and uncontrolled inputs?
+29) Suppose I have a component and I want prevent that component from re-rendering . How we can do that?  Do we have any function ? To Prevent it?
+30) Can you please explain me the whole process how data flow in react from one layer to another ? (OR)
+    Have you work with Redux? we have API need to consume the API, application and whatever out put we need to view that particular page. How data flow is this condition?
+31) What is the Ref in React?
+32) what is strictmode in component and why we are use it ? Which situation we can  it?
+33) Do you have knowledge about Unit Testing?
+34) In React , We have parent adn child component right. I need to pass the data from parent component to child OR child to parent . So how we can do  that.And If we 

@@ -1,0 +1,261 @@
+1)functional component and class component?
+index.js code:
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+function Greeting(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+
+function App() {
+  return (
+    <div>
+      <Greeting name="Alice" />
+      <Greeting name="Bob" />
+      <Greeting name="Charlie" />
+    </div>
+  );
+}
+
+ReactDOM.render(<App/> ,document.getElementById('root'));
+
+---------------------------------
+same program for Class Component :
+
+import React,{Component} from 'react'
+import ReactDom from 'react-dom'
+class App extends Component{
+ render(){
+   return(
+     <div>
+      <h3>Welcome to class componenet</h3>
+     </div>
+   )
+ }
+}
+ReactDom.render(<App/>,document.getElementById("root"))
+
+-------------------------------
+index.js code:
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+class Greeting extends React.Component {
+  render() {
+  return <h1>Hello, {this.props.name}!</h1>;
+}
+}
+
+class Clock extends React.Component {
+    render() {
+    return (
+      <div>
+      <Greeting name="Alice" />
+      <Greeting name="Bob" />
+      <Greeting name="Charlie" />
+     </div>
+    );
+  }
+}
+ReactDOM.render(<Clock/> ,document.getElementById('root'));
+
+------------
+Class Components, on the other hand, are ES6 classes that extend the React.Component class. They have a render() method that returns a React element. They can have state and lifecycle methods like componentDidMount() and componentWillUnmount(). Here's an example of a class component that displays the current time:
+
+index.js (Working)
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class Greeting extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: props.name
+    };
+  }
+
+  render() {
+    return <h1>Hello, {this.state.name}!</h1>;
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Greeting name="Alice" />
+        <Greeting name="Bob" />
+        <Greeting name="Charlie" />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+============================================================
+3) How to pass the data from parent to child
+
+1) (Props method)
+import React from 'react';
+import ReactDOM from 'react-dom'
+import  ChildComponent from './ChildComponent';
+function ParentComponent() {
+  const name = "John";
+  return (
+    <div>
+      <ChildComponent name={name} />
+    </div>
+  );
+}
+
+ReactDOM.render(<ParentComponent/> ,document.getElementById('root'));
+----------------
+
+Child component:
+
+ChildComponent.js(Waiting VS code)
+
+import React from 'react';
+
+function ChildComponent(props) {
+  return (
+    <div>
+      <h2>Hello, {props.name}!</h2>
+    </div>
+  );
+}
+export default ChildComponent;
+-----------------------
+2)using (context method)
+
+import React, { createContext, useState } from 'react';
+import ReactDOM from 'react-dom'
+import  ChildComponent from './ChildComponent'
+
+export const MyContext = createContext();
+
+function ParentComponent() {
+  const [name, setName] = useState('John');
+  return (
+    <MyContext.Provider value={name}>		
+      <ChildComponent />
+    </MyContext.Provider>
+  );
+}
+ReactDOM.render(<ParentComponent/> ,document.getElementById('root'));
+
+------------------------------------
+
+
+
+Child component: 
+ChildComponent.js (Working in VS code)
+
+import React, { useContext } from 'react';
+import { MyContext } from './index';
+
+function ChildComponent() {
+  const name = useContext(MyContext);
+  return (
+    <div>
+      <p> 
+         <b></b>  Hello, {name}!</p>
+    </div>
+  );
+}
+
+ export default ChildComponent;
+
+
+--
+
+3) using (Redux) 
+============================================================================
+4)In what scenario we will use Context?(waiting)
+============================================================================
+Q) What is Virtual DOM?
+============================================================================
+5) How can we pass the data from Child to Parent?
+index.js
+import React, { useState } from 'react'
+import ReactDom from 'react-dom'
+import ChildComponent from './ChildComponent'
+
+function ParentComponet(){
+const [dataFromChild, setDataFromChild] = useState('')
+const handleDataFromChild = (data) =>{
+   setDataFromChild(data)
+}
+    return(
+    <div>
+        <p>Data from child : {dataFromChild}</p>
+        <ChildComponent onData={handleDataFromChild} />
+    </div>
+    )
+}
+
+ReactDom.render(<ParentComponet/>,document.getElementById("root"))
+
+------------------------
+childComponent.js
+
+import React, { useState } from 'react'
+function ChildComponent({onData}){
+const [inputValue, setInputValue]= useState('')
+const handleSubmit = (e) =>{
+   e.preventDefault();
+   onData(inputValue) 
+}
+return(
+    <div>
+        <form action="" onSubmit={handleSubmit}>
+         <label htmlFor="">Enter Data: 
+         <input
+          type="text"
+          value={inputValue}
+          onChange={ (e) => setInputValue(e.target.value) }
+         />
+        
+        </label>
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+)
+}
+export default ChildComponent;
+
+============================================================================
+6) If you work with React then have you worked on form Element? Like submitting for CRUD operations?
+7) In React how we can call an API? Suppose we have”n” point we have get the data from particular point right? (waiting)
+8)  Life Cycle Methods Of Component In React JS?
+9) for Routing and navigation which libraries  using in your project?
+10) What is ReactJS?
+11) What is different between Virtual DOM and real DOM?
+12) Tell me about all Hooks?
+13) If you want use UnMount means How to write?
+14) What is different between useMemo and useCallBack?
+15) Difference between control component and uncontrolled component ?
+16) Is there performance issued on controlled and uncontrolled inputs?
+17) Suppose I have a component and I want prevent that component from re-rendering . How we can do that?  Do we have any function? To Prevent it?
+18) What is strict mode in component and why we are use it? Which situation we can do it?
+19) In React , We have parent and child component right. I need to pass the data from parent component to child OR child to parent . So how we can do that. And If we there is no relationship between two component so then how we can pass the data? 
+(OR) prop drilling
+20) What is Higher Order Component or what is HOC in React?
+21) Why we are use arrow function in reactJs?
+22) Do you know about render props ? what is it?
+23) Can you tell me different type component in React? (ok)
+24) Have you use pure Component?
+25) Inside the package.json there is dependancy and dev.dependancy?
+26) npm install axios --save , npm install packagename . what is the different between --save and without save?
+27) How React works internally?
+28) What is use of the KEY for the component?
+29) Could you please tell me what is the controlled component in ReactJS and when do use?
+30) Do you know what the pure component is over the normal component? 
+31) Which one is fast, functional component or class based component?
+32) In React useRef hook and ref keyword ? What is significant of both?
+33) How to implement key and ref that code you need to write?
+34)What is JSX in React?
+35)What is props used for in React?
+   What is state in React

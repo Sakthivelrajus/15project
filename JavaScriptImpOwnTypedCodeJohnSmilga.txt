@@ -1,0 +1,3378 @@
+1) Intro 00:00
+2) Info 02:23
+3) Goals 04:57
+4) Structure 06:40
+5) Dev Environment 08:56
+6) Vs Code And Chrome 09:56
+7) Extensions 13:22
+8) Emmet 24:57
+9) Basics Intro 28:24
+10) Setup Project 28:41
+11) Inline Javascript 31:51
+12) Internal Javascript 35:07
+13) External Javascript 42:59
+14) Cleanup Workspace 53:01
+15) Helper Methods 54:10
+16) Statments And Comments 1:04:17
+17) Variables 1:16:20
+18) Assign Value Later 1:25:08
+19) Variable Naming Rules 1:29:31
+20) Const, Let, Var 1:35:36
+21) Quatation Marks 1:40:51
+22) String Concatenation 1:46:43
+23) Number Basics 1:52:08
+24) Numbers - Additional Features 2:00:29
+25) Implicit Type Conversion 2:08:53
+26) Data Types 2:20:54
+27) Arrays 2:29:08
+28) Functions - Declare, Invoke 2:40:23
+29) Functions - Parameters, Arguments 2:46:50
+30) Functions - Return 2:59:47
+31) Functions - Expressions 3:13:09
+32) Objects 3:20:53
+33) Conditional Statements - Basics 3:29:17
+34) Conditional Statements Continued 3:35:15
+35) Equality 3:42:18
+36) Logical Operators 3:46:43
+37) Switch Statement 3:51:08
+38) While Loops 3:58:36
+39) Do While Loops 4:04:32
+40) For Loop 4:07:3
+41) Connect The Dots 4:11:34
+42) String Properties And Methods 4:11:58
+43) Template Literals 4:28:33
+44) Array Properties And Methods 4:34:43
+45) Exercise - Full Name 4:46:34
+46) Exercise - Calculate Total 4:56:48
+47) Value Vs Reference 5:11:29
+48) Null And Undefined 5:17:21
+49) Truthy And Falsy 5:19:36
+50) Ternary Operator 5:24:11
+51) Global Scope 5:28:27
+52) Local Scope 5:35:53
+53) Variable Lookup 5:42:55
+54) Callback Functions, Higher Order Functions 5:49:47
+55) Array Iterators 6:04:54
+56) For Each 6:07:16
+57) Map 6:17:00
+58) Filter 6:27:43
+59) Find 6:31:38
+60) Reduce 6:40:08
+61) Math Object 6:49:56
+62) Date Object 6:58:29
+63) Dom Intro 7:07:47
+64) DOM - General Concepts 7:10:26
+65) Window And Document Overview 7:19:06
+66) GetElementById 7:23:21
+67) Get Elements By Tag Name 7:30:13
+68) Get Elements By Class Name 7:38:45
+69) QuerySelector And QuerySelectorAll 7:41:19
+70) Navigate The Dom - Children 7:48:05
+71) Navigate The Dom - Parent Element 7:53:00
+72) Navigate The Dom - NextSibling, PrevSibling 7:56:07
+73) Navigate The Dom - Next/Prev Element Sibling 8:00:36
+74) TextContent And NodeValue 8:01:52
+75) GetAttribute(), SetAttribute() 8:04:50
+76) ClassList And ClassName 8:13:00
+77) CreateElement 8:22:29
+78) InsertBefore 8:30:39
+79) ReplaceChild 8:34:23
+80) Prepend InnerText 8:36:47
+81) Remove And RemoveChild 8:39:57
+82) InnerHTML And TextContent 8:44:50
+83) Change CSS With Style Property 8:53:15
+84) Events Overview 8:58:23
+85) Click Event 9:00:13
+86) Function Reference 9:07:37
+87) Mouse Events 9:12:29
+88) Key Events 9:17:47
+89) Event Object 9:22:01
+90) CurrentTarget Vs Target 9:32:50
+91) Event Bubbling Capturing 9:40:24
+92) Event Propogation Example 9:51:04
+93) Form Submit 9:58:32
+94) Local Storage 10:04:24
+95) Local Storage With Multiple Values 10:13:46
+JAVASCRIPT START TIME 8.40 PM 21/09/2021
+
+//Javascript Fundamentals
+//Practice Projects
+//Video Link-Description
+//Url-vannillajavascriptprojects.com
+//full course 
+//sourse code -www.johnsmilga.com/videos
+
+
+//HTML- Structure
+//CSS -Styling
+//JAVASCRIPT- Functionality , Interaction
+//Makes Web Page Dynamic
+//User Interaction
+
+//Comfortable
+//Apply Theory
+//Build your Own Project
+//Pickup Framework
+
+Structure
+//Info
+//Dev Envirnoment Setup
+//Theory
+//Practice
+//Repeat, Repeat, Repeat...
+
+DEV SETUP
+
+//VS-Code, Chrome
+//Extension, Settings
+//Emmet
+//Basic HTML Document 
+
+
+
+short cut keys=> Shift+!+tab key
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-     scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+
+----------------------------------------
+short cut keys=> .special#first+tab
+<div class="special" id="first"></div>
+
+--------------------------------------
+short cut keys=> Lorem+tap, Lorem5(Numbers) + tab
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+----------------------------------
+
+=>Basics
+
+//Add JS
+...
+...
+... 
+//loops
+
+
+11) Inline Javascript 31:51
+
+// "" double quotation mark
+// '' single quotation mark
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Java Script</title>h1	
+    <!-- <link rel="stylesheet" href="../global.css" /> -->
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <h4>hello people </h4>
+    <button onclick="alert('hello world ')">click me </button>
+   </body>
+</html>
+
+---------------------------------------------
+short cut keys//ctrl+b for close expolrer nor expand explore of VS Code.//
+-------------------------------------
+Video start : 37:33 :
+--------------------------------
+
+12) Internal Javascript 35:07
+
+short cut keys=> btn.btn*7{random button}+tab 
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> JavaScript Basics</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <h4>hello people </h4>
+//btn.btn*7{random number} short cut
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <script>
+     document.querySelectorAll('.btn').forEach((item) =>{
+         item.addEventListener('click',()=>{
+             alert('this is good')
+         })
+     })
+  </script>
+    
+</body>
+</html>
+
+-----------------------------------------------------------------
+
+
+13) External Javascript 42:59
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> JavaScript Basics</title>
+</head>
+<body>
+    <a href="about.html">about</a>
+    <h1>Hello World</h1>
+    <h4>hello people </h4>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <script src="./app.js"></script>
+    
+</body>
+</html>
+
+about.html:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+</head>
+<body>
+    <a href="index.html">home</a>
+
+    <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <button class="btn">random button</button>
+  <script src="./app.js"></script>
+</body>
+</html>
+
+app.js:
+
+document.querySelectorAll('.btn').forEach((item) =>{
+    item.addEventListener('click',()=>{
+        alert('this is good')
+    })
+})
+
+
+
+=========================================================
+14) Cleanup Workspace 53:01
+
+*No code 
+
+===========================================================
+
+15) Helper Methods 54:10
+// work from chrome developer tools also 2+2 =4
+
+index.html:
+
+<!DOCTYPE html>
+<html >
+<head>
+    <title> JavaScript Basics</title>
+</head>
+<body>
+    <h1>javascript tutorial</h1>
+    <script src="./app.js"></script>
+</body>
+</html>
+
+app.js:
+
+// document.write('hello world');
+// alert('hello world');
+// console.log('hello world');
+document.write({name:'sakthivel'});
+alert({name:'sakthivel'});
+console.log({name:'sakthivel'});
+
+========================================================
+16) Statments And Comments 1:04:17
+
+index.html:
+
+code same as above index.html.
+
+app.js
+
+//i woke, ? up early!!!! him today.
+//statements - sets of instructions
+// comments-shortcuts commend+/
+//this is console statement
+//console.log("hello world");
+
+/*console.log("hello people");
+console.log("hello my friend bob");
+console.log("hello susan");
+document.write("hello anna");*/
+console.log("hello people");
+
+===========================================================
+
+17) Variables 1:16:20
+
+index.html :
+code same as above index.html.
+
+app.js:
+
+//Variable- Most Basic Building Block
+//Variables- Store, Access, Modify === Value
+//Declare, Assignment Operator, Assign Value
+
+let name = "John Shrim taco VI";
+console.log(name);
+//some code here
+console.log(name);
+//some code here
+console.log(name);
+//some code here
+console.log(name);
+//some code here
+console.log(name);
+//some code here
+console.log(name);
+//some code here
+
+=============================================================
+18) Assign Value Later 1:25:08
+
+index.html :
+code same as above index.html.
+
+app.js:
+//Variable- Most Basic Building Block
+//Variables- Store, Access, Modify === Value
+//Declare, Assignment Operator, Assign Value
+//assign value later, modify existing
+
+let name = "Sakthivel raju";
+let address, zip, state;
+address= "No3 rajiv gandhi road ";
+zip=  '600070';
+state= 'India';
+names = 'Stephen mark';
+console.log(address,zip,state);
+console.log(names);
+
+===========================================================
+
+19) Variable Naming Rules 1:29:31
+
+index.html :
+code same as above index.html.
+
+app.js:
+
+// can contain digits, letters, underscore, $
+// must start with letter, $ or _
+
+// no keyword
+// cannot start with number
+
+// case sensitive - fullname vs Fullname
+
+// camelCase or underscore
+
+// let random123_$ = 'random';
+// console.log(random123_$);
+
+// let $random123_$ = 'random';
+// console.log($random123_$);
+
+//let let ='random';
+
+// let 123random123_$ = 'random';
+// console.log(123random123_$);
+// let full_name = "random";
+// console.log(full_name);
+
+let full_name ='random';
+console.log(full_name);
+
+=============================================================
+
+20) const, let, var 1:35:36   
+
+index.html :
+code same as above index.html.
+
+
+app.js:
+//LET VS CONST VS VAR
+
+//using var 
+var value ="some value";
+value = "some other values";
+
+//using let 
+let names= "john";
+names = "peters";
+
+//using const (CONSTANT) - can't re-assign
+const lastName = "Sakthivel raju";
+
+console.log(value);
+console.log(names);
+console.log(lastName);
+
+=========================================================
+
+21) Quatation Marks 1:40:51
+
+index.html :
+code same as above index.html.
+
+
+app.js:
+ //"" or ''
+
+const name ="codingaddict's course are the best"
+console.log(name);
+
+
+=========================================================
+
+22) String Concatenation 1:46:43
+
+index.html :
+code same as above index.html.
+
+
+app.js:
+
+//String Concatenation -combine string values
+//`` -backticks (template strings) easier option.
+
+const names = 'john';
+const lastName ='shakeandbake';
+let fullName = names + ''+lastName;
+console.log('Hello there your full name is :'+fullName);
+
+const website = 'google';
+const url = 'https://www.'+website+'.com';
+console.log(url);
+
+========================================================
+23) Number Basics 1:52:08
+
+index.html :
+code same as above index.html.
+
+app.js:
+
+//Numbers 
+//Loosely Typed = don't declare type
+const number = 34;
+//let pants = 2.466;
+//pants = 'are great';
+
+const number2 = 2.456;
+const number3 = '2.456';
+
+const add = number + number2;
+const sub = number - number2;
+const mult = number * number2;
+const div = number / number2;
+
+console.log(add); 
+console.log(sub);  //subtraction
+console.log(mult); //multiple
+console.log(div);  //division
+
+
+
+=====================================================
+
+24) Numbers - Additional Features 2:00:29
+index.html :
+code same as above index.html.
+
+app.js:
+
+//Numbers 
+//+=, -=, /=, *=, ++, --, %
+// Modulus (%) operator returns the remainder after interger division
+
+let number = 40;
+number += 5;
+number += 5;
+number += 5;
+number += 5;
+number -= 5;
+number ++;
+number--;
+console.log(number);
+
+const slices =10;
+const children=4;
+const amount = slices % children;
+console.log(amount);
+
+const random = 4+6+10 * 10;
+const random2 = (4+6+10) *10;
+
+console.log(random);
+console.log(random2);
+// const random = (4+6+2) *2
+// const random2 = 4+6+5 *4
+// console.log(random);
+// console.log(random2);
+
+=====================================================
+
+25) Implicit Type Conversion 2:08:53
+
+index.html :
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Javascript Basics</title>
+  </head>
+  <body>
+    <h1>Javascript Tutorial</h1>
+    <form class="form">
+      <label for="amount">Enter Number</label>
+      <input type="number" id="amount" />
+      <button type="submit">Submit</button>
+    </form>
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+
+-------------------------
+app.js:
+
+// //Implicity Type Conversion
+
+// const names ='john';
+// const lastName='jorden';
+// const fullName = names +' '+lastName;
+// console.log(fullName);
+
+// const number = 4;
+// const number2=10;
+// const result = number+number2;		
+// console.log(result);
+
+// const value = names - lastName;
+// console.log(value);//output NAN- not a number
+
+// let number3 = 10;
+// let number4= 23;
+// number4='23';
+// const result2 = number3 + number4;
+// console.log(result2);
+
+
+const randomNumber = 13;
+document.querySelector('.form').addEventListener('submit',
+function(e){
+    e.preventDefault();
+    let value = document.getElementById('amount').value;
+    value=parseInt(value);
+    console.log('Input Value Type');
+    console.log(value);
+    console.log('sum of Two Values');
+    console.log(randomNumber+value);
+});
+
+==========================================================
+
+
+26) Data Types 2:20:54
+
+index.html :
+no code
+
+
+app.js:
+//LET VS CONST VS VAR
+
+//Data Types - 7 Total
+//Primitive- String, Number, Boolean, Null, Undefined, Symbol
+//Object - Arrays,  Functions, Objects.
+
+//typeof - operator (typeof variable) (typeof value)
+
+//string
+const text = 'some text';
+//Number
+const number = 45;
+//Boolean
+let value1= true;
+let value2 = false;
+//Null
+const result = null;
+//undefinded
+let name;
+//Symbol(ES6)
+console.log(typeof text);
+console.log(typeof true);
+console.log(typeof number);
+console.log(typeof value1);
+console.log(typeof value2);
+console.log(typeof null);
+console.log(typeof name);
+
+============================================================
+
+27) Arrays 2:29:08
+
+index.html// No Code//
+
+app.js:
+
+//Arrays , Functions and Objects
+//Arrays-[], 0 index based
+
+const friend1 = 'anna';
+const friend2 = 'anna';
+const friend3 = 'anna';
+const friend4 = 'anna';
+
+const friends=['john', 'peter', 'bob', 'susy',45, undefined, null];
+let bestFriend = friends[2];
+friends[4]='anna';
+console.log(friends);
+console.log(friends[4]);
+
+console.log(bestFriend);
+console.log(friends[3]);
+
+
+===============================================================
+
+
+28) Functions - Declare, Invoke 2:40:23
+
+index.html// No Code//
+
+app.js:
+
+// Arrays, Functions and Objects
+// Functions - declare, invoke
+
+function hello() {
+    // logic
+    console.log('Hello There Bob');
+    console.log('Hello There Anna');
+    console.log('Hello There Susy');
+  }
+  
+  hello();
+  // come code here....
+  hello();
+  // come code here....
+  hello();
+  // come code here....
+  
+
+=============================================================
+29) Functions - Parameters, Arguments 2:46:50
+//Params (or) Parameters
+index.html// No Code//
+
+app.js:
+
+// Arrays, Functions and Objects
+// params - when declare/define
+// placeholders, local vars
+// arguments - when invoke/call/run
+// use vars/values, multiple params, undefined
+const bob = 'Bob';
+const susy = 'Susy';
+const anna = 'Anna';
+function greet(name, second) {
+  console.log(second);
+  console.log('Hello there ' + name);
+}
+// greet bob
+greet(4);
+// greet anna
+greet(anna, 'Bob');
+// greet susy
+greet('Susy');
+==========================================================
+
+30) Functions - Return 2:59:47
+
+index.html// No Code//
+
+app.js:
+
+// Arrays, Functions and Objects
+// return
+// default undefined, shortcuts, ignores after
+// 1 inch 2.54cm
+const wallHeight = 80;
+
+function calculate(value) {
+  // const newValue = value * 2.54;
+  return value * 2.54;
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+}
+
+calculate(200);
+const width = calculate(100);
+const height = calculate(wallHeight);
+
+const dimensions = [width, height];
+console.log(dimensions);
+=========================================================
+33) Conditional Statements - Basics 3:29:17
+
+index.html// No Code//
+SAKT23011980
+app.js:
+
+
+// Arrays, Functions and Objects
+// expressions - another way define a function
+// create a variable, assign to FUNCTION (not value), use var
+// diff - hoisting, use - arrow func,libraries,
+
+// function definition/declaration
+function addValues(num1, num2) {
+  return num1 + num2;
+}
+
+const firstValue = addValues(3, 4);
+const secondValue = addValues(12, 34);
+// function expression
+const add = function (num1, num2) {
+  return num1 + num2;
+};
+// const thirdValue = add(5, 6);
+const values = [firstValue, secondValue, add(5, 6)];
+console.log(values);
+
+const multiply = (num1, num2) => num1 * num2;
+
+
+=====================================================
+
+32) Objects 3:20:53
+
+
+index.html// No Code//
+
+app.js:
+
+// Arrays, Functions and Objects
+// Objects - key/value pairs  methods
+// dot notation
+
+const person = {
+  name: 'john',
+  lastName: 'peters',
+  age: 25,
+  education: false,
+  married: true,
+  siblings: ['anna', 'susan', 'peter'],
+  greeting() {
+    console.log('Hello my name is JOHN');
+  },
+};
+
+const age = person.age;
+console.log(age);
+person.name = 'bob';
+console.log(person.name);
+console.log(person.siblings[2]);
+person.greeting();
+
+
+===========================================================
+
+33) Conditional Statements - Basics 3:29:17
+
+index.html// No Code//
+
+app.js:
+
+// Conditional Statements
+// >, <, >=, <=, ==, ===, !=, !===
+
+const value = 2 > 1;
+// console.log(typeof value);
+const value2 = 1 > 2;
+if (value2) {
+  console.log('hello world');
+} else {
+  console.log('hello people');
+}
+
+===========================================================
+34) Conditional Statements Continued 3:35:15
+
+index.html// No Code//
+
+app.js:
+
+// Conditional Statements
+// Comparison Operators
+// >, <, >=, <=, ==, ===, !=, !==
+// else if and !
+
+const num1 = 6;
+const num2 = 6;
+const result = num1 >= num2;
+
+const value = false;
+
+if (!value) {
+  console.log('value is false');
+}
+
+// if (num1 > num2) {
+//   console.log('first number is bigger than second');
+// } else if (result) {
+//   console.log('first number equal to a second');
+// } else {
+//   console.log('second number is bigger than first');
+// }
+=======================================================
+
+
+35) Equality 3:42:18
+
+index.html// No Code//
+
+app.js:
+
+// Conditional Statements
+// Comparison Operators
+// >, <, >=, <=, ==, ===, !=, !==
+// == checks only value
+// === checks value and type
+
+const num1 = 6;
+const num2 = '6';
+
+const value = num1 != num2;
+const value2 = num1 !== num2;
+
+console.log(value);
+console.log(value2);
+
+======================================================
+36) Logical Operators 3:46:43
+
+index.html// No Code//
+
+app.js:
+
+
+// Logical Operators
+// (|| - OR), (&& - AND), !
+
+const name = 'peter';
+const age = 24;
+
+if (name !== 'bob' && age === 24) {
+  console.log('hello there user');
+} else {
+  console.log('wrong values');
+}
+
+=====================================================
+37) Switch Statement 3:51:08
+
+index.html// No Code//
+
+app.js:
+
+// Switch
+// dice values : 1 - 6
+
+const dice = 3;
+
+switch (dice) {
+  case 1:
+    console.log('you got one');
+    break;
+  case 2:
+    console.log('you got two');
+    break;
+  case 3:
+    console.log('you got three');
+    break;
+  default:
+    console.log('you did not roll the dice');
+}
+
+// else if
+// if (dice === 1) {
+//   console.log('you got one');
+// } else if (dice === 2) {
+//   console.log('you got two');
+// } else {
+//   console.log('you did not roll the dice');
+// }
+
+// all if
+// if (dice === 1) {
+//   console.log('you got one');
+// }
+// if (dice === 2) {
+//   console.log('you got two');
+// }
+// if (dice < 1 || dice > 6) {
+//   console.log('you did not roll the dice');
+// }
+
+
+===================================================
+
+38) While Loops 3:58:36
+
+index.html// No Code//
+
+app.js:
+
+// Loops
+// repeatedly run a block of code while condition is true
+// while loop
+// TURN OFF AUTOSAVE
+
+let amount = 10;
+
+while (amount > 0) {
+  console.log('I have ' + amount + " dollars and I'm going to the mall");
+  amount--;
+}
+
+
+====================================================
+
+39) Do While Loops 4:04:32 
+
+index.html// No Code//
+
+app.js:
+
+// Loops
+// repeatedly run a block of code while condition is true
+// do while loop
+// code block first, condition second
+// runs at least
+
+let money = 12;
+
+do {
+  console.log('You have ' + money + ' dollars');
+  money++;
+} while (money < 10);
+
+
+
+
+====================================================
+40) For Loop 4:07:3
+
+index.html// No Code//
+
+app.js:
+
+// Loops
+// repeatedly run a block of code while condition is true
+// for loop
+
+// let i;
+// for (i = 0; i < 10; i++) {
+//   console.log('and the number is : ' + i);
+// }
+
+for (let number = 11; number >= 0; number--) {
+  console.log('and the number is : ' + number);
+}
+
+
+====================================================
+
+41) Connect The Dots 4:11:34
+//String Mehtods
+//Global/Local Scope
+//Array Iterators-(map, filter, reduce)
+//Global Objects-Math ,Date
+
+========================================================
+42) String Properties And Methods 4:11:58
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Tutorial</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      h1 {
+        letter-spacing: 2px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Connecting the Dots</h1>
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+
+-----------------
+
+index.js:
+
+// String properties and methods
+// wrapper String Object, don't memorize methods
+let text = ' Peter Jordan';
+let result = text.length;
+console.log(result);
+
+console.log(text.length);
+console.log(text.toLowerCase());
+console.log(text.toUpperCase());
+console.log(text.charAt(0));
+console.log(text.charAt(text.length - 1));
+console.log(text.indexOf('e'));
+console.log(text);
+console.log(text.trim());
+console.log(text.trim().toLowerCase().startsWith('peter'));
+console.log(text.includes('eter'));
+console.log(text.slice(0, 2));
+console.log(text.slice(-3));
+
+// const person = {
+//   name: 'peter', // property
+//   greeting() {
+//     // method
+//     console.log("Hey, I'm Peter");
+//   },
+// };
+
+// console.log(person);
+
+// console.log(person.name);
+// person.greeting();
+
+
+
+==================================================
+43) Template Literals 4:28:33
+index.html code same as above part:
+
+app.js:
+// Template Literals - ES6+
+// Backtick characters `` - above tab (left from one)
+// Interpolation ${} - insert expression(value)
+
+const name = 'john';
+const age = 25;
+const sentence = "Hey it's " + name + ' and he is ' + age + ' years old';
+
+const value = `Hey it's ${name} and he is ${age} years old. And here is some simple math ${
+  4 + 4
+}`;
+console.log(value);
+
+console.log(sentence);
+
+
+==================================================
+
+44) Array Properties And Methods 4:34:43
+index.html code same as above part:
+
+app.js:
+// Array Properties and Methods
+let names = ['john', 'bobo', 'barry', 'olga', 'ben'];
+
+//length
+console.log(names.length);
+console.log(names[names.length - 1]);
+
+// concat
+const lastNames = ['pepper', 'onion', 'banana'];
+const allNames = names.concat(lastNames);
+console.log(allNames);
+// reverse
+console.log(allNames.reverse());
+
+//unshift
+allNames.unshift('susy');
+allNames.unshift('anna');
+console.log(allNames);
+//shift
+allNames.shift();
+allNames.shift();
+allNames.shift();
+allNames.shift();
+console.log(allNames);
+//push
+allNames.push('susy');
+console.log(allNames);
+//pop
+allNames.pop();
+// allNames.pop();
+// allNames.pop();
+// allNames.pop();
+console.log(allNames);
+// splice - mutates original array
+const specificNames = allNames.splice(0, 3);
+console.log(specificNames);
+console.log(allNames);
+
+========================================================
+45) Exercise - Full Name 4:46:34
+
+index.html code same as above part:
+
+app.js:
+
+// Arrays and for loop
+ 
+const names = ['anna', 'susy', 'bob'];
+const lastName = 'shakeandbake';
+let newArray = [];
+
+//for loop
+for (let i = 0; i < names.length; i++) {
+  console.log(i);
+  console.log(names[i]);
+  const fullName = `${names[i]} ${lastName}`;
+  newArray.push(fullName);
+}
+
+console.log(names);
+console.log(newArray);
+========================================================
+
+46) Exercise - Calculate Total 4:56:48
+
+index.html code same as above part:
+
+app.js:
+
+// Functions, return, if, arrays, for loop
+
+const gas = [20, 40, 100, 30];
+const food = [10, 40, 50];
+
+function calculateTotal(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  if (total > 100) {
+    console.log(`Whoa! You are spending way too much`);
+    return total;
+  }
+  console.log(`You are good total is less than 100`);
+
+  return total;
+}
+
+const gasTotal = calculateTotal(gas);
+const foodTotal = calculateTotal(food);
+const randomTotal = calculateTotal([200, 4000, 500, 1]);
+
+console.log({
+  gas: gasTotal,
+  food: foodTotal,
+  random: randomTotal,
+});
+
+
+
+================================================
+
+47) Value Vs Reference 5:11:29
+
+index.html code same as above part:
+
+app.js:
+
+// Refernce vs Value
+// Primitive Data Types
+// String, Number, Symbol, Boolean, Undefined, Null,
+// Arrays, Functions, Objects = object
+// typeof
+
+// when assigning primitive data type value to a variable any changes are made directly to that value, without affecting original value
+
+// when assigning non-primitive data type value to a variable is done by reference so any changes will affect all the references.
+
+const number = 1;
+let number2 = number;
+number2 = 7;
+console.log(`the first value is ${number}`);
+console.log(`the second value is ${number2}`);
+
+let person = { name: 'bob' };
+let person2 = { ...person };
+person2.name = 'susy';
+console.log(`the name of the first person is ${person.name}`);
+console.log(`the name of the second person is ${person2.name}`);
+ 
+
+================================================
+
+48) Null And Undefined 5:17:21
+
+index.html code same as above part:
+
+app.js:
+
+//Null and Undefined
+//both represent "no value"
+//undefined-"javascript can not find value for this"
+//varibale without value
+//missing function arguments
+//null-"developer sets the value"
+
+let number = 20+null;// 20+0
+console.log(number);
+number2=20+undefined;//20+0
+console.log(number2);
+
+
+===============================================
+
+49) Truthy And Falsy 5:19:36
+index.html code same as above part:
+
+app.js:
+
+// Truthy and Falsy
+// "",'',``,0 ,-0 ,NaN ,false, null, undefined
+
+const bool1 = true;
+const bool2 = 2 > 1;
+
+const text = '';
+
+if (text) {
+  console.log('hey the value Truthy');
+} else {
+  console.log('hey the value Falsy');
+}
+
+// if (bool1) {
+//   console.log(`Hey it works!`);
+// }
+// if (bool2) {
+//   console.log(`Hey it also works!`);
+// }
+
+===============================================
+50) Ternary Operator 5:24:11
+
+index.html code same as above part:
+
+app.js:
+
+// unary operator -  typeof
+let text = 'some text';
+// console.log(typeof text); // operand
+// binary operator - assignment
+let number = 3;
+let number2 = 2 + 5;
+// ternary operator
+// condition ? (runs if true) : (runs if false)
+
+const value = 1 < 0;
+
+value ? console.log('value is true') : console.log('value is false');
+
+// if (value) {
+//   console.log('value is true');
+// } else {
+//   console.log('value is false');
+// }
+
+
+====================================================
+
+51) Global Scope 5:28:27
+
+index.html code same as above part:
+
+app.js:
+
+
+// Global Scope vs Local Scope
+// any variable outside code block {} is said to be in Global Scope
+// can be accesss anywhere in the program
+// Gotchas : name collisions, modify by mistake
+
+let name = 'bobo';
+name = 'peter';
+
+function calculate() {
+  // some other code...
+  console.log(name);
+  name = 'orange';
+  function inner() {
+    name = 'inner name value';
+    console.log(`this is from inner function ${name}`);
+  }
+  inner();
+}
+calculate();
+
+if (true) {
+  // some other code...
+  console.log(name);
+  name = 'pants';
+}
+
+console.log(`my name is ${name} and I'm awesome`);
+
+======================================================
+52) Local Scope 5:35:53
+
+index.html code same as above part:
+
+app.js:
+
+// Local Scope
+// can not be access from outside code blocks
+// if - NOT VAR
+
+let name = 'bobo';
+
+function calculate() {
+  const name = 'john';
+  const age = 25;
+  // code goes here
+  becomesGlobal = 'global variable';
+}
+
+calculate();
+console.log(becomesGlobal);
+
+if (true) {
+  const name = 'john';
+}
+
+{
+  const name = 'john';
+  const special = 'special';
+}
+console.log(special);
+
+console.log(`my name is ${name} and I'm awesome`);
+
+=====================================================
+53) Variable Lookup 5:42:55
+
+index.html code same as above part:
+
+app.js:
+
+// Variable Lookup
+// {} - code block
+
+const globalNumber = 5;
+
+function add(num1, num2) {
+  // const globalNumber = 20;
+  const result = num1 + num2 + globalNumber;
+  function multiply() {
+    // const globalNumber = 100;
+    const multiplyResult = result * globalNumber;
+    console.log(multiplyResult);
+  }
+  console.log(multiplyResult);
+
+  multiply();
+  return result;
+}
+
+console.log(add(3, 4));
+====================================================
+
+54) Callback Functions, Higher Order Functions
+
+index.html code same as above part:
+
+app.js:
+
+function morning(name) {
+    return `Good morning ${name.toUpperCase()}`;
+  }
+  function afternoon(name) {
+    return `Good afternoon ${name.repeat(3)}`;
+  }
+  
+  function greet(name, cb) {
+    const myName = 'john';
+    console.log(`${cb(name)}, my name is ${myName}`);
+  }
+  
+  greet('bobo', morning);
+  greet('peter', afternoon);
+  
+  // Callback Functions, Higher Order Functions, Functions as First Class Objects/Citizens
+  // Functions are first class objects - stored in a variable (expression), passed as an argument to another function, return from the function (closure)
+  
+  // Higher Order function - accepts another function as an argument or returns another function as a result
+  
+  // Callback Function - passed to a another function as an an argument and executed inside that function
+  
+  // function greetMorning(name) {
+  //   const myName = 'john';
+  //   console.log(`Good morning ${name}, my name is ${myName}`);
+  // }
+  // function greetAfternoon(name) {
+  //   const myName = 'susan';
+  //   console.log(`Good afternoon ${name}, my name is ${myName}`);
+  // }
+  
+===================================================
+55) Array Iterators 6:04:54
+
+index.html code same as above part:
+
+app.js:
+
+// Powerfull Array Methods
+// forEach, map, filter, find, reduce
+// Iterate over array - no for loop required
+// Accept CALLBACK function as an argument, calls Callback against each item in a array. Reference Item in the Callback Paramater.
+
+const numbers = [0, 1, 2, 3, 4];
+
+// show all numbers
+
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+
+
+
+===============================================
+ 
+
+56) For Each 6:07:16
+
+index.html code same as above part:
+
+app.js:
+
+// forEach
+// does not return new array
+
+const people = [
+  { name: 'bob', age: 20, position: 'developer' },
+  { name: 'peter', age: 25, position: 'designer' },
+  { name: 'susy', age: 30, position: 'the boss' },
+];
+
+function showPerson(person) {
+  console.log(person.position.toUpperCase());
+}
+
+// people.forEach(showPerson);
+
+people.forEach(function (item) {
+  console.log(item.position.toUpperCase());
+});
+
+
+==============================================
+
+57) Map 6:17:00
+
+index.html code same as above part:
+
+app.js:
+
+// map
+// does return a new array
+// does not change size of original array
+// uses values from original array when making new one
+
+const people = [
+  { name: 'bob', age: 20, position: 'developer' },
+  { name: 'peter', age: 25, position: 'designer' },
+  { name: 'susy', age: 30, position: 'the boss' },
+  { name: 'anna', age: 35, position: 'the boss' },
+];
+
+const ages = people.map(function (person) {
+  return person.age + 20;
+});
+const newPeople = people.map(function (person) {
+  return {
+    firstName: person.name.toUpperCase(),
+    oldAge: person.age + 20,
+  };
+});
+
+const names = people.map(function (person) {
+  return `<h1>${person.name}</h1>`;
+});
+
+document.body.innerHTML = names.join('');
+
+console.log(names);
+
+==================================================
+
+58) Filter 6:27:43
+
+index.html code same as above part:
+
+app.js:
+
+
+ // filter
+// does return a new array
+// can manipulate the size of new array
+// returns based on condition
+
+const people = [
+  { name: 'bob', age: 20, position: 'developer' },
+  { name: 'peter', age: 25, position: 'designer' },
+  { name: 'susy', age: 30, position: 'the boss' },
+  { name: 'anna', age: 35, position: 'the boss' },
+];
+
+const youngPeople = people.filter(function (person) {
+  return person.age <= 25;
+});
+
+const developers = people.filter(function (person) {
+  return person.position === 'senior developer';
+});
+
+console.log(developers);
+
+====================================================
+
+59) Find 6:31:38
+
+index.html code same as above part:
+
+app.js:
+
+// find
+// returns single instance - (in this case object)
+// returns first match, if no match undefined
+// great for getting unique value
+
+const people = [
+  { name: 'bob', age: 20, position: 'developer', id: 1 },
+  { name: 'peter', age: 25, position: 'designer', id: 2 },
+  { name: 'susy', age: 30, position: 'the boss', id: 3 },
+  { name: 'anna', age: 35, position: 'the boss', id: 4 },
+];
+const names = ['bob', 'peter', 'susy'];
+console.log(
+  names.find(function (name) {
+    return name === 'zelda';
+  })
+);
+
+const person = people.find(function (person) {
+  return person.id === 3;
+});
+
+console.log(person.name);
+
+const person2 = people.filter(function (person) {
+  return person.id === 3;
+});
+
+console.log(person2[0].name);
+======================================================
+
+
+60) Reduce 6:40:08
+
+index.html code same as above part:
+
+app.js:
+
+// reduce
+// iterates, callback function
+// reduces to a single value - number, array, object
+// 1 parameter ('acc') - total of all calculations
+// 2 parameter ('curr') - current iteration/value
+
+const people = [
+  { name: 'bob', age: 20, position: 'developer', id: 1, salary: 200 },
+  { name: 'peter', age: 25, position: 'designer', id: 2, salary: 300 },
+  { name: 'susy', age: 30, position: 'the boss', id: 3, salary: 500 },
+  { name: 'anna', age: 35, position: 'the boss', id: 4, salary: 500 },
+];
+
+const total = people.reduce(function (acc, currItem) {
+  console.log(`total ${acc}`);
+  console.log(`current money : ${currItem.salary}`);
+  acc += currItem.salary;
+  return acc;
+}, 500);
+
+console.log(total);
+
+=====================================================
+61) Math Object 6:49:56
+
+index.html code same as above part:
+
+app.js:
+
+// Math
+// Standard built-in objects - always available
+
+// const number = 4.56789;
+// const result = Math.floor(number);
+
+// const number = 4.12222;
+// const result = Math.ceil(number);
+
+// const number = 89;
+// const result = Math.sqrt(number);
+
+// const result = Math.PI;
+// const result = Math.min(4, 5, 6, 7, 9);
+// const result = Math.max(4, 5, 6, 7, 9, 100, 200, 1000);
+
+const result = Math.floor(Math.random() * 10 + 1);
+
+console.log(result);
+======================================================
+
+62) Date Object 6:58:29
+
+index.html code same as above part:
+
+app.js:
+
+// Date
+
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+const days = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturtday',
+];
+
+// const date = new Date();
+const date = new Date('1/12/2004');
+const month = date.getMonth();
+console.log(months[month]);
+
+const day = date.getDay();
+console.log(days[day]);
+
+console.log(date.getDate());
+console.log(date.getFullYear());
+
+const sentence = `${days[day]}, ${date.getDate()} ${
+  months[month]
+} ${date.getFullYear()}`;
+
+document.body.innerHTML = sentence;
+
+
+
+===================================================================
+
+63) Dom Intro 7:07:47
+
+//Select Elements
+//Traverse DOM
+//Insert/Remove Elements
+//Apply Styling
+//Add/Remove CSS Classes
+ //No code only theory
+64) DOM - General Concepts 7:10:26
+ //No code only theory
+
+65) Window And Document Overview 7:19:06
+ //No code only theory
+===============================================================
+
+66) GetElementById 7:23:21
+code to be type
+
+==============================================================
+
+67) Get Elements By Tag Name 7:30:13
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .btn {
+        font-size: 2rem;
+        background: lightgray;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>hello world</h2>
+    <h2>hello people</h2>
+    <ul>
+      <li>apple</li>
+      <li>orange</li>
+      <li>banana</li>
+      <li>pear</li>
+      <li>tomato</li>
+    </ul>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+app.js :
+// Select the element or group of elements the we want
+// Decide the effect we want to apply to the selection
+
+// getElementsByTagName('tagname');
+// node-list =  array-like object
+// index, lenght property but not array methods
+
+const headings = document.getElementsByTagName('h2');
+headings[0].style.color = 'red';
+// console.log(headings.length);
+
+const items = document.getElementsByTagName('li');
+
+// items.forEach(function(item) {
+//   console.log(item);
+// });
+items[2].style.color = 'orange';
+const betterItems = [...items];
+
+betterItems.forEach(function(item) {
+  // console.log(item);
+});
+
+console.log(items);
+console.log(betterItems);
+
+===========================================================
+68) Get Elements By Class Name 7:38:45
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM</title>
+    <style>
+         <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ .btn {
+        font-size: 2rem;
+        background: lightgray;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>hello world</h2>
+    <h2>hello people</h2>
+    <ul>
+      <li class="special">apple</li>
+      <li>orange</li>
+      <li class="special">banana</li>
+      <li>pear</li>
+      <li class="special">tomato</li>
+    </ul>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+--------------
+
+app.js:
+
+// Select the element or group of elements the we want
+// Decide the effect we want to apply to the selection
+
+// getElementsByClassName('classname');
+
+// node-list =  array-like object
+// index, lenght property but not array methods
+
+const listItems = document.getElementsByClassName('special');
+listItems[1].style.color = 'blue';
+
+
+
+==================================================================
+
+
+69) QuerySelector And QuerySelectorAll 7:41:19
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .btn {
+        font-size: 2rem;
+        background: lightgray;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="result">
+      <li class="special">apple</li>
+      <li>orange</li>
+      <li class="special">banana</li>
+      <li>pear</li>
+      <li class="special last">tomato</li>
+    </ul>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+----------------------
+
+app.js
+// Select the element or group of elements the we want
+// Decide the effect we want to apply to the selection
+
+// querySelector('any css'); - selects single
+// querySelectorAll('any css') - selects all
+
+const result = document.querySelector('#result');
+result.style.backgroundColor = 'blue';
+
+const item = document.querySelector('.special');
+// console.log(item);
+
+const lastItem = document.querySelector('li:last-child');
+// console.log(lastItem);
+
+const list = document.querySelectorAll('.special');
+
+list.forEach(function(item) {
+  console.log(item);
+  item.style.color = 'yellow';
+});
+
+==========================================
+
+70) Navigate The Dom - Children 7:48:05
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .btn {
+        font-size: 2rem;
+        background: lightgray;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="result">
+      <li>apple</li>
+      <li>orange</li>
+      <li>banana</li>
+      <li>pear</li>
+      <li>tomato</li>
+    </ul>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+-------------------------------
+
+app.js
+
+// Select the element or group of elements the we want
+// Decide the effect we want to apply to the selection
+
+// childNodes - returns all childNodes including whitespace which is treated as a text node
+
+// children
+// firstChild
+// lastChild
+
+const result = document.querySelector('#result');
+const allChildren = result.childNodes;
+// console.log(allChildren);
+
+const children = result.children;
+console.log(children);
+
+console.log(result.firstChild);
+console.log(result.lastChild);
+======================================================
+
+71) Navigate The Dom - Parent Element 7:53:00
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM</title>
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    
+    <div id="result">
+      <h1>hello world</h1>
+      <div class="second">
+          <h2> second heading</h2>
+          <h3>another heading</h3>
+      </div>
+
+    </div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+-------------------
+
+app.js
+//parentElement
+// const heading = document.querySelector('h2');
+// const parent = heading.parentElement;
+
+// parent.style.color ='red';
+const heading = document.querySelector('h2');
+const parent = heading.parentElement;
+parent.style.color ='red';
+
+============================================================
+
+72) Navigate The Dom - NextSibling, PrevSibling 7:56:07
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .btn {
+        font-size: 2rem;
+        background: lightgray;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="result">
+      <li class="first">first</li>
+      <li>list item 2</li>
+      <li>list item 3</li>
+      <li id="last">last</li>
+    </ul>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+---------------------
+
+app.js:
+
+
+// previousSibling
+// nextSibling
+// return whitespace
+
+const first = document.querySelector('.first');
+const second = (first.nextSibling.nextSibling.style.color = 'red');
+console.log(second);
+
+const last = document.querySelector('#last');
+const third = last.previousSibling.previousSibling;
+console.log(third);
+console.log(last.nextSibling.nextSibling);
+
+
+==========================================================
+
+73) Navigate The Dom - Next/Prev Element Sibling 8:00:36
+
+index.html
+
+code above part
+
+----------
+app.js
+
+// previousElementSibling
+// nextElementSibling
+
+const first = document.querySelector('.first');
+first.nextElementSibling.style.color ='red';
+const last = document.querySelector('#last');
+
+==========================================================
+
+74) TextContent And NodeValue 8:01:52
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .btn {
+        font-size: 2rem;
+        background: lightgray;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="special">this is special content</h1>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+--------------------------
+app.js
+// nodeValue
+// textContent
+
+const item = document.getElementById('special');
+const value = item.firstChild.nodeValue;
+const easyValue = item.textContent;
+
+console.log(easyValue);
+
+
+=========================================================
+
+75) GetAttribute(), SetAttribute() 8:04:50
+index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .btn {
+        font-size: 2rem;
+        background: lightgray;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="first" id="special">i have class of first</li>
+      <a href="first.html" id="link">random link</a>
+      <li>i have no attributes</li>
+    </ul>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+-------------------------
+app.js
+// getAttribute();
+// setAttribute();
+
+const first = document.querySelector('.first');
+const idValue = first.getAttribute('id');
+// console.log(idValue);
+
+const link = document.getElementById('link');
+const showLink = link.getAttribute('href');
+console.log(showLink);
+
+const last = link.nextElementSibling;
+last.setAttribute('class', 'first');
+last.textContent = 'i also have a class of first';
+console.log(last);
+
+const links = document.querySelectorAll('.first');
+console.log(links);
+
+==========================================================
+76) ClassList And ClassName 8:13:00
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .colors {
+        background: red;
+        color: white;
+      }
+      .text {
+        font-size: 2rem;
+        letter-spacing: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="first" class="text">i'm first element</h1>
+    <h1 id="second">i'm second element</h1>
+    <h1 id="third">i'm third element</h1>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+==============================================================
+app.js
+
+// className
+// classList
+
+const first = document.getElementById('first');
+const second = document.getElementById('second');
+const third = document.getElementById('third');
+
+// const classValue = first.className;
+// console.log(classValue);
+
+second.className = 'colors text';
+
+// third.classList.add('colors');
+// third.classList.add('text');
+third.classList.add('text', 'colors');
+third.classList.remove('text');
+
+let result = third.classList.contains('colors');
+if (result) {
+  console.log('hello world');
+} else {
+  console.log('does not have the class');
+}
+
+const classValue = third.classList;
+console.log(classValue);
+
+
+================================================================
+77) CreateElement 8:22:29
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+      }
+      .blue {
+        background: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="result">
+      <h1 class="red">i'm the child of result</h1>
+    </div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+--------------
+app.js:
+
+// createElement('element')
+// createTextNode('text content')
+// element.appendChild(childElement)
+
+const result = document.querySelector('#result');
+
+// create empty element
+
+const bodyDiv = document.createElement('div');
+// create text node
+const text = document.createTextNode('a simple body div');
+bodyDiv.appendChild(text);
+document.body.appendChild(bodyDiv);
+
+const heading = document.createElement('h2');
+const headingText = document.createTextNode('dynamic heading');
+heading.appendChild(headingText);
+heading.classList.add('blue');
+
+result.appendChild(heading);
+
+console.log(result.children);
+
+=================================================================
+
+
+78) InsertBefore 8:30:39
+
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+      }
+      .blue {
+        background: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="result">
+      <h1 class="red">i'm the child of result</h1>
+    </div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+--------------------
+
+// createElement('element')
+// createTextNode('text content')
+// element.appendChild(childElement)
+
+// insertBefore('element','location');
+
+const result = document.querySelector('#result');
+const first = document.querySelector('.red');
+// create empty element
+
+const bodyDiv = document.createElement('div');
+// create text node
+const text = document.createTextNode('a simple body div');
+bodyDiv.appendChild(text);
+document.body.insertBefore(bodyDiv, result);
+// result element
+const heading = document.createElement('h2');
+const headingText = document.createTextNode('dynamic heading');
+heading.appendChild(headingText);
+heading.classList.add('blue');
+
+result.insertBefore(heading, first);
+
+console.log(result.children);
+
+
+=====================================================
+
+79) ReplaceChild 8:34:23
+
+index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+      }
+      .blue {
+        background: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="result">
+      <h1 class="red">i'm the child of result</h1>
+    </div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+------------------------
+app.js
+
+// createElement('element')
+// createTextNode('text content')
+// element.appendChild(childElement)
+
+// replaceChild('new','old');
+
+const result = document.querySelector('#result');
+const first = document.querySelector('.red');
+// create empty element
+
+const bodyDiv = document.createElement('div');
+// create text node
+const text = document.createTextNode('a simple body div');
+bodyDiv.appendChild(text);
+document.body.insertBefore(bodyDiv, result);
+// result element
+const heading = document.createElement('h2');
+const headingText = document.createTextNode('dynamic heading');
+heading.appendChild(headingText);
+heading.classList.add('blue');
+
+result.insertBefore(heading, first);
+
+const smallHeading = document.createElement('h6');
+const smallText = document.createTextNode(`i'm small heading text`);
+smallHeading.classList.add('red');
+smallHeading.appendChild(smallText);
+document.body.replaceChild(smallHeading, bodyDiv);
+console.log(result.children);
+
+
+================================================================
+80) Prepend InnerText 8:36:47
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>first heading</h1>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+----------------------------------
+app.js
+
+//prepend
+//innerText
+
+const heading = document.createElement('h2');
+heading.innerText=`i am a dynamic heading`;
+document.body.prepend(heading);
+
+
+============================================================
+81) Remove And RemoveChild 8:39:57
+
+index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <div id="result">
+       <h1>second heading</h1>
+    </div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+----------------------------
+
+//remove 
+//removeChild
+
+
+const result = document.querySelector('#result');
+// result.remove();
+const heading = result.querySelector('h1');
+result.removeChild(heading);
+console.log(heading);
+
+============================================================
+
+82) InnerHTML And TextContent 8:44:50
+
+index.html;
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="first">
+      <li class="item">list item</li>
+      <li>list item</li>
+    </ul>
+    <div id="second">
+      i have some text content
+    </div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+----------------------------
+
+app.js:
+
+//innerHtml
+//textContent
+
+const list = document.getElementById('first');
+const div = document.getElementById('second');
+const item = document.querySelector('.item');
+
+console.log(div.textContent);
+console.log(list.innerHTML);
+console.log(list.textContent);
+
+const randomVar = 'random value';
+
+const ul = document.createElement('ul');
+ul.innerHTML = `<li class="item> ${randomVar}  </li>
+<li> list item</li>  <li> list item</li>`;
+
+document.body.appendChild(ul);
+div.textContent = `<li class="item"> ${randomVar} </li>
+<li> list item</li>  <li> list item</li>`;
+
+=====================================================
+83) Change CSS With Style Property 8:53:15
+
+index.html;
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .title {
+        background: blue;
+        color: white;
+        font-size: 3rem;
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="random">i'm just some random div looking for the css</div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+-----------------------------------
+
+app.js:
+
+// CSS
+
+const random = document.querySelector('.random');
+
+// random.style.backgroundColor = 'blue';
+// random.style.color = 'white';
+// random.style.fontSize = '3rem';
+// random.style.textTransform = 'capitalize';
+
+random.classList.add('title');
+
+===========================================
+84) Events Overview 8:58:23
+
+index.html;
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>events in javascript</h2>
+    <p>hey, I can trigger an event</p>
+    <button class="btn">click me</button>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+--------------------------------------
+
+app.js
+
+const heading = document.querySelector('h2');
+const btn = document.querySelector('.btn');
+const text = document.querySelector('p');
+
+text.addEventListener('mouseenter', function() {
+  heading.classList.add('red');
+});
+text.addEventListener('mouseleave', function() {
+  heading.classList.remove('red');
+});
+btn.addEventListener('click', function() {
+  if (heading.classList.contains('blue')) {
+    heading.classList.remove('blue');
+  } else {
+    heading.classList.add('blue');
+  }
+});
+
+
+====================================================
+
+85) Click Event 9:00:13
+
+index.html and app.js code same as 84 part
+
+=====================================================
+
+86) Function Reference 9:07:37
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>events in javascript</h2>
+    <button class="btn">click me</button>
+    <!-- javascript -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+--------------------------------------------
+
+app.js;
+
+// select element
+// addEventListener()
+// what event, what to do
+
+const btn = document.querySelector('.btn');
+const heading = document.querySelector('h2');
+
+function changeColors() {
+  let hasClass = heading.classList.contains('red');
+  if (hasClass) {
+    heading.classList.remove('red');
+  } else {
+    heading.classList.add('red');
+  }
+}
+
+btn.addEventListener('click', changeColors);
+
+
+===================================================================
+87) Mouse Events 9:12:29
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>events in javascript</h1>
+    <button class="btn">click me</button>
+
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+------------------------------
+
+app.js
+
+// click - fires after full action occurs
+// mousedown - button is pressed
+// mouseup - button is released
+// mouseenter - moved onto an element
+// mouseleave - moved out of an element
+
+const heading = document.querySelector('h1');
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', function() {
+  console.log('you clicked me');
+});
+btn.addEventListener('mousedown', function() {
+  console.log('down');
+});
+btn.addEventListener('mouseup', function() {
+  console.log('up');
+});
+
+heading.addEventListener('mouseenter', function() {
+  heading.classList.add('blue');
+});
+heading.addEventListener('mouseleave', function() {
+  heading.classList.remove('blue');
+});
+
+
+==========================================================
+88) Key Events 9:17:47
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="name" />
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+-------------------------------------------
+app.js
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="name" />
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+===========================================================
+
+88) Key Events 9:17
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+      a {
+        display: inline-block;
+        margin-top: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">click me</button>
+    <h1>some heading</h1>
+    <a href="#" id="link">random link</a>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+---------------------
+
+app.js
+
+
+// event object argument e,evt
+// info about triggered event
+// event.type
+// event.currentTarget
+// this keyword
+// preventDefault() - prevents default behaviour
+
+const heading = document.querySelector('h1');
+const btn = document.querySelector('.btn');
+const link = document.getElementById('link');
+
+heading.addEventListener('click', event => {
+  console.log(event.currentTarget);
+  console.log(this);
+});
+
+btn.addEventListener('click', function(event) {
+  event.currentTarget.classList.add('blue');
+  console.log(event.type);
+});
+
+function someFunc(e) {
+  e.preventDefault();
+}
+
+link.addEventListener('click', someFunc);
+
+
+==========================================================
+
+90) CurrentTarget Vs Target 9:32:50
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        border: none;
+        display: inline-block;
+        margin: 0.5rem;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+      a {
+        display: inline-block;
+        margin-top: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">first button</button>
+    <button class="btn">
+      second <strong>button <strong>more nested </strong> </strong>
+    </button>
+    <button class="btn">third button</button>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+-----------------------------------
+app.js
+
+// currentTarget - always refers to the element to which the event handler has been attached to
+// target - identifies the element on which the event occured
+
+const btns = document.querySelectorAll('.btn');
+
+btns.forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    // console.log(e.currentTarget);
+    // e.currentTarget.style.color = 'green';
+    console.log('current', e.currentTarget);
+    console.log('target', e.target);
+    e.target.style.color = 'green';
+  });
+});
+
+
+===========================================================
+
+91) Event Bubbling Capturing 9:40:24
+
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        border: none;
+        display: inline-block;
+        margin: 0.5rem;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="list-items">
+        <li class="item"><a href="#" class="link">link</a></li>
+        <li class="item"><a href="#" class="link">link</a></li>
+        <li class="item"><a href="#" class="link">link</a></li>
+      </ul>
+    </div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+-----------------------------------------
+app.js
+
+// allows select dynamic elements
+// event propogation - order the events are fired
+// event bubbling - clicked element first then bubbles up -- default
+// event capturing - fires at the root and fires until reaches target
+
+const container = document.querySelector('.container');
+const list = document.querySelector('.list-items');
+
+function showBubbling(e) {
+  console.log('current target', e.currentTarget);
+  // console.log('target', e.target);
+  // if (e.target.classList.contains('link')) {
+  //   console.log('you clicked on the link');
+  // }
+}
+function stopPropogation(e) {
+  e.stopPropagation();
+}
+
+list.addEventListener('click', showBubbling, { capture: true });
+container.addEventListener('click', showBubbling, { capture: true });
+document.addEventListener('click', showBubbling, { capture: true });
+window.addEventListener('click', showBubbling, { capture: true });
+
+
+=================================================================
+
+92) Event Propogation Example 9:51:04
+(* this chapter code not found from john. I did typed my self so error came);
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+     <style>
+
+     </style>
+  </head>
+  <body>
+    
+    <div class="container">
+       <h1 class="heading"> i'm sitting inside container </h1>
+
+    </div>
+    <button class="btn">click me</button>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+----------------------------------------------
+app.js 
+
+// allows select dynamic elements
+// event propogation-order the events are fired
+// event bubbling -clicked elemtns first then bubbles up --default
+
+const container = document.querySelector('.container');
+const btn = document.querySelector('.btn');
+const heading = document.querySelector('.heading');
+console.log(heading);
+
+function sayHello() {
+    console.log('hello there');
+}
+btn.addEventListener('click', function(){
+    const element = document.createElement('hi');
+    element.classList.add('heading');
+    element.textContent=`i'm inside the container`;
+    container.appendChild(element);
+});
+container.addEventListener('click', function(e){
+    if(event.target.classList.contains('heading')){
+        console.log('hello there');
+    }
+})
+// heading.addEventListener('click',sayHello);
+
+
+==================================================
+
+93) Form Submit 9:58:32
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        border: none;
+        display: inline-block;
+        margin: 0.5rem;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="form">
+      <input type="text" id="name" />
+      <input type="password" id="password" />
+      <input type="submit" value="submit" />
+    </form>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+------------------------------------------------
+
+
+app.js
+
+// submit event listener
+// prevent default
+// how to get a value
+
+const form = document.getElementById('form');
+const name = document.getElementById('name');
+const password = document.getElementById('password');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  console.log('form submitted');
+  console.log(name.value);
+  console.log(password.value);
+});
+
+
+=======================================================
+
+94) Local Storage 10:04:24
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ES6</title>
+    <style>
+      body {
+        text-transform: capitalize;
+      }
+      .btn {
+        background: #f15025;
+        color: #fff;
+        border: none;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ES6</h1>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+----------------------------------------
+
+
+app.js
+
+// Web Storage API - provided by browser
+// session storage, local storage
+// setItem, getItem , removeItem, clear
+
+// localStorage.setItem('name','john')
+// sessionStorage.setItem('name','john')
+
+localStorage.setItem('name', 'john');
+localStorage.setItem('friend', 'peter');
+localStorage.setItem('job', 'developer');
+localStorage.setItem('address', 'street 123');
+
+const name = localStorage.getItem('name');
+console.log(name);
+
+localStorage.removeItem('name');
+const anotherName = localStorage.getItem('name');
+console.log(anotherName);
+localStorage.clear();
+==========================================================
+
+95) Local Storage With Multiple Values 10:13:46
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ES6</title>
+    <style>
+      body {
+        text-transform: capitalize;
+      }
+      .btn {
+        background: #f15025;
+        color: #fff;
+        border: none;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ES6</h1>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+-------------------------
+
+app.js
+
+// JSON.stringify(), JSON.parse
+
+const friends = ['john', 'peter', 'bob'];
+localStorage.setItem('friends', JSON.stringify(friends));
+
+const values = JSON.parse(localStorage.getItem('friends'));
+console.log(values[2]);
+
+let fruits;
+
+if (localStorage.getItem('fruits')) {
+  fruits = JSON.parse(localStorage.getItem('fruits'));
+} else {
+  fruits = [];
+}
+console.log(fruits);
+// fruits.push('apple');
+fruits.push('orange');
+localStorage.setItem('fruits', JSON.stringify(fruits));
+
+=================  The End  by Sakthivel =======================

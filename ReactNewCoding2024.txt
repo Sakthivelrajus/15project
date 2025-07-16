@@ -1,0 +1,1432 @@
+Here are some ReactJS coding problems that are commonly asked in interviews, along with brief explanations of what each one entails.
+
+1. Create a Counter Component
+Problem: Create a simple counter component that has buttons to increment, decrement, and reset the counter.
+
+Requirements:
+
+The counter should display the current count.
+Clicking the increment button should increase the count by 1.
+Clicking the decrement button should decrease the count by 1.
+Clicking the reset button should set the count back to 0.
+Example Code:
+
+
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button onClick={() => setCount(0)}>Reset</button>
+    </div>
+  );
+}
+
+export default Counter;
+----------------------------------------------------------------------------------------
+2. Todo List Application
+Problem: Build a simple Todo List application where you can add, mark as complete, and remove tasks.
+
+Requirements:
+
+An input field to add a new task.
+A button to add the task to the list.
+Each task should have a checkbox to mark it as completed.
+Each task should have a delete button to remove it from the list.
+Example Code:
+
+
+import React, { useState } from 'react';
+
+function TodoList() {
+  const [tasks, setTasks] = useState([]);
+  const [input, setInput] = useState('');
+
+  const addTask = () => {
+    setTasks([...tasks, { text: input, completed: false }]);
+    setInput('');
+  };
+
+  const toggleComplete = (index) => {
+    const newTasks = [...tasks];
+    newTasks[index].completed = !newTasks[index].completed;
+    setTasks(newTasks);
+  };
+
+  const deleteTask = (index) => {
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+  };
+
+  return (
+    <div>
+      <h2>Todo List</h2>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+      <button onClick={addTask}>Add Task</button>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>
+            <input
+              type="checkbox"
+              checked={task.completed}
+              onChange={() => toggleComplete(index)}
+            />
+            {task.completed ? <s>{task.text}</s> : task.text}
+            <button onClick={() => deleteTask(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default TodoList;
+----------------------------------------------------------------------------------------
+3. Form Validation
+Problem: Create a form with fields for name, email, and password, and add validation to ensure that all fields are filled out and that the email is valid.
+
+Requirements:
+
+The form should have input fields for name, email, and password.
+Show an error message if the user tries to submit the form without filling out all fields.
+Validate that the email address is in a valid format.
+Display a success message when the form is submitted correctly.
+Example Code:
+
+
+import React, { useState } from 'react';
+
+function FormValidation() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+
+  const validateEmail = (email) => {
+    return /\S+@\S+\.\S+/.test(email);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !password) {
+      setError('All fields are required');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setError('Invalid email format');
+      return;
+    }
+
+    setError('');
+    setSuccess('Form submitted successfully');
+  };
+
+  return (
+    <div>
+      <h2>Form Validation</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Name: </label>
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        </div>
+        <div>
+          <label>Email: </label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </div>
+        <div>
+          <label>Password: </label>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </div>
+        <button type="submit">Submit</button>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {success && <p style={{ color: 'green' }}>{success}</p>}
+      </form>
+    </div>
+  );
+}
+
+export default FormValidation;
+----------------------------------------------------------------------------------------
+4. Fetching Data from an API
+Problem: Create a component that fetches and displays data from an API when the component is mounted.
+
+Requirements:
+
+Use useEffect to fetch data from an API when the component is first rendered.
+Display the data in a list format.
+Handle loading and error states.
+Example Code:
+
+
+import React, { useState, useEffect } from 'react';
+
+function FetchData() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError('Error fetching data');
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  return (
+    <div>
+      <h2>Data from API</h2>
+      <ul>
+        {data.map((item) => (
+          <li key={item.id}>{item.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default FetchData;
+----------------------------------------------------------------------------------------
+5. Search Functionality
+Problem: Create a search field that filters through a list of items and displays only those that match the search query.
+
+Requirements:
+
+A list of items (e.g., names).
+An input field for the user to type in their search query.
+The list should dynamically update to only show items that match the query.
+Example Code:
+
+
+import React, { useState } from 'react';
+
+function SearchFilter() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const items = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry', 'Fig', 'Grape'];
+
+  const filteredItems = items.filter((item) =>
+    item.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div>
+      <h2>Search Filter</h2>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <ul>
+        {filteredItems.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default SearchFilter;
+Additional Tips:
+Understand State and Props: Make sure you understand how to pass data between components using props and how to manage component state with useState.
+Understand Lifecycle Methods: Be familiar with lifecycle methods like useEffect for side effects such as fetching data.
+Focus on Best Practices: Make sure you’re comfortable with best practices in React, such as immutability, lifting state, and keeping components reusable.
+These exercises will help you practice and prepare for common coding challenges in ReactJS interviews. Let me know if you'd like further explanations or more examples!
+
+==========================================================================
+Detailed Descriptions for Selected Problems:
+1. Counter Component
+Description: Implement a component with a display showing the current count and buttons to increment, decrement, and reset the counter.
+Key Concepts: useState, event handling.
+2. Todo List Application
+Description: Create a todo list where users can add, delete, and mark tasks as completed. Ensure the state is managed properly to reflect changes in the UI.
+Key Concepts: useState, list rendering, conditional rendering.
+4. Search Filter
+Description: Filter a list of items as the user types in a search field. The list should update in real-time based on the input.
+Key Concepts: useState, useEffect for side effects, filtering arrays.
+8. Dynamic Forms
+Description: Create a form where users can dynamically add or remove input fields. For example, adding multiple email addresses or phone numbers.
+Key Concepts: useState, dynamic rendering, managing complex state.
+14. React Router
+Description: Set up client-side routing in a React application, creating multiple pages/components that users can navigate between.
+Key Concepts: react-router-dom, route parameters, nested routes.
+17. Custom Hooks
+Description: Create a custom hook that abstracts a piece of reusable logic, such as handling form state, fetching data, or managing intervals.
+Key Concepts: Custom hooks, useEffect, useState, code reuse.
+20. React Portals
+Description: Use React Portals to render a component, such as a modal or tooltip, outside of the main component tree for better control over CSS and positioning.
+Key Concepts: React Portals, rendering outside parent hierarchy.
+23. WebSocket Integration
+Description: Build a component that connects to a WebSocket server and updates the UI in real-time based on incoming messages.
+Key Concepts: WebSocket API, useEffect, real-time data updates.
+25. Component Testing with Jest
+Description: Write tests for a React component to ensure it behaves as expected under various conditions. Test user interactions, state changes, and rendering.
+Key Concepts: Jest, React Testing Library, unit testing, mock functions.
+
+
+
+====================================End================================
+
+Here are sample solutions for 25 ReactJS interview coding problems. These examples cover a variety of topics such as state management, hooks, forms, routing, and more.
+
+1. Counter Component
+javascript
+Copy code
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button onClick={() => setCount(0)}>Reset</button>
+    </div>
+  );
+}
+
+export default Counter;
+--------------------------------------------------------------------------------------------------------
+2. Todo List Application
+
+import React, { useState } from 'react';
+
+function TodoList() {
+  const [tasks, setTasks] = useState([]);
+  const [input, setInput] = useState('');
+
+  const addTask = () => {
+    if (input.trim()) {
+      setTasks([...tasks, { text: input, completed: false }]);
+      setInput('');
+    }
+  };
+
+  const toggleComplete = (index) => {
+    const newTasks = [...tasks];
+    newTasks[index].completed = !newTasks[index].completed;
+    setTasks(newTasks);
+  };
+
+  const deleteTask = (index) => {
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+  };
+
+  return (
+    <div>
+      <h2>Todo List</h2>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+      <button onClick={addTask}>Add Task</button>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>
+            <input
+              type="checkbox"
+              checked={task.completed}
+              onChange={() => toggleComplete(index)}
+            />
+            {task.completed ? <s>{task.text}</s> : task.text}
+            <button onClick={() => deleteTask(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default TodoList;
+
+--------------------------------------------------------------------------------------------------------
+3. Form Validation
+
+import React, { useState } from 'react';
+
+function FormValidation() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+
+  const validateEmail = (email) => {
+    return /\S+@\S+\.\S+/.test(email);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !password) {
+      setError('All fields are required');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setError('Invalid email format');
+      return;
+    }
+
+    setError('');
+    setSuccess('Form submitted successfully');
+  };
+
+  return (
+    <div>
+      <h2>Form Validation</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Name: </label>
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        </div>
+        <div>
+          <label>Email: </label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </div>
+        <div>
+          <label>Password: </label>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </div>
+        <button type="submit">Submit</button>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {success && <p style={{ color: 'green' }}>{success}</p>}
+      </form>
+    </div>
+  );
+}
+
+export default FormValidation;
+--------------------------------------------------------------------------------------------------------
+4. Search Filter
+
+import React, { useState } from 'react';
+
+function SearchFilter() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const items = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry', 'Fig', 'Grape'];
+
+  const filteredItems = items.filter((item) =>
+    item.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div>
+      <h2>Search Filter</h2>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <ul>
+        {filteredItems.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default SearchFilter;
+--------------------------------------------------------------------------------------------------------
+5. Fetching Data from an API
+
+import React, { useState, useEffect } from 'react';
+
+function FetchData() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError('Error fetching data');
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  return (
+    <div>
+      <h2>Data from API</h2>
+      <ul>
+        {data.map((item) => (
+          <li key={item.id}>{item.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default FetchData;
+--------------------------------------------------------------------------------------------------------
+6. Pagination
+
+import React, { useState } from 'react';
+
+function Pagination() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(5);
+
+  const items = Array.from({ length: 30 }, (_, i) => `Item ${i + 1}`);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(items.length / itemsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+
+  return (
+    <div>
+      <h2>Pagination Example</h2>
+      <ul>
+        {currentItems.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+      <nav>
+        <ul className="pagination">
+          {pageNumbers.map((number) => (
+            <li key={number} className="page-item">
+              <button onClick={() => paginate(number)} className="page-link">
+                {number}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
+}
+
+export default Pagination;
+--------------------------------------------------------------------------------------------------------
+7. Modal Component
+
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+
+function Modal({ isOpen, onClose, children }) {
+  if (!isOpen) return null;
+
+  return ReactDOM.createPortal(
+    <div style={modalStyles}>
+      <div style={overlayStyles} onClick={onClose}></div>
+      <div style={contentStyles}>
+        {children}
+        <button onClick={onClose}>Close</button>
+      </div>
+    </div>,
+    document.getElementById('modal-root')
+  );
+}
+
+const modalStyles = {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  zIndex: 1000,
+};
+
+const overlayStyles = {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'rgba(0, 0, 0, 0.7)',
+};
+
+const contentStyles = {
+  position: 'relative',
+  margin: '100px auto',
+  padding: '20px',
+  width: '300px',
+  background: '#fff',
+  borderRadius: '8px',
+};
+
+function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  return (
+    <div>
+      <h2>Modal Example</h2>
+      <button onClick={() => setIsModalOpen(true)}>Open Modal</button>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <h3>Modal Content</h3>
+        <p>This is a simple modal.</p>
+      </Modal>
+    </div>
+  );
+}
+
+export default App;
+--------------------------------------------------------------------------------------------------------
+8. Dynamic Forms
+
+import React, { useState } from 'react';
+
+function DynamicForm() {
+  const [fields, setFields] = useState([{ value: '' }]);
+
+  const handleChange = (i, event) => {
+    const values = [...fields];
+    values[i].value = event.target.value;
+    setFields(values);
+  };
+
+  const handleAdd = () => {
+    setFields([...fields, { value: '' }]);
+  };
+
+  const handleRemove = (i) => {
+    const values = [...fields];
+    values.splice(i, 1);
+    setFields(values);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Form values:', fields);
+  };
+
+  return (
+    <div>
+      <h2>Dynamic Form</h2>
+      <form onSubmit={handleSubmit}>
+        {fields.map((field, idx) => (
+          <div key={`${field}-${idx}`}>
+            <input
+              type="text"
+              value={field.value}
+              onChange={(e) => handleChange(idx, e)}
+            />
+            <button type="button" onClick={() => handleRemove(idx)}>
+              Remove
+            </button>
+          </div>
+        ))}
+        <button type="button" onClick={handleAdd}>
+          Add Field
+        </button>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+}
+
+export default DynamicForm;
+--------------------------------------------------------------------------------------------------------
+9. Tabs Component
+
+import React, { useState } from 'react';
+
+function Tabs() {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const tabs = [
+    { title: 'Tab 1', content: 'Content of Tab 1' },
+    { title: 'Tab 2', content: 'Content of Tab 2' },
+    { title: 'Tab 3', content: 'Content of Tab 3' },
+  ];
+
+  return (
+    <div>
+      <h2>Tabs Component</h2>
+      <div>
+        {tabs.map((tab, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveTab(index)}
+            style={activeTab === index ? { fontWeight: 'bold' } : {}}
+          >
+            {tab.title}
+          </button>
+        ))}
+      </div>
+      <div>
+        <p>{tabs[activeTab].content}</p>
+      </div>
+    </div>
+  );
+}
+
+export default Tabs;
+--------------------------------------------------------------------------------------------------------
+10. Accordion Component
+
+import React, { useState } from 'react';
+
+function Accordion() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const sections = [
+    { title: 'Section 1', content: 'Content of Section 1' },
+    { title: 'Section 2', content: 'Content of Section 2' },
+    { title: 'Section 3', content: 'Content of Section 3' },
+  ];
+
+  return (
+    <div>
+      <h2>Accordion Example</h2>
+      {sections.map((section, index) => (
+        <div key={index}>
+          <h3 onClick={() => toggleAccordion(index)}>{section.title}</h3>
+          {activeIndex === index && <p>{section.content}</p>}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Accordion;
+--------------------------------------------------------------------------------------------------------
+11. Drag and Drop
+
+import React, { useState } from 'react';
+
+function DragDrop() {
+  const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3', 'Item 4']);
+
+  const onDragStart = (event, index) => {
+    event.dataTransfer.setData('draggedItem', index);
+  };
+
+  const onDrop = (event, index) => {
+    const draggedItemIndex = event.dataTransfer.getData('draggedItem');
+    const newItems = [...items];
+    const [draggedItem] = newItems.splice(draggedItemIndex, 1);
+    newItems.splice(index, 0, draggedItem);
+    setItems(newItems);
+  };
+
+  return (
+    <div>
+      <h2>Drag and Drop Example</h2>
+      <ul>
+        {items.map((item, index) => (
+          <li
+            key={index}
+            draggable
+            onDragStart={(e) => onDragStart(e, index)}
+            onDrop={(e) => onDrop(e, index)}
+            onDragOver={(e) => e.preventDefault()}
+            style={{ margin: '10px 0', padding: '10px', border: '1px solid #000' }}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default DragDrop;
+--------------------------------------------------------------------------------------------------------
+12. Real-time Search with Debouncing
+
+import React, { useState, useEffect } from 'react';
+
+function DebouncedSearch() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [displayTerm, setDisplayTerm] = useState('');
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDisplayTerm(searchTerm);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [searchTerm]);
+
+  return (
+    <div>
+      <h2>Debounced Search</h2>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <p>Displaying: {displayTerm}</p>
+    </div>
+  );
+}
+
+export default DebouncedSearch;
+--------------------------------------------------------------------------------------------------------
+13. Infinite Scroll
+
+import React, { useState, useEffect } from 'react';
+
+function InfiniteScroll() {
+  const [items, setItems] = useState(Array.from({ length: 20 }));
+  const [loading, setLoading] = useState(false);
+
+  const loadMoreItems = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setItems((prevItems) => [...prevItems, ...Array.from({ length: 20 })]);
+      setLoading(false);
+    }, 1500);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight || loading) {
+        return;
+      }
+      loadMoreItems();
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [loading]);
+
+  return (
+    <div>
+      <h2>Infinite Scroll</h2>
+      <ul>
+        {items.map((_, index) => (
+          <li key={index} style={{ height: '50px', border: '1px solid #000', marginBottom: '5px' }}>
+            Item {index + 1}
+          </li>
+        ))}
+      </ul>
+      {loading && <p>Loading more items...</p>}
+    </div>
+  );
+}
+
+export default InfiniteScroll;
+--------------------------------------------------------------------------------------------------------
+14. React Router
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
+function Home() {
+  return <h2>Home Page</h2>;
+}
+
+function About() {
+  return <h2>About Page</h2>;
+}
+
+function Contact() {
+  return <h2>Contact Page</h2>;
+}
+
+function NotFound() {
+  return <h2>404 Not Found</h2>;
+}
+
+function AppRouter() {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+export default AppRouter;
+--------------------------------------------------------------------------------------------------------
+15. Authentication Flow
+
+
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+
+function Login({ onLogin }) {
+  const handleLogin = () => {
+    onLogin();
+  };
+
+  return (
+    <div>
+      <h2>Login Page</h2>
+      <button onClick={handleLogin}>Log in</button>
+    </div>
+  );
+}
+
+function Dashboard() {
+  return <h2>Dashboard</h2>;
+}
+
+function ProtectedRoute({ component: Component, isAuthenticated, ...rest }) {
+  return (
+    <Route
+      {...rest}
+      render={(props) =>
+        isAuthenticated ? <Component {...props} /> : <Redirect to="/login" />
+      }
+    />
+  );
+}
+
+function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  return (
+    <Router>
+      <Switch>
+        <Route path="/login">
+         <Login onLogin={() => setIsAuthenticated(true)} />
+        </Route>
+        <ProtectedRoute
+          path="/dashboard"
+          component={Dashboard}
+          isAuthenticated={isAuthenticated}
+        />
+        <Redirect to="/login" />
+      </Switch>
+    </Router>
+  );
+}
+
+export default App;
+--------------------------------------------------------------------------------------------------------
+16. Context API for Theme
+
+import React, { useContext, useState } from 'react';
+
+const ThemeContext = React.createContext();
+
+function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
+function ThemedComponent() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  return (
+    <div style={{ background: theme === 'light' ? '#fff' : '#333', color: theme === 'light' ? '#000' : '#fff', padding: '20px' }}>
+      <h2>Current Theme: {theme}</h2>
+      <button onClick={toggleTheme}>Toggle Theme</button>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <ThemedComponent />
+    </ThemeProvider>
+  );
+}
+
+export default App;
+-------------------------------------------------------------------------------------
+17. Higher-Order Component (HOC)
+javascript
+Copy code
+import React from 'react';
+
+function withLogger(WrappedComponent) {
+  return function Logger(props) {
+    console.log('Props:', props);
+    return <WrappedComponent {...props} />;
+  };
+}
+
+function HelloWorld({ name }) {
+  return <h2>Hello, {name}!</h2>;
+}
+
+const HelloWorldWithLogger = withLogger(HelloWorld);
+
+function App() {
+  return <HelloWorldWithLogger name="React" />;
+}
+
+export default App;
+-------------------------------------------------------------------------------------
+18. Render Props
+javascript
+Copy code
+import React from 'react';
+
+class MouseTracker extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { x: 0, y: 0 };
+  }
+
+  handleMouseMove = (event) => {
+    this.setState({
+      x: event.clientX,
+      y: event.clientY,
+    });
+  };
+
+  render() {
+    return (
+      <div style={{ height: '100vh' }} onMouseMove={this.handleMouseMove}>
+        {this.props.render(this.state)}
+      </div>
+    );
+  }
+}
+
+function App() {
+  return (
+    <MouseTracker render={({ x, y }) => (
+      <h2>The mouse position is ({x}, {y})</h2>
+    )} />
+  );
+}
+
+export default App;
+--------------------------------------------------------------------------------------------------------
+19. Portal
+javascript
+Copy code
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function Modal({ children }) {
+  return ReactDOM.createPortal(
+    <div style={modalStyles}>
+      {children}
+    </div>,
+    document.getElementById('modal-root')
+  );
+}
+
+const modalStyles = {
+  position: 'fixed',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  padding: '20px',
+  backgroundColor: '#fff',
+  border: '1px solid #ccc',
+};
+
+function App() {
+  return (
+    <div>
+      <h2>Portal Example</h2>
+      <Modal>
+        <h3>Modal Content</h3>
+        <p>This is rendered in a portal.</p>
+      </Modal>
+    </div>
+  );
+}
+
+export default App;
+--------------------------------------------------------------------------------------------------------
+20. Custom Hook
+javascript
+Copy code
+import React, { useState, useEffect } from 'react';
+
+function useFetch(url) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [url]);
+
+  return { data, loading, error };
+}
+
+function App() {
+  const { data, loading, error } = useFetch('https://jsonplaceholder.typicode.com/posts');
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  return (
+    <div>
+      <h2>Custom Hook Example</h2>
+      <ul>
+        {data.map((item) => (
+          <li key={item.id}>{item.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+--------------------------------------------------------------------------------------------------------
+21. Error Boundary
+javascript
+Copy code
+import React, { Component } from 'react';
+
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h2>Something went wrong.</h2>;
+    }
+
+    return this.props.children;
+  }
+}
+
+function ProblematicComponent() {
+  throw new Error('I crashed!');
+  return <div>Problematic Component</div>;
+}
+
+function App() {
+  return (
+    <ErrorBoundary>
+      <ProblematicComponent />
+    </ErrorBoundary>
+  );
+}
+
+export default App;
+--------------------------------------------------------------------------------------------------------
+22. Lazy Loading Components
+javascript
+Copy code
+import React, { Suspense, lazy } from 'react';
+
+const LazyComponent = lazy(() => import('./LazyComponent'));
+
+function App() {
+  return (
+    <div>
+      <h2>Lazy Loading Example</h2>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />
+      </Suspense>
+    </div>
+  );
+}
+
+export default App;
+--------------------------------------------------------------------------------------------------------
+23. Memoization with React.memo
+javascript
+Copy code
+import React, { useState, useCallback } from 'react';
+
+const ChildComponent = React.memo(({ onClick }) => {
+  console.log('Child Component Rendered');
+  return <button onClick={onClick}>Increment</button>;
+});
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  const handleClick = useCallback(() => {
+    setCount((prevCount) => prevCount + 1);
+  }, []);
+
+  return (
+    <div>
+      <h2>React.memo Example</h2>
+      <p>Count: {count}</p>
+      <ChildComponent onClick={handleClick} />
+    </div>
+  );
+}
+
+export default App;
+--------------------------------------------------------------------------------------------------------
+24. Optimizing with useMemo
+javascript
+Copy code
+import React, { useState, useMemo } from 'react';
+
+function App() {
+  const [count, setCount] = useState(0);
+  const [items] = useState([5, 10, 15]);
+
+  const expensiveCalculation = (items) => {
+    console.log('Calculating total...');
+    return items.reduce((acc, item) => acc + item, 0);
+  };
+
+  const total = useMemo(() => expensiveCalculation(items), [items]);
+
+  return (
+    <div>
+      <h2>useMemo Example</h2>
+      <p>Count: {count}</p>
+      <p>Total: {total}</p>
+      <button onClick={() => setCount((prevCount) => prevCount + 1)}>
+        Increment
+      </button>
+    </div>
+  );
+}
+
+export default App;
+--------------------------------------------------------------------------------------------------------
+25. WebSocket Integration
+javascript
+Copy code
+import React, { useState, useEffect } from 'react';
+
+function WebSocketExample() {
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    const ws = new WebSocket('wss://example.com/socket');
+
+    ws.onmessage = (event) => {
+      setMessages((prevMessages) => [...prevMessages, event.data]);
+    };
+
+    return () => {
+      ws.close();
+    };
+  }, []);
+
+  return (
+    <div>
+      <h2>WebSocket Example</h2>
+      <ul>
+        {messages.map((msg, index) => (
+          <li key={index}>{msg}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default WebSocketExample;
+These are sample solutions for typical ReactJS interview coding questions. They cover different aspects of React such as state management, hooks, forms, routing, and optimization. Each of these examples can be expanded or modified to suit specific needs or interview scenarios.
+
+
+==========================================================================================================
+
+Redux
+
+ Review the Flow
+1=State: The initial state is defined in the reducer.
+2=Action: User or system events trigger actions.
+3=Reducer: The reducer listens for actions and returns a new state based on the action.
+4=Store: The store holds the state and dispatches actions to the reducer.
+   React Integration: React components connect to the Redux store using useSelector and useDispatch.
+
+Here's a simple Redux program to demonstrate the basic concepts of Redux, including setting up a store, creating actions, and managing state with reducers. This example will implement a counter with increment and decrement actions.
+-------------------------------------
+1. Install Redux and React-Redux
+Before you start, make sure you have Redux and React-Redux installed.
+
+--------------
+npm install redux react-redux
+2. Setting Up the Redux Store
+Create a store.js file to set up the Redux store.
+
+
+// store.js
+import { createStore } from 'redux';
+
+// Initial state
+const initialState = {
+  count: 0
+};
+
+// Actions
+const INCREMENT = 'INCREMENT';
+const DECREMENT = 'DECREMENT';
+
+export const increment = () => ({
+  type: INCREMENT
+});
+
+export const decrement = () => ({
+  type: DECREMENT
+});
+
+// Reducer
+const counterReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case INCREMENT:
+      return {
+        ...state,
+        count: state.count + 1
+      };
+    case DECREMENT:
+      return {
+        ...state,
+        count: state.count - 1
+      };
+    default:
+      return state;
+  }
+};
+
+// Create store
+const store = createStore(counterReducer);
+
+export default store;
+-----------------------------
+
+3. React Component with Redux Integration
+Create a Counter.js file for the counter component that interacts with the Redux store.
+
+javascript
+Copy code
+// Counter.js
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement } from './store';
+
+function Counter() {
+  const count = useSelector((state) => state.count);
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <h2>Counter</h2>
+      <p>Count: {count}</p>
+      <button onClick={() => dispatch(increment())}>Increment</button>
+      <button onClick={() => dispatch(decrement())}>Decrement</button>
+    </div>
+  );
+}
+
+export default Counter;
+
+------------
+4. Integrating Redux with React
+In your index.js or App.js file, wrap your React application with the Provider from react-redux and pass the store to it.
+
+javascript
+Copy code
+// index.js or App.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+import Counter from './Counter';
+
+function App() {
+  return (
+    <Provider store={store}>
+      <Counter />
+    </Provider>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+-----------
+5. Running the Application
+Now, when you run your application (npm start), you should see a simple counter with "Increment" and "Decrement" buttons. Clicking these buttons will increase or decrease the count in the Redux store, and the updated count will be displayed in the component.
+
+This is a basic example of how to use Redux in a React application. You can expand upon this by adding more actions, reducers, or even integrating it with more complex state management scenarios.
+=================

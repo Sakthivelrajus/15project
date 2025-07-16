@@ -1,0 +1,1143 @@
+1) What is the inheritance?
+
+function Bus(){
+    this.fw =2
+    this.totalWheels = function(){
+        console.log(this.fw+this.bw)
+    }
+   }
+-under f2 console developer toos-
+Bus.prototype.bw = 4
+var obj = new Bus()
+obj.totalWheels()
+O/P = 6
+
+
+
+
+------------------------------------------------------------------------------
+2)What is Prototype?- What is Prototypal Inheritance?- What is Prototype Chain? - Why we call it _proto_ ?- What is inhertance in Javascript
+function Bus(){
+    this.fw =2
+    this.totalWheels = function(){
+        console.log(this.fw+this.bw)
+    }
+   }
+-under f2 console developer toos-
+Bus.prototype.bw = 4
+var obj = new Bus() 
+obj.totalWheels()
+O/P = 6
+
+------------------------------------------------------------------------------
+
+
+3) Do you know the different between call , bind and apply?
+
+function f1(){
+    console.log("Called") 
+}
+f1()
+f1.call()
+f1.apply()
+f1.bind()()
+
+o/p Called
+---------
+Coding:
+   function f1(a){
+    console.log(this.x+a)
+}
+// this
+// Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+f1(10)
+o/p NaN
+
+var o={x:30}
+f1.call(o,10)
+f1.apply(o,[10])
+f1.bind(o,10)()
+f1.bind(o)(10)
+------------------------------------------------------------------------------
+
+4) What is async and await?
+    
+coding:
+function f1(){
+    return new Promise(function(resolve,reject){
+        setTimeout(function(){
+            resolve('success')
+        },5000)
+    })
+}
+
+// f1()
+// .then(function(data){
+//     console.log("then cb",data);
+// })
+// .catch(function(data){ 
+//    console.log("then cb",data) 
+// })
+async function getData(){
+    const data = await f1();
+    console.log(data)
+}
+getData()
+------------------------------------------------------------------------------
+
+5) Can you explain me what are call back function?
+
+Method -1:
+function f1(a,b,c){
+    a(1)
+    b(2)
+    c(3)
+}
+f1(
+    function(data){
+        console.log(data)
+    },
+     function(data){
+        console.log(data)
+    },
+   function(data){
+        console.log(data)
+    }
+)
+---------------
+Method -1:
+function f1(a,b){
+   a("Sachin")
+   b()
+   return function(){
+      console.log("kohli")
+   }
+}
+var x = f1(
+      function(data){
+       console.log(data);
+      },
+      function(){
+        console.log("Dhoni") 
+      }
+
+)
+x()
+------------------
+Method -3:
+function f1(a,b){
+    a ("Alice")
+    b ()
+    return function(){
+        console.log("Bob");
+    }
+    
+}
+ f1(
+    function(name){
+        console.log(name);
+    },
+    function(){
+        console.log("Charles");
+    }
+)
+()
+
+-----------------------------
+6) Tell me Different between undefined and not defined and null?
+
+let num;
+console.log(num); // Output: undefined
+
+----
+console.log(num); // Output: Uncaught ReferenceError: num is not defined
+----
+let name = null
+console.log(name)
+------------------------------------------------------------------------------
+
+7) What is event?
+     
+Coding:
+<html>
+   <head>   
+      <script type = "text/javascript">
+               function sayHello() {
+               alert("Hello World")
+            }
+        
+      </script>      
+   </head>
+      <body>
+      <p>Click the following button and see result</p>      
+      <form>
+         <input type = "button" onclick = "sayHello()" value = "Say Hello"/>
+      </form>      
+   </body>
+</html>
+
+
+
+------------------------------------------------------------------------------
+8) What is difference between setTimeout and setInterval?
+
+setTimeout:
+The setTimeout() method is used to execute a function after waiting for the specified time interval.
+
+setTimeout(function(){
+   console.log('5sec completed') 
+},5000)
+---------------
+
+setInterval:
+The setInterval() function is commonly used to set a delay for functions that are executed again and again
+setInterval(function(){
+  console.log("calling ")  
+},1000)
+1
+clearInterval(1) (or) clearTimeout(1)
+
+
+
+------------------------------------------------------------------------------
+
+9) What is an event loop in JavaScript?
+
+
+function f(){
+    console.log(1)
+    setTimeout(function(){
+        console.log(2)
+    },1000)
+    console.log(3)
+}
+f()
+ o/p
+ 1
+ 3
+ 2
+ 
+
+------------------------------------------------------------------------------
+
+10) What is the difference between Debouncing and  in JavaScript?
+ 
+Debounce:
+<p>
+    <b>Search:</b> <input onkeyup="debounce()" placeholder="Search..."/>
+</p>
+
+<script>
+    var timer;
+    function fnSearch(){
+        console.log('AJAX req')
+    }
+    function debounce(){
+        clearTimeout(timer)
+      timer=setTimeout(function(){
+            fnSearch();
+        },5000);
+    }
+</script>
+
+-----------------
+
+throttle:
+
+<p>
+        <b>Search:</b> <input onkeyup="fnThrottling()" placeholder="Search..."/>
+    </p>
+    
+    <script>
+        var timer, flag=true;
+        function fnSearch(){
+            console.log("AJAX")
+        }
+        function fnThrottling(){
+            if(flag){
+                fnSearch();
+                flag=false;
+            }
+            clearTimeout(timer)
+          timer=setTimeout(function(){
+                fnSearch();
+            },5000);
+        }  
+    </script>
+ 
+
+
+
+-----------------------------------------------------------------------------------------------------
+11) Can you give me example of Closure?
+       
+function f1(){
+   var name = "Alice"
+   function f2(){
+   console.log(name)
+   }
+   return f2
+}
+var f3 = f1()
+f3()
+ 
+---------------
+
+Code Explanation:
+
+function f1() {
+    var name = "alice"; // Declares a local variable 'name' inside f1
+
+    function f2() {
+        console.log(name); // Accesses the 'name' variable from f1's scope
+    }
+
+    return f2; // Returns the inner function 'f2'
+}
+
+var f3 = f1(); // Calls f1 and stores the returned function f2 in 'f3'
+f3(); // Executes 'f3' (which is actually 'f2'), printing "alice"
+Concepts Demonstrated:
+Lexical Scope & Closures:
+
+In JavaScript, inner functions (like f2) have access to variables declared in their outer functions (f1), even after the outer function has executed. This is called lexical scoping.
+When f1() is executed, it returns f2, but the name variable remains accessible due to closures.
+Closure Mechanism:
+
+f1() runs and returns f2, but name is still preserved in memory.
+f3 holds a reference to f2, and when f3() is called, it logs "alice" because f2 retains access to name due to the closure.
+Practical Use Cases of Closures:
+
+Encapsulation: Keeps variables private within a function scope.
+Maintaining State: Helps in scenarios like counters, event handlers, and module patterns.
+Key Takeaways:
+Closures allow inner functions to access outer function variables even after execution.
+Returned functions maintain references to their parent’s scope.
+This is useful for data privacy, callback functions, and state management.
+-------------------------------------------------------------------------------------------------------
+12) Lexical scope?
+ Lexical scope is the ability for a function scope to access variables from the parent scope. We call the child function to be lexically bound by that of the parent function.
+
+function f1() {
+  var a = 10
+  function f2() {
+    var b = 20
+    console.log(a); 
+    console.log(b); 
+  }
+  f2();
+}
+f1();
+
+-----------------------------------------------------------------------------------------------------------
+
+13) Spread Operator?
+coding:1
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const newArray = [...array1, ...array2];
+console.log(newArray); // [1, 2, 3, 4, 5, 6]
+
+------------------------------------------------------------------------------------------------------------
+
+14) Event loop (Repeated Quesions)
+
+
+------------------------------------------------------------------------------------------------------
+
+15) What is different between var,  let and const ? Have you worked on ES6?
+
+var:
+
+javascript
+
+// example with var
+function exampleVar() {
+  var x = 10;
+  if (true) {
+    var x = 20;
+    console.log(x); // Output: 20
+  }
+  console.log(x); // Output: 20
+}
+------------------
+my owncode easy understand
+var:
+function f1(){
+  if(true){
+    var a = 10
+  }
+  console.log(a);
+}
+f1()
+O/P:10
+-----------------------
+let:
+
+javascript
+
+// example with let
+function exampleLet() {
+  let x = 10;
+  if (true) {
+    let x = 20;
+    console.log(x); // Output: 20
+  }
+  console.log(x); // Output: 10
+}
+------------------
+my owncode easy understand:
+let:
+
+function f1(){
+  let a =10
+  if(true){
+     a = 100
+  }
+  console.log(a);
+}
+f1()
+O/P :100
+----------------------------
+
+const:
+
+javascript
+
+// example with const
+function exampleConst() {
+  const x = 10;
+  if (true) {
+    const x = 20;
+    console.log(x); // Output: 20
+  }
+  console.log(x); // Output: 10
+}
+-------
+
+my owncode easy understand:
+const:
+function f1(){
+  const a =10
+  if(true){
+     a = 100
+  }
+  console.log(a);
+}
+f1()
+
+O/P:Assignment to constant variable.
+
+
+
+
+---------------------------------------------------------------------------------------------
+
+
+16) What is ‘ this’ keyword javascript?
+
+
+
+let person = {
+  name: 'John',
+  sayHello: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }  
+};
+
+person.sayHello(); // output: "Hello, my name is John"
+
+let name = 'Jane';
+
+function sayHello() {
+  console.log(`Hello, my name is ${this.name}`);
+}
+
+let person = {
+  name: 'John',
+  sayHello: sayHello
+};
+
+sayHello(); // output: "Hello, my name is Jane"
+person.sayHello(); // output: "Hello, my name is John"
+
+
+--------------------------------------------------------------------------
+17) What is Hoisting?
+
+sayHello(); // Output: "Hello, World!"
+function sayHello() {
+  console.log("Hello, World!");
+}
+
+--------------------------------------------------------------------------
+18) What  arrow function?
+
+let square = function(x) {
+  return x * x;
+};
+
+console.log(square(5)); // Output: 25
+
+And here's the equivalent arrow function:
+
+let square = (x) => {
+  return x * x;
+};
+
+console.log(square(5)); // Output: 25
+--------------------------------------------------------------------------
+19) What is arrow function? How it is beneficial compare to normal function?
+
+let multiply = function(x, y) {
+  return x * y;
+};
+
+console.log(multiply(5, 10)); // Output: 50
+
+--------------------------------------------------------------------------
+20) What is JavaScript bind function?
+let person = {
+  name: 'John',
+  sayHello: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+
+person.sayHello() O/P : Hello, my name is John
+let sayHelloToMary = person.sayHello.bind({name: 'Mary'});
+sayHelloToMary(); // Output: "Hello, my name is Mary"
+
+--------------------------------------------------------------------------
+
+21) What is Map method ? What is different between for loop and Map method?
+
+let numbers = [1, 2, 3, 4, 5];
+
+
+let doubledNumbers = numbers.map(function(number) {
+  return number * 2;
+});
+
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+------------
+let users = [
+  {name: 'John', age: 30},
+  {name: 'Mary', age: 25},
+  {name: 'Peter', age: 40}
+];
+
+let userNames = users.map(function(user) {
+  return user.name;
+});
+
+console.log(userNames); // Output: ["John", "Mary", "Peter"]
+
+-------------------
+different between for loop and Map method
+
+
+// Using a for loop
+let numbers = [1, 2, 3, 4, 5];
+let doubledNumbers = [];
+
+for(let i = 0; i < numbers.length; i++) {
+  doubledNumbers.push(numbers[i] * 2);
+}
+
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+
+======================
+program for forloop using javasctipt
+ChatGPT
+Certainly! Here's a simple example of a for loop in JavaScript:
+
+javascript
+Copy code
+for (let i = 0; i < 5; i++) {
+  console.log("Iteration number:", i);
+}
+This loop will iterate 5 times, starting from 0 and ending at 4. In each iteration, it will log the message "Iteration number:" followed by the current value of i.
+
+You can also use a for loop to iterate over elements in an array:
+
+javascript
+Copy code
+const colors = ['red', 'green', 'blue'];
+
+for (let i = 0; i < colors.length; i++) {
+  console.log("Color:", colors[i]);
+}
+This loop will iterate over each element in the colors array and log each color to the console.
+======================================
+------------------------------------------
+
+different between forEach and Map method
+
+
+// Using forEach
+let numbers = [1, 2, 3, 4, 5];
+numbers.forEach(function(number) {
+  console.log(number * 2);
+});
+
+// Output: 2 4 6 8 10
+
+// Using map
+let numbers = [1, 2, 3, 4, 5];
+let doubledNumbers = numbers.map(function(number) {
+  return number * 2;
+});
+
+console.log(doubledNumbers);
+
+// Output: [2, 4, 6, 8, 10]
+
+--------------------------------------------------------------------------
+
+22) Can be used for loop in array?
+
+Yes, a for loop can be used to iterate over an array in JavaScript. Here is an example:
+
+javascript
+
+let numbers = [1, 2, 3, 4, 5];
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+
+
+--------------------------------------------------------------------------
+
+23) Have you heard about ternary operator?What is ternary operator?
+
+
+
+let a = 5;
+let b = 10;
+
+let largest = a > b ? a : b;
+
+console.log(largest); // Output: 10
+------------
+kudvenkat :
+
+var userInput = Number(prompt("Please enter a number"));
+var message = "";
+if (userInput % 2 == 0)
+{
+    message = "Your number is even";
+}
+else
+{
+    message = "Your number is odd";
+}
+
+alert(message);
+---------------
+var userInput = Number(prompt("Please enter a number"));
+var message = userInput % 2 == 0 ? "Your number is even": "Your number is odd";
+alert(message);  
+
+
+--------------------------------------------------------------------------
+
+24) What is nullish coalescing operator?
+
+let name;
+let defaultName = 'John';
+
+console.log(name ?? defaultName); // Output: John
+
+name = 'Alice';
+console.log(name ?? defaultName); // Output: Alice
+
+name = '';
+console.log(name ?? defaultName); // Output: ''		
+
+name = 0;
+console.log(name ?? defaultName); // Output: 0
+
+name = null;
+console.log(name ?? defaultName); // Output: John
+
+name = undefined;
+console.log(name ?? defaultName); // Output: John
+-------------------------------------------------------------------------
+25) What is optional chaining?
+let user = {
+  name: 'Alice',
+  address: {
+    street: '123 Main St
+    city: 'New York',
+    country: 'USA'
+  }
+};
+
+console.log(user.address?.zipCode); // Output: undefined
+
+user = {
+  name: 'Bob'
+};
+
+console.log(user.address?.zipCode); // Output: undefined
+
+--------------------------------------------------------------------------
+
+26) What is OR operator ?
+
+
+let name;
+let defaultName = 'John';
+
+console.log(name || defaultName); // Output: John
+
+name = 'Alice';
+console.log(name || defaultName); // Output: Alice
+
+name = '';
+console.log(name || defaultName); // Output: John
+
+name = 0;
+console.log(name || defaultName); // Output: John
+-------------------------
+
+let foo = null;
+let bar = 'Hello';
+
+console.log(foo || 'default value'); // Output: default value
+console.log(bar || 'default value'); // Output: Hello
+
+--------------------------------------------------------------------------
+
+27) Do you know about Promises? What are Promises?
+
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('data');
+    }, 1000);
+  });
+}
+
+fetchData()
+  .then(data => console.log(data))
+  .catch(error => console.log(error));
+javascript
+------------------------------------------
+const promise = new Promise((resolve, reject) => {
+  // Some asynchronous operation
+  const data = fetch('https://api.example.com/data'); //https://jsonplaceholder.typicode.com/posts
+  if (data) {
+    resolve(data);
+  } else {
+    reject(new Error('Data not found'));
+  }
+});
+
+// Consuming the promise
+promise
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+  
+
+
+--------------------------------------------------------------------------
+
+
+
+28) What is promise? what is promise.race()? what is promise.all?
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('promise1');
+  }, 1000);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('promise2');
+  }, 2000);
+});
+
+Promise.race([promise1, promise2])
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
+ ----------
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('promise1');
+  }, 1000);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('promise2');
+  }, 2000);
+});
+
+Promise.all([promise1, promise2])
+  .then(results => console.log(results))
+  .catch(error => console.log(error));
+  
+
+--------------------------------------------------------------------------
+
+29) Can you explain me what call back function and promises and async and await?
+
+function fetchData(callback) {
+  setTimeout(() => {
+    callback('data');
+  }, 1000);
+}
+
+fetchData(data => {
+  console.log(data);
+});
+----------
+
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('data');
+    }, 1000);
+  });
+}
+
+fetchData()
+  .then(data => console.log(data))
+  .catch(error => console.log(error));
+------ 
+
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('data');
+    }, 1000);
+  });
+}
+
+async function getData() {
+  try {
+    const data = await fetchData();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getData();
+
+--------------------------------------------------------------------------
+
+30) Do you know default parameter value which is introduce ES6?
+
+
+function greet(name = 'World') {
+  console.log(`Hello, ${name}!`);
+}
+
+greet();          // Output: Hello, World!
+greet('Alice');   // Output: Hello, Alice!
+
+--------------------------------------------------------------------------
+
+31) What about rest and spread operator?
+
+
+function sum(...numbers) {
+  let result = 0;
+  numbers.forEach((num) => {
+    result += num;
+  });
+  return result;
+}
+
+console.log(sum(1, 2, 3, 4));   // Output: 10
+
+
+-------------------------
+
+
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr3 = [...arr1, ...arr2];
+
+console.log(arr3);   // Output: [1, 2, 3, 4, 5, 6]
+
+
+--------------------------------------------------------------------------
+32) What do is Array includes() method?
+
+const fruits = ["apple", "banana", "mango", "orange"];
+
+console.log(fruits.includes("apple")); // Output: true
+console.log(fruits.includes("kiwi")); // Output: false
+console.log(fruits.includes("mango", 2)); // Output: false
+console.log(fruits.includes("orange", 2)); // Output: true
+
+--------------------------------------------------------------------------
+
+33) typeof null?
+const x = null;
+
+console.log(typeof x); // Output: object
+--------------------------------------------------------------------------
+
+
+34) Can we update the value of const?
+
+No, we cannot update the value of a const variable in JavaScript once it has been initialized. A const variable is a read-only variable that cannot be reassigned or modified after it has been declared. Here's an example:
+
+javascript
+
+const x = 5;
+x = 10; /
+
+--------------------------------------------------------------------------
+35) Do know about event delegation and event bubbling? And how we can resolve it?
+
+
+<ul id="myList">
+      <li class="hover-hand"> Item 1 </li>
+      <li class="hover-hand"> Item 2 </li>
+      <li class="hover-hand"> Item 3 </li>
+</ul>
+JavaScript using event delegation:
+
+javascript
+
+const myList = document.querySelector('#myList');
+
+myList.addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+    console.log('You clicked on item:', event.target.textContent);
+  }
+});
+--------------
+style.css
+
+.hover-hand{
+    cursor: pointer;
+}
+-------------
+
+To prevent event bubbling, you can use the event.stopPropagation() method in your event listener. For example:
+
+html
+
+<div id="myDiv" >
+    <h2>Welcome </h2>
+  </div>
+  <button id="myButton">Click Me</button>
+
+javascript
+
+const myButton = document.querySelector('#myButton');
+const myDiv = document.querySelector('#myDiv');
+
+myButton.addEventListener('click', function(event) {
+  event.stopPropagation();
+  console.log('Button clicked');
+});
+
+myDiv.addEventListener('click', function(event) {
+  console.log('Div clicked');
+});
+
+In this example, if you click the button, only the button's click event handler will be called, and the div's click event handler will not be called due to event.stopPropagation()
+-----------------------
+event bubbling?
+Event bubbling is a natural behavior of events in the browser, where an event that is triggered on a child element will "bubble" up to its parent elements, triggering any event listeners on those elements along the way.
+
+Here's an example to illustrate event bubbling in JavaScript:
+
+HTML:
+
+<div id="outer" style="width: 300px; height: 300px; background-color: lightblue;">
+    <div id="inner" style="width: 200px; height: 200px; background-color: lightgreen;"></div>
+  </div>
+
+
+javascript
+
+const outer = document.querySelector('#outer');
+const inner = document.querySelector('#inner');
+
+outer.addEventListener('click', function(event) {
+  console.log('Outer element clicked');
+});
+
+inner.addEventListener('click', function(event) {
+  console.log('Inner element clicked');
+});
+
+In this example, if you click on the "Click me!" text, both the inner and outer event handlers will be called, in that order. This is because the click event first triggers on the inner element, and then "bubbles" up to the outer element.
+
+You can use the event.stopPropagation() method to prevent event bubbling if you only want to handle the event on the inner element. For example:
+
+javascript
+
+const outer = document.querySelector('#outer');
+const inner = document.querySelector('#inner');
+
+outer.addEventListener('click', function(event) {
+  console.log('Outer element clicked');
+});
+
+inner.addEventListener('click', function(event) {
+  console.log('Inner element clicked');
+  event.stopPropagation();
+});
+
+In this modified example, if you click on the "Click me!" text, only the inner event handler will be called, as event.stopPropagation() prevents the event from bubbling up to the outer element
+-------------------------------------------------------------------------------------------------------
+
+36) What is  =, ==,===, in JavaScript?
+
+"="
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Operators</h2>
+
+ <p>a = 2, b = 5, calculate c = a + b, and display c:</p> 
+
+<p id="demonstration"></p>
+
+<script>
+var a = 2;
+var b = 5;
+var c= a + b;
+document.getElementById("demonstration").innerHTML = c;
+</script>
+
+</body>
+</html>
+----------------------------------------
+
+
+Method 2: (NIT)
+
+var n1=10 =>content 10
+n1
+10
+typeof(n1)
+'number' => type 
+var n2 = '10' content 10
+
+n2
+'10'
+typeof(n2)
+'string' => type
+n1==n2
+true
+n1===n2
+false
+------------------------------------
+ var n1 = 10
+  var n2 = "10"
+  sum = n1 == n2 
+  console.log(sum);
+content equal same is "==" true
+------------------------------
+ var n1 = 10
+  var n2 = "10"
+  sum = n1 === n2 
+  console.log(sum);
+content and type different "===" false
+--------------------------------------------------------------------------
+
+37) What is a window object?(My)
+
+// Open a new browser window
+const newWindow = window.open('https://www.flipkart.com/', '_blank', 'width=600,height=400');
+
+// Check the window status periodically
+const checkWindowStatus = setInterval(() => {
+  if (newWindow.closed) {
+    console.log('The window was closed');
+    clearInterval(checkWindowStatus); // Stop checking once the window is closed
+  } else {
+    console.log('The window is open');
+  }
+}, 1000); // Check every 1000 milliseconds (1 second)
+
+// Close the window after 5 seconds (5000 milliseconds)
+setTimeout(() => {
+  newWindow.close();
+}, 5000);
+
+
+--------------------------------------------------------------------------
+
+38) What is shallow copy and deep copy
+
+Shallow copy:
+
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1];
+
+console.log(arr1); // Output: [1, 2, 3]
+console.log(arr2); // Output: [1, 2, 3]
+
+arr2.push(4);
+console.log(arr1); // Output: [1, 2, 3]
+console.log(arr2); // Output: [1, 2, 3, 4]
+
+
+Deep copy
+
+const obj1 = { name: 'John', age: 30 };
+const obj2 = JSON.parse(JSON.stringify(obj1));
+
+console.log(obj1); // Output: { name: 'John', age: 30 }
+console.log(obj2); // Output: { name: 'John', age: 30 }
+
+obj2.age = 40;
+console.log(obj1); // Output: { name: 'John', age: 30 }
+console.log(obj2); // Output: { name: 'John', age: 40 }
+
+
+
+-----------------------------------------
+39) What is Generator function?
+
+function* generateNumbers() {
+  let num = 0;
+  while (true) {
+    yield num++;
+  }
+}
+
+const numbers = generateNumbers();
+
+console.log(numbers.next().value); // Output: 0
+console.log(numbers.next().value); // Output: 1
+console.log(numbers.next().value); // Output: 2
+console.log(numbers.next().value); // Output: 3
+
+-----------------------------------------------------------
+
+
+40)what is currying in javascript
+
+function multiple(a,b){
+    return a*b
+   }
+   function curriedMultiply(a){
+     return function (b){
+      return a*b
+     }
+   }
+   const double = curriedMultiply(2)
+   console.log(double(5))
+   
+   const triple = curriedMultiply(3)
+   console.log(triple(5))
+   
+===================================

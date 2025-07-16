@@ -1,0 +1,222 @@
+
+Array Methods
+
+Here are some commonly used array methods in JavaScript:
+
+1) push: Adds one or more elements to the end of an array and returns the new length of the array.
+let fruits = ['apple', 'banana', 'orange'];
+console.log(fruits); // Output: ['apple', 'banana', 'orange']
+
+fruits.push('mango');
+console.log(fruits); // Output: ['apple', 'banana', 'orange', 'mango']
+
+fruits.push('grape', 'kiwi');
+console.log(fruits); // Output: ['apple', 'banana', 'orange', 'mango', 'grape', 'kiwi']
+
+-------------
+2)pop: Removes the last element from an array and returns that element.
+let fruits = ['apple', 'banana', 'orange'];
+console.log(fruits); // Output: ['apple', 'banana', 'orange']
+
+let lastFruit = fruits.pop();
+console.log(lastFruit); // Output: 'orange'
+console.log(fruits); // Output: ['apple', 'banana']
+
+-------------
+3)shift: Removes the first element from an array and returns that element.
+let fruits = ['apple', 'banana', 'orange'];
+console.log(fruits); // Output: ['apple', 'banana', 'orange']
+
+let firstFruit = fruits.shift();
+console.log(firstFruit); // Output: 'apple'
+console.log(fruits); // Output: ['banana', 'orange']
+
+-------------
+4)unshift: Adds one or more elements to the beginning of an array and returns the new length of the array.
+let fruits = ['banana', 'orange'];
+console.log(fruits); // Output: ['banana', 'orange']
+
+fruits.unshift('apple');
+console.log(fruits); // Output: ['apple', 'banana', 'orange']
+
+fruits.unshift('mango', 'grape');
+console.log(fruits); // Output: ['mango', 'grape', 'apple', 'banana', 'orange']
+
+-------------
+5)concat: Combines two or more arrays and returns a new array.
+
+let fruits1 = ['apple', 'banana'];
+let fruits2 = ['orange', 'mango'];
+
+let mergedFruits = fruits1.concat(fruits2);
+
+console.log(mergedFruits); // Output: ['apple', 'banana', 'orange', 'mango']
+
+-------------
+6)slice: Extracts a section of an array and returns a new array.
+let fruits = ['apple', 'banana', 'orange', 'mango', 'grape'];
+
+let slicedFruits = fruits.slice(1, 4);
+
+console.log(slicedFruits); // Output: ['banana', 'orange', 'mango']
+
+-------------
+7)splice: Changes the contents of an array by removing, replacing, or adding elements.
+let fruits = ['apple', 'banana', 'orange', 'mango', 'grape'];
+
+// Remove elements
+let removedFruits = fruits.splice(2, 3);
+console.log(removedFruits); // Output: ['orange', 'mango', 'grape']
+console.log(fruits); // Output: ['apple', 'banana']
+
+// Replace elements
+let replacedFruits = fruits.splice(1, 1, 'kiwi', 'pear');
+console.log(replacedFruits); // Output: ['banana']
+console.log(fruits); // Output: ['apple', 'kiwi', 'pear']
+
+// Add elements
+fruits.splice(2, 0, 'orange', 'mango');
+console.log(fruits); // Output: ['apple', 'kiwi', 'orange', 'mango', 'pear']
+
+-------------
+8)forEach: Executes a provided function once for each array element.
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(element) {
+    console.log(element);
+});
+
+-------------
+9)map: Creates a new array populated with the results of calling a provided function on every element in the array.
+let numbers = [1, 2, 3, 4, 5];
+
+let squaredNumbers = numbers.map(function(element) {
+    return element * element;
+});
+
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+-------------
+10)filter: Creates a new array with all elements that pass the test implemented by the provided function.
+
+let numbers = [1, 2, 3, 4, 5];
+
+let evenNumbers = numbers.filter(function(element) {
+    return element % 2 === 0;
+});
+
+console.log(evenNumbers); // Output: [2, 4]
+
+-------------
+11)reduce: Applies a function to an accumulator and each element in the array to reduce it to a single value.
+let numbers = [1, 2, 3, 4, 5];
+
+let sum = numbers.reduce(function(accumulator, element) {
+    return accumulator + element;
+}, 0);
+
+console.log(sum); // Output: 15
+
+-------------
+12)find: Returns the first element in the array that satisfies the provided testing function.
+let fruits = ['apple', 'banana', 'orange', 'mango'];
+
+let foundFruit = fruits.find(function(element) {
+    return element === 'orange';
+});
+
+console.log(foundFruit); // Output: 'orange'
+
+-------------
+13)findIndex: Returns the index of the first element in the array that satisfies the provided testing function.
+let fruits = ['apple', 'banana', 'orange', 'mango'];
+
+let index = fruits.findIndex(function(element) {
+    return element === 'orange';
+});
+
+console.log(index); // Output: 2
+
+-------------
+14)sort: Sorts the elements of an array in place and returns the sorted array.
+let fruits = ['banana', 'apple', 'orange', 'mango'];
+fruits.sort();
+
+console.log(fruits); // Output: ['apple', 'banana', 'mango', 'orange']
+
+-----
+let numbers = [4, 2, 8, 1, 6];
+numbers.sort();
+
+console.log(numbers); // Output: [1, 2, 4, 6, 8]
+
+
+
+-------------
+15)reverse: Reverses the order of the elements in an array in place.
+let fruits = ['apple', 'banana', 'orange', 'mango'];
+fruits.reverse();
+
+console.log(fruits); // Output: ['mango', 'orange', 'banana', 'apple']
+
+-------------
+16)indexOf: Returns the first index at which a given element can be found in the array, or -1 if it is not present.
+let fruits = ['apple', 'banana', 'orange', 'mango'];
+
+let index = fruits.indexOf('orange');
+
+console.log(index); // Output: 2
+
+--------
+let fruits = ['apple', 'banana', 'orange', 'mango'];
+
+let index = fruits.indexOf('pear');
+
+console.log(index); // Output: -1
+
+-------------
+17)includes: Determines whether an array includes a certain element, returning true or false.
+let fruits = ['apple', 'banana', 'orange', 'mango'];
+
+let includesOrange = fruits.includes('orange');
+console.log(includesOrange); // Output: true
+
+let includesPear = fruits.includes('pear');
+console.log(includesPear); // Output: false
+
+-------------
+18)every: Tests whether all elements in the array pass the provided function.
+let numbers = [2, 4, 6, 8, 10];
+
+let allEven = numbers.every(function(element) {
+    return element % 2 === 0;
+});
+
+console.log(allEven); // Output: true
+---
+
+let numbers = [2, 4, 6, 8, 11];
+
+let allEven = numbers.every(function(element) {
+    return element % 2 === 0;
+});
+
+console.log(allEven); // Output: false
+
+-------------
+19)some: Tests whether at least one element in the array passes the provided function.
+let numbers = [2, 4, 6, 8, 10];
+
+let hasOddNumber = numbers.some(function(element) {
+    return element % 2 !== 0;
+});
+
+console.log(hasOddNumber); // Output: false
+-------
+let numbers = [2, 4, 6, 8, 11];
+
+let hasOddNumber = numbers.some(function(element) {
+    return element % 2 !== 0;
+});
+
+console.log(hasOddNumber); // Output: true

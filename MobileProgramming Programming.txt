@@ -1,0 +1,38 @@
+Concepts
+
+lifecycle methods in React.
+useContext hook in React and how is it used?
+useMemo hook in React and what is its purpose?
+
+
+Given a sorted array, find the smallest positive integer that is not the sum of a subset
+of the array in O(N) time. For example, for the input [1, 2, 3, 10], the output should be
+7.
+
+Given the code: let a = true; setTimeout(() => { a = false; }, 2000) while(a) { console.log(’
+-- inside while -- ’); } What will be printed to the console? Explain the output.
+
+What will be the output of the following code? function foo() { console.log(a); }
+function bar() { var a = 3; foo(); } var a = 5; bar();
+
+Given a nested array, flatten it into a single array. For example, input: [[[1, 2, 3], 4, 5],
+6, 7, [[8, 9], 10]], output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
+
+Given an integer array A of size N and an integer B, you can pick B elements from
+either the left or right end of the array A to get the maximum sum. Find and return
+the maximum possible sum. For example, if A = [5, -2, 3, 1, 2] and B = 3, the output
+should be 8.
+
+Given an array nums of size n, return the element that appears more than
+n / 2
+times. You may assume that the element always exists in the array. For example, for
+the input [3, 2, 3], the output should be 3.
+
+What will be the output of the following code? console.log([] == ![]); const arr = [10, 12,
+15, 21]; for (var i = 0; i < arr.length; i++) { setTimeout(function() { console.log(’Index: ’ +
+i + ’, element: ’ + arr[i]); }, 3000); }
+
+Given an integer array A containing N distinct integers, find all the leaders in the
+array A. An element is a leader if it is strictly greater than all the elements to its right
+side. The rightmost element is always a leader. For example, for the array [16, 17, 4,
+3, 5, 2], the leaders are [17, 5, 2].

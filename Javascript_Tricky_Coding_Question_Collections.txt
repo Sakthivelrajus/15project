@@ -1,0 +1,738 @@
+Telegram Javascript TRICKY Quesions:
+
+let x = 2
+let y = (x++,10)
+console.log(x,y)
+o/p 3 10
+-----
+let x = [3,4,5,6,7,89][1,2,3]
+console.log(x)
+o/p 6
+
+---
+
+var x = {foo:1};
+var output = (function(){
+ delete x.foo;
+ return x.foo;
+})();
+console.log(output)
+
+o/p undefined
+
+
+
+
+JAVASCRIPT INTERVIEW CODING ROUND:
+==========================================
+22.5.24 ITC 
+console.log(null==undefined)  
+----
+what is largest number:
+let arr = [86,96,99,92,98]
+
+remove the dublicate number : 
+let arr=[1,2,3,6,6,7,9]
+
+What is strick mode in javascript
+stateless component in react js
+ecma script features
+higer order function and higher order componenet
+babel ?
+what is JSx?
+ES6 features  
+useContext vs useMemo
+How to align center in the text css
+what is flex in css
+what are the complicity use in react
+what are the roles and responsiblity in frond end
+Higer order componenet
+
+======================
+27.5.24 Deloite
+
+ES6 features  
+useContext vs useMemo
+How to align center in the text css
+what is flex in css
+what are the complicity use in react
+what are the roles and responsiblity in frond end
+Higer order componenet
+what is pure componenet
+
+
+
+
+
+
+
+
+
+
++++++++++++++++++++++++
+function f1(){
+    var calling = "sakthivel raju"
+    console.log(calling)
+}
+ 
+f1()
+-----------------
+
+
+
+Ref: codingdoctor/AccentureRound1
+-------------------------------------------------------
+1) Remove the duplicate value?
+
+const name = "sakthivel sarvanana ss";
+const res = [...new Set(name.split(""))];
+console.log(res)  
+--------------------
+
+2) Remove the duplicate value word?
+const stringArray = ["apple", "banana", "orange", "banana", "kiwi", "orange"];
+
+const uniqueStrings = [...new Set(stringArray)];
+
+console.log(uniqueStrings); // ["apple", "banana", "orange", "kiwi"]
+---------------------------------------------------
+model json link :https://dummyjson.com/products
+------------------------------------------------
+
+
+Call backs function program interview accenture :
+
+const modifyArr = (arr, cb) => {
+    arr.push(4);
+    cb()
+}
+const arr = [1,2,3];
+modifyArr(arr,() =>{
+    console.log(arr)
+})
+o/p [1, 2, 3, 4]
+
+--------------------------------------------------------
+ 
+Write on example of closure in javascript? (The Learner)
+
+function person(){
+var name = "Purna";
+
+function getName(){
+return name
+}
+return getName;
+}
+var per = person();
+console.log(per())
+
+//
+
+function f1(){
+    let name = "Alice"
+    function f2(){
+      console.log(name)  
+    }
+     return f2
+ }
+ var f3 = f1()
+ undefined
+ f3()
+----------------------------------------------------------------------------------------------
+3)Can you write the code function add(2)(3)(4)  in javascript?
+
+program 1:
+
+function add(x) {
+  return function(y) {
+    return function(z) {
+      return x + y + z;
+    };
+  };
+}
+
+const result = add(2)(3)(4);
+console.log(result); // Output: 9
+
+
+-----------------------
+
+
+function add(x){
+    function b(y){
+        function c(z){
+            return x+y+z
+        }
+        return c;
+    }
+    return b;
+}
+var t = add(2)(3)(4);
+console.log(t)
+
+
+
+------------------------------------------------------------------------------------------
+
+4)flattern(flat) function using flatten array and remove the duplicate?(The Learner)
+[1,[2,3],[1,3,5,4]]
+
+coding:
+
+var arry = [1,[2,3],[1,3,5,4]];
+var farr = [];
+function flat(arr){
+arr.forEach((a) =>{
+ if(typeof a == 'object'){
+    flat(a);
+} else{
+    if(farr.indexOf(a) == -1){
+    farr.push(a)
+}
+  }
+});
+    return farr;
+}
+var t = flat(arry);
+console.log(t);
+
+O/P (5) [1, 2, 3, 5, 4]
+
+-----------------------------------------------------------------------------------------
+(shift+6 for Caret "^")
+5) how to remove the special  character from string? 
+ const str = "sjdjie$38(*edd$ddm*>^@)"
+ 
+1) coding: const name = "sjdjie$38(*edd$ddm*>^@)";
+console.log(name.replace(/[^a-zA-Z ]/g, ""));
+
+
+or)console.log(name.replace(/[^\w\s]/gi,""))
+ 
+2) coding:
+const name = "abc's test#s";
+console.log(name.replace(/[^a-zA-Z ]/g, ""));
+
+---------------------------------------------------------------------------
+6) Reverse: 
+
+let test="Hello How are You" 
+let test2 = test.split("").reverse("").join("")
+console.log(test2)
+Expected Output : uoy era woh olleH
+--------------------------------------------------------
+
+
+
+Plz solve this problem , Input:12345678,Output:1234** ,We need last four numbers coming like this Using Javascript ?
+
+function maskNumber(input) {
+  if (typeof input === 'number') {
+    input = input.toString();
+  }
+
+  if (input.length < 4) {
+    return input; // If the input has less than 4 characters, return it as is.
+  }
+
+  const firstFourDigits = input.slice(0, 4);
+  const maskedPortion = '*'.repeat(input.length - 4);
+
+  return firstFourDigits + maskedPortion;
+}
+
+const input = 12345678;
+const output = maskNumber(input);
+console.log(output);
+
+-----------------------------------------
+
+
+
+
+
+
+===============================================================
+(shift+6 for Caret "^")
+Can you please remove the special  character from string? (The Learner)
+ const str = "sjdjie$38(*edd$ddm*>^@)"
+ 
+1) coding: const name = "sjdjie$38(*edd$ddm*>^@)";
+console.log(name.replace(/[^a-zA-Z ]/g, ""));
+or)console.log(name.replace(/[^\w\s]/gi,""))
+ 
+2) coding:
+const name = "abc's test#s";
+console.log(name.replace(/[^a-zA-Z ]/g, ""));
+
+---------------------------------------------------------------------------
+Reverse: 
+
+let test="Hello How are You" 
+let test2 = test.split("").reverse("").join("")
+console.log(test2)
+Expected Output : uoy era woh olleH
+------------------------------------------------------------------
+
+1)How to find Duplicate elements in a Array ?
+const arrNumber = [1,2,8,2,9,8]
+const duplicates= arrNumber.filter((ele, index, arr) =>arr.indexOf (ele)!== index)
+console.log(duplicates);
+o/p 2,8
+
+1-a) Remove the duplicate value?
+
+const name = "sakthivel sarvanana ss";
+const res = [...new Set(name.split(""))];
+console.log(res)  
+======================================================
+2)How to find Max and Min value in a given Array ?
+
+//maxFunction
+const arrNumber = [1, 9, 887, 65, 65, 76];
+
+const maxFunction = (arr) => {
+  return arr.reduce(function (pre, cur) {
+    return pre > cur ? pre : cur;  // only change greater than symbol
+  });
+};
+
+console.log(maxFunction(arrNumber));
+
+
+//min funcion
+const arrNumber=[1,9,887,65,65,76]
+const minFunction=(arr)=>{
+    return arr.reduce(function(pre,cur){
+            return pre<cur?pre:cur
+    })
+   
+}
+console.log(minFunction(arrNumber));
+-------------------------------------------------------
+3)How To find second Largest value in array
+//Second largest Number
+const intArray=[2,8,9,7]
+const largestValue =(arr)=>{
+    firstLargestVlue=Math.max(...arr)
+    index=arr.indexOf(firstLargestVlue)
+    arr.splice(index,1)
+    secondLargestVlue=Math.max(...arr) // small change 
+    return(secondLargestVlue)
+}
+console.log(largestValue(intArray))
+
+
+
+//First Largest Number
+const intArray=[2,8,9,7]
+const largestValue =(arr)=>{
+    firstLargestVlue=Math.max(...arr)
+    index=arr.indexOf(firstLargestVlue)
+    arr.splice(index,1)
+    return(firstLargestVlue)
+}
+console.log(largestValue(intArray))
+o/p 9
+-------------------------------------------------------
+4)what is difference between Filter and Find method?
+
+
+//filter
+const empArr=[
+    {name:"Sachin", age:52},
+    {name:"Rahul Dravid", age:45},
+    {name:"Kabil Dev", age:62},
+    {name:"Dhoni", age:42},
+    {name:"Rohid Sharma", age:38},
+    {name:"Virat Koili", age:34},
+    {name:"Natrajan", age:29},
+    {name:"Aswin Ravichandran", age:38},
+    {name:"Sunil Kawaskar", age:66},
+    {name:"Murali Karthick", age:48},
+];
+const filteredItem= empArr.filter((item)=>{
+    return item.age>50
+})
+console.log(filteredItem);
+
+----------
+//find
+const empArr=[
+    {name:"Sachin", age:52},
+    {name:"Rahul Dravid", age:45},
+    {name:"Kabil Dev", age:62},
+    {name:"Dhoni", age:42},
+    {name:"Rohid Sharma", age:38},
+    {name:"Virat Koili", age:34},
+    {name:"Natrajan", age:29},
+    {name:"Aswin Ravichandran", age:38},
+    {name:"Sunil Kawaskar", age:66},
+    {name:"Murali Karthick", age:48},
+];
+const filteredItem= empArr.find((item)=>{
+    return item.age>50
+})
+console.log(filteredItem);
+o/p
+
+-----------------------------------------------------------------------
+5) How to Find missing elements in a given Array 1 to 10?
+
+
+const arrNum = [1, 2, 3, 4, 5, 6, 9, 10];
+const missArray = [];
+
+const missingValue = (arr) => {
+  const minValue = Math.min(...arr);
+  const maxValue = Math.max(...arr);
+
+  for (let i = minValue; i <= maxValue; i++) {
+    if (arr.indexOf(i) < 0) {
+      missArray.push(i);
+    }
+  }
+
+  return missArray;
+};
+
+console.log(missingValue(arrNum));
+
+
+-------------------------------------------------
+6) How to Find missing elements in a given Array 1 to 10?
+const arrNum = [1,2,3,4,5,6,9,10]
+const missArray=[]
+const missingValue =(arr)=>{
+    const minValue = Math.min(...arr)
+    const MaxValue = Math.max(...arr)
+    for(let i=minValue; i<MaxValue; i++){
+        if(arr.indexOf(i)<0){
+            missArray.push(i)
+        }
+    }
+    return(missArray)
+}
+console.log(missingValue(arrNum));
+
+
+--------------------------------------------------
+7)how to find even or odd numbers in array in javascript?
+
+const numbers = [1,2,3,8,9,12,16]
+const even = numbers.filter((item)=>{
+        return item%2 === 0
+})
+const odd = numbers.filter((item)=>{
+    return item%2 == !0
+})
+console.log('even numbers', even);
+console.log('odd numbers', odd);
+o/p 
+even numbers (4) [2, 8, 12, 16]
+odd numbers (3) [1, 3, 9]
+
+-----------------------------------------
+8)how to find prime number in Javascript ?
+
+var number = prompt("Enter the number");
+
+if (number == 1) {
+    console.log(`${number} is not prime neither composite`);
+} else if (number < 1) {
+    console.log(`Prime number of ${number} is not possible`);
+} else {
+    var isPrime = true;
+
+    for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+            isPrime = false;
+            break;  // Break out of the loop if a divisor is found
+        }
+    }
+
+    if (isPrime) {
+        console.log(`${number} is a prime number`);
+    } else {
+        console.log(`${number} is not a prime number`);
+    }
+}
+
+
+---------------------------------------
+
+9)how to reverse a string in Javascript ?
+
+let test="Hello How are You" 
+let test2 = test.split("").reverse("").join("")
+console.log(test2)
+Expected Output : uoy era woh olleH
+----------
+const reverseString=(str)=>{
+    var strToArray = str.split("")
+    var arrReverse= strToArray.reverse()
+    var strReverse = arrReverse.join("")
+    return strReverse
+
+}
+console.log(reverseString("Hi How Are you"));
+
+------------------------------------------
+
+10)how to merged two arrays in javascript?
+
+
+//using spread operator
+const array1 = [3, 4, 5, 6];
+const array2 = ["het", "raj", "yash", "jay"];
+const combined = [...array1, ...array2];
+console.log(combined);
+
+
+//using concat method
+ const a = [1, 2, 3, 4, 5];
+ const b = [10, 12, 15, 20];
+ const c = a.concat(b);
+ console.log(c);
+========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+========================================================
+JAVASCRIPT TRICKY ROUND
+
+1)what is the output of this function
+let count = 0
+function printCount(){
+        if(count == 1){
+            let count = 3
+            console.log('count1', count);
+
+
+        }
+        console.log('count2',count);
+}
+printCount()
+o/p: 
+count1 3
+count2 0
+----------------------------------------------
+
+2)Which result first print in the console.log
+console.log(1);
+setTimeout(() => {console.log(2)},1000 );
+setTimeout(() => {console.log(3)},0 );
+console.log(4);
+o/p
+ 1
+ 4
+ 3
+ 2
+
+-----------------------------------------------------
+3)What is the output of this setTimeout function
+
+setTimeout(()=>{
+    console.log(i);
+	var i = 10
+	
+},1000)
+o/p
+undefined 
+------------
+var i = 10 // Global variable
+setTimeout(()=>{
+    console.log(i);
+	
+	
+},1000)
+o/p = 10
+------------------------------------------------------
+4)what is the output of this funcion
+console.log(2+'2'); o/p = 22
+console.log(2-'2'); o/p = 0
+console.log('2'-2); o/p = 0
+
+
+============================================================================
+
+
+
+PART =2
+
+//1)
+function fruit(){
+    console.log(name);
+    console.log(price);
+    var name = "apple";
+    let price = 20
+ 
+        
+    }
+    fruit()
+    
+---------------
+//2
+for (var i =0; i<3; i++){
+    setTimeout(()=> console.log(i),1)
+}
+
+
+
+//3
+for (let i =0; i<3; i++){
+    setTimeout(()=> console.log(i),1)
+}
+
+
+//4
+console.log(+true);
+console.log(typeof+true);
+
+//5
+console.log(!"anil");
+console.log(typeof("anil"));
+
+
+//6
+let data = 'size'
+const bird ={
+    size:'small',
+};
+console.log(bird[data]);
+console.log(bird["size"]);
+console.log(bird.size);
+console.log(bird.data);
+
+
+//7
+let c = {name:'peter'}
+let d;
+d=c ;
+c.name='anil';
+console.log(d.name);
+
+
+//8
+var x;
+var x=10;
+console.log(x);
+
+//9
+var x;
+let x=10;
+console.log(x);
+
+
+
+//10
+let a =3
+let b = new Number(3)
+console.log(a == b);
+console.log(a === b);
+
+
+
+//11
+let name;
+names={}
+console.log(name);
+
+
+//12
+function fruit(){
+    console.log("woof");
+}
+fruit.name = "apple"
+fruit();
+
+//
+
+//13
+function sum(a,b){
+    return a+b
+}
+console.log(sum(1,'2'));
+
+
+
+//14
+let number =0
+console.log(number ++);
+console.log(++ number );
+console.log(number);
+
+
+//15
+function getAge(...args){
+    console.log(typeof args);
+}
+getAge(21)
+
+
+
+//16
+function getAge(){
+    'use strict';
+    age= 21;
+    console.log(age);
+}
+getAge(); 
+
+//17
+const foo = () => console.log("first");
+const bar = () => setTimeout(() => console.log("second"));
+const baz = () => console.log("third");
+baz()
+bar()
+foo()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

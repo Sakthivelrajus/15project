@@ -1,0 +1,35 @@
+
+@vishwanath-ts
+2 weeks ago
+Timestamps:
+0:56 What is Hoisting in JS?
+1:16 How it works?
+1:44 What is difference between let and var?
+2:17 What is Event Loop?
+2:47 What is precedence in Event Loop?
+3:29 What is difference between setTimeout and setInterval?
+4:27 Where do you use Rest Operator?
+5:36 Have you heard of array.reverse?
+6:03 What is meant by Shallow copy and Deep copy?
+7:11 What are Closure?
+8:08 Have you used reduce function in JS?
+8:19 What is the difference between map and reduce?
+9:24 What are the parameters map function accepts?
+9:49 What is difference between a Promise and a Callback?
+10:23 What position attributes in CSS have you used?
+10:35 What is the difference between them?
+12:32 What is Flexbox?
+13:13 What is difference between display=none and visibility=hidden? 
+13:48 What are the Hooks you have used?
+14:34 What is the purpose of useCallback?
+14:48 What are Class based Lifecycle methods?
+16:37 How would you be able to achieve componentDidMount, 
+componentDidUpdate & componentDidUnMount in functional based component?
+17:58 What are Pure Components and its purpose?
+19:27 What are Higher Order components?
+20:07 What HOCs have you used?
+20:29 Have you used Context API?
+20:46 Already have state management in React, so why go for Redux?
+21:06 How Redux works?
+22:27 Have you used any Middlewares?
+22:42 What is the purpose of using middlewares?

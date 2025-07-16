@@ -1,0 +1,98 @@
+https://github.com/SatishKonduru/batch27
+
+https://github.com/SatishKonduru/Batch25/tree/master/Batch25
+cashbook
+https://cashbook.in/
+------------------------------------
+48. Project Setup
+ng new cashbook --strict=false 
+
+npm install bootstrap --save
+npm uninstall --save bootstrap
+ "node_modules/bootstrap/dist/css/bootstrap.min.css"
+ 
+ Checking bootstrap working 
+ <div class="btn-group">
+    <button class="btn btn-danger">Button 1</button>
+    <button class="btn btn-default">Button 2</button>
+    <button class="btn btn-info">Button 3</button>
+    <button class="btn btn-primary">Button 4</button>
+    <button class="btn btn-success">Button 5</button>
+    <button class="btn btn-warning">Button 6</button>
+</div>
+   
+npm install @fontsource/poppins
+
+ng add @angular/material 
+
+node -v
+
+npm uninstall -g angular-cli
+
+
+npm uninstall -g @angular/cli
+npm cache verify
+npm install -g @angular/cli@latest
+ng version
+
+//npm : File C:\Program Files\nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system
+//Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+----------------------
+
+49. Landing Page
+
+www.npmjs.com/package/ngx-toastr
+
+npm install ngx-toastr --save
+ng g c pages/home --skip-tests=true
+
+------------------------------------
+
+50.Register Page
+ 
+ ng g c pages/register --skip-tests=true
+ ng g c pages/login --skip-tests=true
+ ----------------------------------
+
+51. setup JSON-SERVER
+
+PS C:\Cashbook\cashbook\server> cd .\server\
+
+npm install json-server
+
+npx json-server db.json
+
+you will get :Endpoints:http://localhost:3000/users
+
+install Postman
+
+-------------
+52. User Service
+
+ require('crypto').randomBytes(128).toString('hex')
+  ['9d475758187d4f22d286fc1f288d6a0380e7df987260af3414e130ca3b44517eb085c6e44ad7be85c46fb15b8675be3baf5bfcb8d798167ccc1bcfedba5ca2b619562fcb0d5e5a1068c1b02e56c10c918c0734a5d1a39781c6175b14b1554569007d06d057fa98353c7765fb239bf34748588d4158de7ac2fdeccd83889f663d']
+ 
+ npm install crypto-js
+ 
+ ng g c services/user --skip-tests=true
+ 
+
+ C:\Cashbook\cashbook\server> npx json-server db.json
+ 
+ ng g environments
+
+-------------------
+53. Login Process
+
+ng g c dashboard --skip-tests=true
+
+ng g s encryption --skip-tests=true 
+  
+------------------------------------
+54. Dashboard
+
+-----------------------
+55. Adding New Cashbook
+
+ng g c new-book --skip-tests=true
+services> ng g s dashboard --skip-tests=true

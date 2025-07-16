@@ -1,0 +1,44 @@
+In recent reactjs machine coding round, this was asked. Can you solve this ?
+
+1. Create a react component that displays a timer with initial value 0.
+2. There should be two buttons one to start/stop, and other to reset timer.
+3. Clicking on start will start timer from 0 and increase timer value by 1 for every second and button text should change to "stop".
+4. Clicking on stop will pause the timer and change button text to "start".
+5. Now click on start then timer should continue from paused value.
+6. Clicking on reset will reset the timer to initial value 0.
+
+---------------------------------
+
+#reactjs
+In recent reactjs machine coding round, this was asked. Can you solve this ?
+
+1.get the data from below url
+https://lnkd.in/gMWt2VgK
+2. Display a table which should contain years and population from this api 
+3. Add a input where user can search year or population appy debouncing here.
+4.Add a reset button which will reset the data in table to initial data.
+5. Add delete option in each row which should delete respective row when clicked.
+
+
+-------------------------------------
+
+🚀 Just solved a fun JavaScript machine coding round question! 💡 This exercise really helped me solidify my understanding of React component lifecycle and setTimeout.
+
+Here's the challenge from Adarsha P C 's LinkedIn post:
+
+Parent component ➖
+
+Input box: Enter a statement (e.g. "How are you?")
+Button: Pass the entered statement to the child component when clicked.
+Child component ➖
+
+Receive the incoming statement and display each word with a 2-second delay on screen.
+
+➖ The output looks like this: "How --2sec delay-- are --2sec delay-- you?"
+
+Check out my solution in this sandbox link: https://lnkd.in/dPqZT3Tr
+
+Feel free to take a look and let me know if you have any suggestions for improvement or alternative approaches! 🙌 
+
+
+---------------------------

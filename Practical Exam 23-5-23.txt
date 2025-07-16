@@ -1,0 +1,161 @@
+HTML 30-4-2023
+1)inline elements and block-level elements.
+2)What is inline-block element ?
+3)local storage and session storage?
+4)Have you used SVG?
+5)How are you maintaining your authorization
+6)Do you know about difference between web worker and service worker?
+7)What are the symentic element in HTML? 
+8)Have you worked on Accessibilty? Like disable one maintaining some standard  in HTML?(Not Answerd
+9)What is  <!DOCTYPE html> in html?
+
+---------------------------------------------------------
+CSS  30-4-2023
+
+1) Can you explain the Flex styling? Or About the Flex box styling?
+2) How your styling in your React Component?
+3) What is BOX Model in CSS?
+4) Can you explain the position ?and different between position? 
+5) What is a absolute in CSS?
+6) Suppose you have React Component, suppose there is one setting icon in it. So how is your style those one?
+7) Are you supporting the multiple view port the response behaviour? What about Mobile Responsive?(Not Answerd)
+8) css specificity in css?
+9)what is media query? Have you use media query?
+10) In CSS you have use position right. So tell me what are the different type of position you are used? (Repeated)
+11) What is different between relative and absolute?
+12) Do you know about Box model?(Repeated)
+13) How you will design response design webpage?
+14) Tell me some of the break points you remember?
+15) Have you heard about gradient , I mean linear gradient and radial gradient?
+16) you know Box model?(Repeated)
+17) Pseudo-elements ?
+
+
+
+---------------------------------------------------------
+JAVASCRIPT 30-4-2023
+
+1)Inheritance
+2)Prototype 
+3)call ,apply and bind
+4)async and await
+5)call back function
+6)undefined not defined
+7)event
+8)setTimeout and setInterval
+9)eventlooping
+10)debounce and throttling (code memory waiting)
+11)closure
+12)lexical scope
+13)spread operator
+14)event looping(Repeated)
+15)var, let and const 
+16)"this" key word (vvi)
+17)hoisting (vvi) 
+18)Arrow function
+19)Arrow function and normal function
+20)bind function
+21)Map Method
+   forloop vs map method,(waiting)
+   forEach vs map method
+22) can be used for loop in array(waiting)
+23)ternary operator (or) conditional operator
+24)nullish coalescing operator
+25)optional chaining
+26)OR operator
+27)promise vs observable
+28)promise? what is promise.race()? what is promise.all?   
+29)promise, callback function , aync and await
+30)default parameter 
+31)Rest operator and spread operator
+32)Array includes() method (waiting)
+33)typeof null  (waiting)
+34)update the value of const(waiting)
+35)event delegation and event bubbling (waiting)
+36)What is  =, ==,===, in JavaScript? 
+37)window object?
+38)ES6 latest features
+39)Generator function
+40)shallow copy and deep copy 
+50)Destructuring  in ES6?
+55)Default parameters(Repeated)
+53)higher order function 
+Q)polyfil for bind method?
+Q)What is the use of event handlinging JS?
+
+Q)What is the difference between synchronous and asynchronous programming?
+Q)What is function curring?
+   
+---------------------
+
+REACT
+
+code sandbox link :https://codesandbox.io/s/react-codesandbox-l4w3o6my59
+
+ Q)instead of using Redux = usereducer and usecontext
+
+1) difference between class component vs functional component
+2) Statefull Component and Stateless Component (My Question)? 
+3) How to pass the data from one Component to another Component? What are the different ways?
+4) In what scenario we will use Context?(waiting)
+Q) What is Virtual DOM?
+5) How can we pass the data from Child to Parent?
+6) If you work with React then have you worked on form Element? Like submitting for CRUD operations?
+7) In React how we can call an API? Suppose we have”n” point we have get the data from particular point right? (waiting)
+8)  Life Cycle Methods Of Component In React JS?
+9) for Routing and navigation which libraries  using in your project?
+10) What is ReactJS?
+11) What is different between Virtual DOM and real DOM?
+12) Tell me about all Hooks?
+13) If you want use UnMount means How to write?
+14) What is different between useMemo and useCallBack?
+15) Difference between control component and uncontrolled component ?
+16) Is there performance issued on controlled and uncontrolled inputs?
+17) Suppose I have a component and I want prevent that component from re-rendering . How we can do that?  Do we have any function? To Prevent it?
+18) What is strict mode in component and why we are use it? Which situation we can do it?
+19) In React , We have parent and child component right. I need to pass the data from parent component to child OR child to parent . So how we can do that. And If we there is no relationship between two component so then how we can pass the data? 
+(OR) prop drilling
+20) What is Higher Order Component or what is HOC in React?
+21) Why we are use arrow function in reactJs?
+22) Do you know about render props ? what is it?
+23) Can you tell me different type component in React? (ok)
+24) Have you use pure Component?
+25) Inside the package.json there is dependancy and dev.dependancy?
+26) npm install axios --save , npm install packagename . what is the different between --save and without save?
+27) How React works internally?
+28) What is use of the KEY for the component?
+29) Could you please tell me what is the controlled component in ReactJS and when do use?
+30) Do you know what the pure component is over the normal component? 
+31) Which one is fast, functional component or class based component?
+32) In React useRef hook and ref keyword ? What is significant of both?
+33) How to implement key and ref that code you need to write?
+34) What is JSX in React?
+35) What is props used for in React?
+    What is state in React
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------

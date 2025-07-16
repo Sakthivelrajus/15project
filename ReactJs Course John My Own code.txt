@@ -1,0 +1,3461 @@
+
+free online study website (00:00) - ?INTRO
+(00:44) - FreeCodeCamp
+(02:54)? - MDN Web Docs
+(03:48) ?- ?W3Schools
+(04:41) ?-? dev.to
+(05:15)? - CSS-Tricks
+(05:44)? - Outro
+
+=========================
+===============================   
+
+
+14) (54:00) First Component 
+
+index.html:(Default code )
+
+<html>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+ --------------------------------------------
+App.js:(Default code )
+
+import './App.css';
+
+import {Component} from 'react';
+
+ 
+class App extends Component {
+ 
+}
+ 
+export default App;
+----------------------------------------------------------
+index.js:
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function Greeting(){
+  return <h1> this is my first component</h1>
+}
+ReactDOM.render(<Greeting/> ,document.getElementById('root'));
+==============================================================
+
+15 (1:04:13) Text Editor Setup 
+
+No code only theory 
+
+=============================================================
+16 (1:12:29) First Component In Detail 
+index.js // No changes other files
+
+import React from 'react';
+import ReactDom from 'react-dom';
+// stateless functional component
+// always return JSX
+
+// function Greeting(){
+//   return <h4> hello world </h4>
+// }
+function Greeting(){
+  return (
+    <div>
+      <h1>hello world</h1>
+    </div>   
+  )
+}
+
+// const Greeting = () =>{
+//   return React.createElement('h1',{},'hello world');
+// };
+
+ReactDom.render(<Greeting />, document.getElementById('root'));
+
+==============================================================
+17 (1:19:18) JSX Rules 
+
+//No code changes in other files
+
+index.js :
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+//JSX Rules
+// return single element
+// div/ section/ article or Fragment
+//use camelCase for html attribute
+//close every element
+// formatting
+
+
+
+function Greeting (){
+  return(
+    <div>
+    <h3> Hello People</h3>
+    <ul>
+      <li> 
+        <a href='#'> hello world  </a>
+      </li>
+       <img src='' alt=''  />
+       <input type="" name="" id=""/>
+    </ul>
+    </div>
+  ) 
+}
+
+ReactDOM.render(<Greeting/>, document.getElementById('root'))
+
+
+==================================================
+
+17 (1:19:18) JSX Rules  IInd part
+
+index.js :
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// JSX Rules
+// return single element
+// div/ section/ article or Fragment
+// use camelCase for html attribute
+// close every element
+// formatting
+
+
+
+function Greeting (){
+  return   (
+   <div>
+     <h1> hello world</h1>
+   </div>
+)
+
+}
+
+ReactDOM.render(<Greeting/>, document.getElementById('root'))
+
+================================================
+google chrome browser extensions
+// VVI- 
+1) Redux DevTools
+2) React Developer Tools -extension tool in chrome for debugging
+---------------------------------
+18 (1:28:55) Nested Components And Tools 
+
+index.js :
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Nested Components, React Tools
+
+
+function Greeting (){
+  return   (
+   <div>
+     <Person/> 
+     <Message/>
+     
+
+   </div>
+);
+
+}
+const Person = () => <h2> John doe</h2>
+const Message = () => {
+  return <p> this is my message</p>;
+};
+
+ReactDOM.render(<Greeting/>, document.getElementById('root'))
+
+===============================================
+
+19 (1:34:50) Mini Book Project 
+
+index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Nested Components. React Tools
+
+
+function BookList () {
+  return (
+     <section>
+       <Book />
+       <Book />
+       <Book />
+       <Book />
+       <Book />
+       <Book />
+       <Book /> 
+       
+        
+   </section>
+   );
+}
+
+const Book = () => {
+  return (
+    <article>
+     <Image/>
+     <Title/>
+     <Author/>
+  </article>
+  );
+  
+};
+
+const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg" alt="" />
+
+const Title = () =>  <h1> I Love You to the Moon and Back Board book </h1>
+const Author = () =>  <h4> Amelia Hepworth </h4>
+
+
+
+ReactDOM.render(<BookList/>, document.getElementById('root'));
+
+
+
+=========================================
+20 (1:42:59) CSS Basics 
+
+//index.js//
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+
+//Nested Components. React Tools
+function BookList(){
+  return (
+    <section className='booklist'>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/> <Book/>
+
+    </section>
+  );
+}
+
+const Book = () =>{
+  return(
+   <article>
+     
+     < Title  />
+     < Author />
+     < Image />
+    </article>
+  );
+};
+const Image = () => <img className="style" src="https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg" />
+const Title = () => <h1> I love You to the Moon and Back Board book</h1>
+
+const Author= () => <h4> Amelia Hepworth </h4>
+
+ReactDOM.render(<BookList />, document.getElementById('root'));
+-----------------------------
+
+create a css file name as index.css in same line
+
+index.css
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background: #f1f5f8;
+  color:#222;
+  
+}
+
+.style{
+  height: 150px;
+  width: 150px;
+}
+ 
+.booklist {
+  
+  width: 90vw;
+  max-width: 1170px;
+  margin: 5rem auto;
+  display: grid;
+  gap: 2rem;
+  
+  
+}
+
+@media screen and (min-width:768px) {
+  .booklist {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
+.book{
+  background: #ffff;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+
+}
+
+========================================================
+
+21 (1:54:41) JSX Css 
+                             
+No code.. 
+
+
+================================================
+22 (2:01:31) JSX Javascript 
+index.js code
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+//CSS
+import './index.css';
+
+function BookList () {
+  return (
+     <section className = "booklist" >
+       <Book />
+     </section>
+   );
+}
+const author = 'Amelia Hepworth';
+const title = ' I Love you to the Moon and Back';
+const img ='https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg';
+
+const Book = () => {
+   return (
+    <article className='book'>
+    <img   className= 'images' src = {img}  alt= ''   />
+    <h1> {title} </h1>
+    <h4> {author.toUpperCase()} </h4>
+    {/* <p> {let x = 6} </p> */}
+     <p> {6+61} </p>
+
+  </article>
+  );
+  
+};
+
+ReactDOM.render(<BookList/>, document.getElementById('root'));
+--
+// no code other file 
+=========================================================
+before probs code:
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+//CSS
+import './index.css';
+
+//setup vars
+const title= 'I Love you to the Moon and Back';
+const author= 'Amelia Hepworth';
+const img ='https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg';
+
+
+function BookList () {
+  return (
+     <section className = "booklist" >
+        <Book />  
+     </section>
+   );
+}
+
+
+const Book = ()=> {
+   return (
+    <article className='book'>
+    <img className='images' src = {img}  alt= ''  />
+    <h1> {title} </h1>
+    <h4> {author} </h4>
+    
+    
+
+  </article>
+  );
+  
+};
+
+ReactDOM.render(<BookList/>, document.getElementById('root'));
+
+======================================
+
+23 (2:09:30) Props 
+index code: //no code for other files 
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+//CSS
+import './index.css';
+
+//setup vars
+ const firstBook={
+   img: 'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg',
+   title: 'I Love you to the Moon and Back',
+   author: 'Amelia Hepworth'
+  };
+  const secondBook={
+    img :'https://images-na.ssl-images-amazon.com/images/I/510g8NLbpNL._SX384_BO1,204,203,200_.jpg',
+    title: 'Our Class is a Family',
+    author:'Shannon Olsen '
+   };
+ 
+function BookList () {
+  return (
+     <section className = "booklist" >
+        <Book img={firstBook.img} title={firstBook.title} author={firstBook.author} />  
+        <Book img={secondBook.img} title={secondBook.title} author={secondBook.author} />  
+        <Book img={thirdBook.img} title={thirdBook.title} author={thirdBook.author} />  
+        <Book img={fourthBook.img} title={fourthBook.title} author={fourthBook.author} />  
+        
+     </section>
+   );
+}   
+
+const Book = (props) => {
+   return (
+    <article className='book'>
+    <img className='image' src = {props.img}  alt= ''   />
+    <h1> {props.title} </h1>
+    <h4> {props.author} </h4>
+    </article>
+  );
+  
+};
+
+ReactDOM.render(<BookList/>, document.getElementById('root'));
+
+==================================================================
+24 (2:25:41) Props Destructuring  
+
+index.js code // no coding for other files//
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+//CSS
+import './index.css';
+
+//setup vars
+// firstbook
+const firstBook={
+  img:'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg',
+  title:'I Love you to the Moon and Back',
+  author: 'Amelia Hepworth',
+};
+// secondbook
+const secondBook={
+    img :'https://images-na.ssl-images-amazon.com/images/I/510g8NLbpNL._SX384_BO1,204,203,200_.jpg',
+    title: 'Our Class is a Family',
+    author:'Shannon Olsen '
+}
+
+// thirdbook
+const thirdBook={
+  img :'https://images-eu.ssl-images-amazon.com/images/I/91q2CXBPpRL._AC_UL160_SR160,160_.jpg',
+  title: 'All Are Welcome',
+  author:'Alexandra Penfold '
+}
+
+//fourth book
+const fourthBook={
+  img :'https://images-eu.ssl-images-amazon.com/images/I/51817c82URL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg',
+  title: 'Be Kind',
+  author:'Pat Zietlow Miller '
+}
+
+function BookList () {
+  return (
+     <section className = "booklist" >
+        
+        <Book img={firstBook.img} title={firstBook.title} author={firstBook.author} />  
+        <Book img={secondBook.img} title={secondBook.title} author={secondBook.author} />  
+        <Book img={thirdBook.img} title={thirdBook.title} author={thirdBook.author} />  
+        <Book img={fourthBook.img} title={fourthBook.title} author={fourthBook.author} />  
+        
+        
+     </section>
+   ); 
+}
+
+ 
+const Book = ({img, title, author}) => {
+  // const {img, title, author} = props
+   return (
+    <article className='book'>
+    <img className='images' src = {img}  alt= '' />
+    <h1>{title}</h1>
+    <h4>{author}</h4>
+  </article>
+  );
+  
+};
+
+ReactDOM.render(<BookList/>, document.getElementById('root'));
+
+
+===============================================================================
+
+25) (2:29:44) Props - Children 
+
+code :index.js//
+//index.css some code has changed you can copied entire code 
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+//CSS
+import './index.css';
+
+//setup vars
+// fistbook
+const firstBook={
+  img:'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg',
+  title:'I Love you to the Moon and Back',
+  author: 'Amelia Hepworth',
+};
+// secondbook
+const secondBook={
+    img :'https://images-na.ssl-images-amazon.com/images/I/510g8NLbpNL._SX384_BO1,204,203,200_.jpg',
+    title: 'Our Class is a Family',
+    author:'Shannon Olsen '
+}
+
+// thirdbook
+const thirdBook={
+  img :'https://images-eu.ssl-images-amazon.com/images/I/91q2CXBPpRL._AC_UL160_SR160,160_.jpg',
+  title: 'All Are Welcome',
+  author:'Alexandra Penfold '
+}
+
+//fourth book
+const fourthBook={
+  img :'https://images-eu.ssl-images-amazon.com/images/I/51817c82URL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg',
+  title: 'Be Kind',
+  author:'Pat Zietlow Miller '
+}
+ 
+function BookList () {
+  return (
+     <section className = "booklist" >
+        
+        
+        
+     </section>
+   ); 
+}
+
+ 
+const Book = (props) => {
+  const {img,title, author,children} = props;
+   return (
+    <article className='book'>
+    <img className='images' src = {img}  alt= '' />
+    <h1>{title}</h1>
+    <h4>{author}</h4>
+    { children }
+  </article>
+  );
+  
+};
+
+ReactDOM.render(<BookList/>, document.getElementById('root'));
+============================================================
+
+26 (2:36:13) Simple List
+index.js code only
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+//CSS
+import './index.css';
+
+
+
+// fistbook
+ const books  = [
+ {
+  img:'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg',
+  title:'I Love you to the Moon and Back',
+  author: 'Amelia Hepworth',
+},
+// secondbook
+{
+    img :'https://images-na.ssl-images-amazon.com/images/I/510g8NLbpNL._SX384_BO1,204,203,200_.jpg',
+    title: 'Our Class is a Family',
+    author:'Shannon Olsen '
+},
+
+// thirdbook
+{
+  img :'https://images-eu.ssl-images-amazon.com/images/I/91q2CXBPpRL._AC_UL160_SR160,160_.jpg',
+  title: 'All Are Welcome',
+  author:'Alexandra Penfold '
+},
+
+//fourth book
+{
+  img :'https://images-eu.ssl-images-amazon.com/images/I/51817c82URL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg',
+  title: 'Be Kind',
+  author:'Pat Zietlow Miller ',
+}
+];
+
+const names =['john', 'peter', 'susan'];
+const newNames =names.map((name)=>{
+  return <h1>{name}</h1>
+});
+console.log(newNames);
+
+function BookList () {
+  return <section className = "booklist" >{newNames}</section>
+   
+}
+ 
+ 
+const Book = (props) => {
+  const {img,title, author} = props;
+   return (
+    <article className='book'>
+    <img className='images' src = {img}  alt= '' />
+    <h1>{title}</h1>
+    <h4>{author}</h4>
+    </article>
+  );
+  
+};
+
+ReactDOM.render(<BookList/>, document.getElementById('root'));
+
+====================================================================================
+27 (2:45:12) Proper List 
+
+index.js code// no need to change any other files
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+//CSS
+import './index.css';
+
+// fistbook
+ const books  = [
+ {
+  img:'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg',
+  title:'I Love you to the Moon and Back',
+  author: 'Amelia Hepworth',
+},
+// secondbook
+{
+    img :'https://images-na.ssl-images-amazon.com/images/I/510g8NLbpNL._SX384_BO1,204,203,200_.jpg',
+    title: 'Our Class is a Family',
+    author:'Shannon Olsen '
+},
+
+// thirdbook
+{
+  img :'https://images-eu.ssl-images-amazon.com/images/I/91q2CXBPpRL._AC_UL160_SR160,160_.jpg',
+  title: 'All Are Welcome',
+  author:'Alexandra Penfold '
+},
+
+//fourth book
+{
+  img :'https://images-eu.ssl-images-amazon.com/images/I/51817c82URL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg',
+  title: 'Be Kind',
+  author:'Pat Zietlow Miller ',
+}
+];
+
+ 
+
+function BookList () {
+  return (
+    <section className = "booklist" >
+    {books.map((book)=>{
+     return <Book book={book}></Book>
+   })}
+  </section>
+  );
+}
+ 
+ 
+const Book = (props) => {
+  console.log(props);
+  const {img,title, author} = props.book;
+   return (
+    <article className='book'>
+    <img className='images' src = {img}  alt= '' />
+    <h1>{title}</h1>
+    <h4>{author}</h4>
+    </article>
+  );
+  
+};
+
+ReactDOM.render(<BookList/>, document.getElementById('root'));
+===================================================================================================
+
+28 (2:52:49) Key Prop And Spread Operator 
+
+index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+//CSS
+import './index.css';
+
+// fistbook
+ const books  = [
+ {
+  id:1,
+  img:'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg',
+  title:'I Love you to the Moon and Back',
+  author: 'Amelia Hepworth',
+},
+// secondbook
+{   id:2,
+    img :'https://images-na.ssl-images-amazon.com/images/I/510g8NLbpNL._SX384_BO1,204,203,200_.jpg',
+    title: 'Our Class is a Family',
+    author:'Shannon Olsen '
+},
+
+// thirdbook
+{ 
+  id:3,
+  img :'https://images-eu.ssl-images-amazon.com/images/I/91q2CXBPpRL._AC_UL160_SR160,160_.jpg',
+  title: 'All Are Welcome',
+  author:'Alexandra Penfold '
+},
+
+//fourth book
+{
+  id: 4,
+  img :'https://images-eu.ssl-images-amazon.com/images/I/51817c82URL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg',
+  title: 'Be Kind',
+  author:'Pat Zietlow Miller ',
+}
+];
+
+function BookList () {
+  return (
+    <section className = "booklist" >
+    {books.map((book, index)=>{
+     return <Book key={book.id} {...book}></Book>
+   })}
+  </section>
+  );
+}
+
+const Book = (props) => {
+    const {img,title, author} = props ;
+    
+   return (
+    <article className='book'>
+    <img className='images' src = {img}  alt= '' />
+    <h1>{title}</h1>
+    <h4>{author}</h4>
+    </article>
+  );
+  
+};
+
+ReactDOM.render(<BookList/>, document.getElementById('root'));
+
+===========================================================================
+
+29 (2:58:52) Event Basics 
+
+index.js code / no other code in 
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+//CSS
+import './index.css';
+
+// fistbook
+ const books  = [
+ {
+  id:1,
+  img:'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg',
+  title:'I Love you to the Moon ',
+  author: 'Amelia Hepworth',
+},
+// secondbook
+{   id:2,
+    img :'https://images-na.ssl-images-amazon.com/images/I/510g8NLbpNL._SX384_BO1,204,203,200_.jpg',
+    title: 'Our Class is a Family',
+    author:'Shannon Olsen '
+},
+
+// thirdbook
+{ 
+  id:3,
+  img :'https://images-eu.ssl-images-amazon.com/images/I/91q2CXBPpRL._AC_UL160_SR160,160_.jpg',
+  title: 'All Are Welcome',
+  author:'Alexandra Penfold '
+},
+
+//fourth book
+{
+  id: 4,
+  img :'https://images-eu.ssl-images-amazon.com/images/I/51817c82URL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg',
+  title: 'Be Kind',
+  author:'Pat Zietlow Miller ',
+}
+];
+
+function BookList () {
+  return (
+    <section className = "booklist" >
+    {books.map((book, index)=>{
+     return <Book key={book.id} {...book}></Book>
+   })}
+  </section>
+  );
+}
+
+const Book = ({img, title, author}) => {
+  // attribute ,eventHandler
+  // onClick, onMouseOver
+    const clickHandler = (e) =>{
+      console.log(e);
+      console.log(e.target);
+      alert('hello world');
+    };
+    const complexExample = (author) =>{
+     console.log(author)  
+    }
+    return (
+    <article className='book' onMouseOver={()=>{
+      console.log(author);
+    }}  >
+    <img className='images' src = {img}  alt= '' />
+    <h1 onClick={()=> console.log(title) }  >{title}</h1>
+    <h4>{author}</h4>
+    <button type="button" onClick={clickHandler} > refernce example </button>
+    <button type="button" onClick={() => complexExample(author)}> more complex example </button>
+
+    </article>
+  ); 
+  
+};
+
+ReactDOM.render(<BookList/>, document.getElementById('root'));
+
+
+============================================================
+
+30):(3:11:12) Import And Export Statements 
+
+create file unde folder src->books.js
+create file unde folder src->Book.js
+create file unde folder src->testings.js
+
+Shortcut-> rafce
+
+index.js
+---------
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+//CSS
+import './index.css';
+
+import {data} from './books';
+import SpecificBook from './Book';
+import {greeting} from './testing/testing'
+
+function BookList() {
+  console.log(greeting);
+  return (
+<section className='booklist'>
+  {data.map((book,index) => {
+   return <SpecificBook key={book.id}  {...book}>
+
+   </SpecificBook>
+  })} 
+</section>
+  );
+}
+
+
+
+ReactDOM.render(<BookList/>, document.getElementById('root'));
+
+-----------------------------------------------------------
+books.js:
+--------
+// fistbook
+export const data = [
+    {
+     id:1,
+     img:'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX482_BO1,204,203,200_.jpg',
+     title:'I Love you to the Moon ',
+     author: 'Amelia Hepworth',
+   },
+   // secondbook
+   {   id:2,
+       img :'https://images-na.ssl-images-amazon.com/images/I/510g8NLbpNL._SX384_BO1,204,203,200_.jpg',
+       title: 'Our Class is a Family',
+       author:'Shannon Olsen '
+   },
+   
+   // thirdbook
+   { 
+     id:3,
+     img :'https://images-eu.ssl-images-amazon.com/images/I/91q2CXBPpRL._AC_UL160_SR160,160_.jpg',
+     title: 'All Are Welcome',
+     author:'Alexandra Penfold '
+   },
+   
+   //fourth book
+   {
+     id: 4,
+     img :'https://images-eu.ssl-images-amazon.com/images/I/51817c82URL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg',
+     title: 'Be Kind',
+     author:'Pat Zietlow Miller ',
+   }
+   ];
+---------------------------------------------------------
+
+Book.js:
+-------
+ import React from 'react'
+ const Book = ({img, title, author}) => {
+    // attribute ,eventHandler
+    // onClick, onMouseOver
+      const clickHandler = (e) =>{
+        console.log(e);
+        console.log(e.target);
+        alert('hello world');
+      };
+      const complexExample = (author) =>{
+       console.log(author)  
+      } 
+      return (
+      <article className='book' onMouseOver={()=>{
+        console.log(author);
+      }}  >
+      <img className='images' src = {img}  alt= '' />
+      <h1 onClick={()=> console.log(title) }  >{title}</h1>
+      <h4>{author}</h4>
+      <button type="button" onClick={clickHandler} > refernce example </button>
+      <button type="button" onClick={() => complexExample(author)}> more complex example </button>
+  
+      </article>
+    ); 
+    
+  };
+ 
+ export default Book
+ 
+------------------------------------------------------------
+
+testings.js
+----------->
+export let greeting = 'hello world'
+
+=============================================================
+
+32): (3:23:25) Free Hosting 
+// www.netlify.com,
+// netlify: sakthimail2006@gmail.com/Fl0wer$$2326
+
+// npm run build
+// https://app.netlify.com/teams/sakthimail2006/sites
+// drag and drop build to netlify website
+// https://admiring-shannon-43f4bb.netlify.app
+// react-basics-tutorial-sakthi-2020
+
+========================================================
+
+*************************************************************
+*************************************************************
+33): (3:28:22) Advanced Intro 
+// npm install && npm start
+
+34 (3:30:42) Get Starter Project -theory
+35 (3:31:35) Install Starter -theory
+36 (3:33:43) Starter Overview  -theory
+
+
+36) (3:39:00) UseState - Simple Use Case /1-error-example
+
+//rfce//
+
+app.js:
+--------
+import React from 'react'
+import Setup from './tutorial/1-useState/setup/1-error-example'
+function App() {
+  return (
+    <div className='container'>
+      <Setup/>
+    </div>
+  )
+}
+
+export default App
+
+========================================================
+1-error-example.js
+------------------
+import React from "react";
+
+const ErrorExample = () => {
+  let title = "random title";
+  const handleClick = () =>{
+    title='hello people';
+    console.log(title);
+  };
+  return (
+    <React.Fragment>
+      <h2>{title}</h2>
+      <button type="button"  className="btn" onClick={handleClick}>
+        change title
+      </button>
+    </React.Fragment>
+  );
+};
+
+export default ErrorExample;
+
+
+==============================================================
+37 (3:48:44) UseState - Basics
+
+App.js
+
+
+import React from 'react'
+import Setup from './tutorial/1-useState/setup/2-useState-basics';
+
+
+function App() {
+  return (
+    <div className='container'>
+      <Setup/>
+      
+    </div>
+  )
+}
+
+export default App
+
+-------------------------------
+2-useState-basics.js
+
+
+import React, { useState } from 'react';
+//useState -function
+
+const UseStateBasics = () => {
+  // console.log(useState('hello world'));
+  // const value = useState(1)[0]
+  // const handler = useState(1)[1]
+  // console.log(value, handler);
+  const [text,setText] = useState('random title');
+  
+  const handleClick = () =>{
+    if (text === 'random title')
+    {
+      setText('hello world');
+    }
+    else{
+      setText('random title');
+    }
+  };
+  return(
+  <React.Fragment> 
+    <h1>{text}</h1>
+    <button className="btn" onClick={handleClick}>
+     change title
+    </button>
+  </React.Fragment>
+  ) ;
+};
+
+export default UseStateBasics;
+
+================================================================
+38) (4:00:47) General Rules Of Hooks //Only theory 
+
+-------------------------------
+
+39) (4:03:39) UseState - Array Example
+
+app.js:
+
+
+import React from 'react'
+import Setup from './tutorial/1-useState/setup/3-useState-array';
+
+function App() {
+  return (
+    <div className='container'>
+      <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+-----------------------
+3-useState-array.js:
+
+import React from "react";
+import { data } from "../../../data";
+
+const UseStateArray = () => {
+  const [people, setPeople] = React.useState(data);
+  
+  const removeItem = (id) => {
+    let newPeople = people.filter((person)=> person.id !==id)
+    setPeople(newPeople)
+  };
+  return (
+    <>
+      {people.map((person) => {
+        const { id, name } = person;
+        return (
+          <div key={id} className="item">
+            <h4>{name}</h4>
+            <button onClick={() => removeItem(id)}>remove
+            </button>
+          </div>
+        );
+      })}
+      <button className="btn" onClick={()=> setPeople([])}>
+        clear items
+      </button>
+    </> 
+  );   
+};
+
+export default UseStateArray;
+
+=============================================================
+
+40 (4:17:27) UseState - Object Example 
+
+//App.js code same as above:
+
+4-useState-object.js:
+
+import React, { useState } from 'react';
+
+const UseStateObject = () => { 
+ 
+  const [person, setPerson] = useState({
+    name: 'peter',
+    age : 24,
+    message: 'random message',
+
+  });
+  const changeMessage = () => {
+    setPerson ({...person, message: 'hello world' });
+  };
+
+  return (
+    <>
+    <h3>{person.name}</h3>
+    <h3>{person.age}</h3>
+    <h3>{person.message}</h3>
+    <button className='btn' onClick={changeMessage}> 
+      change message
+    </button>
+    </>
+  );
+};
+
+export default UseStateObject;
+=============================================================
+
+41) (4:23:00) UseState - Multiple State Values 
+
+4-useState-object.js:
+
+import React, { useState } from 'react';
+
+const UseStateObject = () => {
+  const [person, setPerson] = useState({
+    name: 'peter',
+    age : 24,
+    message: 'random message',
+  });
+
+  const [name, setName]= useState('peter')
+  const [age, setAge]= useState(24)
+  const [message, setMessage]= useState('random message')
+
+  const changeMessage = () => {
+    // setPerson ({...person, message: 'hello world' });
+    setMessage('hello world');
+  };
+
+  return ( 
+    <>
+    <h3>{name}</h3>
+    <h3>{age}</h3>
+    <h3>{message}</h3>
+    <button className='btn' onClick={changeMessage}> 
+      change message
+    </button>
+    </>
+  );
+};
+
+export default UseStateObject;
+
+========================================================================
+
+42) (4:26:17) Simple Counter
+
+App.js code same as above:
+
+5-useState-counter.js:
+
+import React, { useState } from 'react';
+
+const UseStateCounter = () => {
+const [value, setValue] = useState(0);
+const reset = () =>{
+setValue(0);
+};
+
+  return (
+    <>
+    <section style={{margin: '4rem 0'}} >
+      <h2>regular counter</h2>
+      <h1>{value}</h1>
+      <button className='btn' onClick={() => setValue
+      (value - 1) }>
+        decrease
+      </button>
+      <button className='btn' onClick={(reset)}>
+        reset
+      </button>
+      <button className='btn' onClick={() => setValue
+      (value +1)}>
+        increase
+      </button>
+    </section>
+    </>
+  );
+   
+};
+export default UseStateCounter;
+ 
+ 
+
+============================================================================
+43) (4:32:10) Functional Update Form 
+
+App.js code same as above:
+
+5-useState-counter.js:
+
+import React, { useState } from 'react';
+
+const UseStateCounter = () => {
+  const [value, setValue] = useState(0);
+  
+  const reset = () => {  //react-projects.netlify.app
+    setValue(0);
+  };
+
+  const complexIncrease = () => {
+    setTimeout(() => {
+      // setValue(value+1);
+      setValue((prevState)=> {
+        return prevState + 1;
+      })
+    },2000);
+  };
+
+  return (
+    <>
+      <section style={{ margin: "4rem 0" }}>
+        <h2>regular counter</h2>
+        <h1>{value}</h1>
+        <button className="btn" onClick={() => setValue(value - 1)}>
+          decrease
+        </button>
+        <button className="btn" onClick={reset}>
+          reset
+        </button>
+        <button className="btn" onClick={() => setValue(value + 1)}>
+          increase
+        </button>
+      </section>
+      <section style={{ margin: "4rem 0" }}>
+        <h2>more complex counter</h2>
+        <h1>{value}</h1>
+        <button className="btn" onClick={complexIncrease}>
+          increase later
+        </button>
+        
+      </section>
+    </>
+  );
+};
+export default UseStateCounter;
+
+=========================================================================
+44 (4:44:55) Matching Project : only theory -no coding
+
+45 (4:47:27) useEffect - Basics 
+
+App.js:
+
+import React from 'react'
+import Setup from './tutorial/2-useEffect/setup/1-useEffect-basics';
+
+function App() {
+  return (
+    <div className='container'>
+      <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+
+1-useEffect-basics:
+
+
+import React, { useState, useEffect } from 'react';
+// by default runs after every re-render
+// cleanup function
+// second parameter
+const UseEffectBasics = () => {
+  const [value, setValue] = useState(0);
+  useEffect(()=>{
+console.log('call useEffect');
+if(value >0){
+  document.title=`New Messages(${value})`;
+}
+  });
+  
+  
+  return(
+    <div>
+      <h1>{value}</h1>
+      <button className='btn' onClick={()=> setValue(value+1)}>
+        click me
+      </button>
+    </div>
+  );
+};
+
+export default UseEffectBasics;
+
+==================================================================
+
+
+47) (5:01:40) useEffect - Dependency List => no code
+==================================================
+
+46) (4:57:47) useEffect - Conditional 
+
+1-useEffect-basics:
+
+const UseEffectBasic = () => {
+
+  const [value, setValue] = useState(0);
+
+  useEffect(() =>{
+    console.log('call useEffect');
+    if(value > 0){
+      document.title=`Message(${value})`;
+    }
+
+  },[value]);
+  console.log('render componenet') 
+
+  useEffect(() => {
+    console.log('hello world');
+  })
+
+
+  return(
+    <>
+      <h1>{value}</h1>
+      <button className='btn' onClick={()=> setValue(value + 1)}> click me</button> 
+
+    </>
+  );
+}
+
+export default UseEffectBasic;
+
+
+========================================================
+
+46,47 no code only theory
+
+======================================================
+48) (5:07:13) useEffect - Cleanup Function 
+
+App.js
+import React from 'react'
+import Setup from './tutorial/2-useEffect/setup/2-useEffect-cleanup';
+
+function App() {
+  return (
+    <div className='container'>
+      <Setup/>
+     </div>
+  );
+}
+
+export default App
+--------------------------------------------------
+2-useEffect-cleanup.js
+import React, { useState, useEffect } from 'react';
+
+// cleanup function
+// second argument
+
+const UseEffectCleanup = () => {
+  const [size, setSize] = useState(window.innerWidth);
+  const checkSize=()=>{
+    setSize(window.innerWidth);
+  };
+  useEffect(()=>{
+    console.log('useEffect');
+    window.addEventListener('resize',checkSize);
+    return()=>{
+      console.log('cleanup');
+      window.removeEventListener('resize',checkSize);
+    };
+  },[]);
+  return (
+    <>
+    <h1>window</h1>
+    <h2>{size}</h2>
+    </>
+  );
+};
+
+export default UseEffectCleanup;
+
+================================================================
+
+49 (5:19:24) useEffect - Fetch Data /correction last chapter 27.10.21/
+
+app.js
+
+import React from 'react'
+import Setup from './tutorial/2-useEffect/setup/3-useEffect-fetch-data';
+
+function App() {
+  return (
+    <div className='container'>
+      <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+
+-------------------------------------
+
+3-useEffect-fetch-data.js
+
+
+import React, { useState, useEffect } from 'react';
+
+const url = 'https://api.github.com/users';
+
+// second argument
+const UseEffectFetchData = () => {
+  const [users, setUsers] = useState([]);
+
+  const getUsers = async () =>{
+    const response = await fetch(url);
+    const users = await response.json();
+    setUsers(users);
+  };
+
+  useEffect(()=>{
+    getUsers();
+  },[]);
+  return(
+    <>
+    <h3>github users</h3>
+    <u1 className="users" >
+      {users.map((user) => {
+        const{id, login, avatar_url, html_url} = user;
+        return(
+          <li key={id}>
+            <img src={avatar_url} alt={login}/>
+            <div>
+              <h4>{login}</h4>
+              <a href={html_url}> profile</a>
+            </div>
+          </li>
+        );
+      })}
+    </u1>
+    </>
+  );
+};
+
+export default UseEffectFetchData;
+
+
+======================================================
+//3-Conditional-rendering//
+51 (5:31:29) Multiple Returns 
+
+//App.js code://
+import React from 'react'
+import Setup from './tutorial/3-conditional-rendering/setup/1-multiple-returns';
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+-----------------------------------
+//1-muliple-returns.js//
+
+import React, { useState, useEffect } from 'react';
+const url = 'https://api.github.com/users/QuincyLarson';
+const MultipleReturns = () => {
+  const [loading, setLoading] = useState(false);
+  if (loading) {
+    return <h2> Loading....</h2>
+  }
+  return <h2>multiple returns</h2>
+};
+
+export default MultipleReturns;
+----------------------------------
+
+52 (5:37:09) Multiple Returns - Fetching Data 
+
+//App.js code same as above//
+
+//1-muliple-returns.js//
+
+import React, { useState, useEffect } from 'react';
+const url = 'https://api.github.com/users/QuincyLarson';
+const MultipleReturns = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError]= useState(false);
+  const [user, setUser] = useState('default user');
+  
+  useEffect(()=>{
+   fetch(url)
+   .then((resp) =>{
+     if(resp.status >= 200 && resp.status <=299){
+        return resp.json();
+     } else{
+       setIsLoading(false);
+       setIsError(true);
+       throw new Error (resp.statusText);
+     }
+
+   })
+   .then((user) =>{
+     const { login } = user;
+     setUser(login);
+     setIsLoading(false);
+   })
+   .catch((error) => console.log(error));
+  },[]);
+
+  if(isLoading){
+    return (
+      <div>
+        <h1> Loading...</h1>
+      </div>
+    );
+  }
+ if(isLoading){
+   return(
+     <div>
+       <h1>Loading....</h1>
+     </div>
+   );
+ }
+if(isError){
+  return(
+    <div>
+      <h1> Error...</h1>
+    </div>
+  );
+}
+
+  return (
+    <div>
+      <h1>{user} </h1>
+    </div>
+  );
+};
+
+export default MultipleReturns;
+
+
+
+==============================================================================
+
+53 (5:52:07) Short - Circuit Evaluation 
+
+// || OR operator
+// && AND operator
+
+//App.js code//
+
+import React from 'react'
+import Setup from './tutorial/3-conditional-rendering/setup/2-short-circuit';
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+------------------------------------------------------------------------------
+
+//2-short-circuit.js code//
+
+import React, { useState } from 'react';
+// short-circuit evaluation
+// ternary operator
+
+const ShortCircuit = () => {
+      const [text,  setText] = useState('');
+      const firstValue = text || 'hello world';
+      const secondValue = text && 'hello world';
+
+  return(
+    <>
+      {/* <h1>{firstValue}</h1>
+      <h1>value :{secondValue} </h1>
+      if(){console.log('hello world')} */}
+     <h1>{text || 'john doe'}</h1>
+     {text && <h1>hello world</h1> }
+     {!text && <h1>hello world</h1>}
+    </>
+  )
+};
+
+export default ShortCircuit; 
+
+
+=========================================================================
+54 (6:02:50) Ternary Operator  
+
+//App.js code same as above
+
+//2-short-circuit.js code//
+import React, { useState } from 'react';
+// short-circuit evaluation
+// ternary operator
+
+const ShortCircuit = () => {
+      const [text,  setText] = useState('');
+      const [isError, setIsError]= useState(false);
+      const firstValue = text || 'hello world';
+      const secondValue = text && 'hello world';
+
+  return(
+    <>
+      {/* <h1>{firstValue}</h1>
+      <h1>value :{secondValue} </h1>
+      if(){console.log('hello world')} */}
+     <h1>{text || 'john doe'}</h1>
+     <button className='btn' onClick={()=> setIsError(!isError) }>
+     toggle error
+     </button>
+     {isError && <h1>Error...</h1>}
+     {isError ? (
+      <p>there is an error...</p>
+     ) : (
+       <div>
+      <h2>there is no error</h2>
+       </div>     
+     )}
+    
+     
+    </>
+  );
+};
+
+export default ShortCircuit;
+
+
+=============================================================
+55 (6:11:30) Show/Hide Component 
+
+//App.js code// 
+import React from 'react'
+import Setup from './tutorial/3-conditional-rendering/setup/3-show-hide';
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+
+-----------------------------------
+//3-show-hide.js//
+
+import React, { useState, useEffect } from 'react';
+
+const ShowHide = () => {
+  const [show, setShow] =  useState(false);
+  return(
+    <>
+    <button className='btn' onClick={()=>setShow(!show)}>
+      show/hide
+    {show && <Item/>}
+    </button>
+    </>
+  );
+
+};
+const Item = () =>{
+  const [size, setSize] = useState(window.innerWidth);
+  const checkSize = () =>{
+    setSize(window.innerWidth);
+  };
+  useEffect(()=>{
+    window.addEventListener('resize',checkSize);
+    return () =>{
+      window.removeEventListener('resize', checkSize);
+    };
+  },[]);
+  return(
+    <div style={{marginTop:'2rem'}}>
+      <h1>Window</h1>
+      <h2>size : {size} </h2>
+
+    </div>
+  );
+};
+
+export default ShowHide;
+===================================================================
+
+56 (6:20:15) Form Basics 
+
+//App.Js code//
+
+import React from 'react'
+import Setup from './tutorial/4-forms/setup/1-controlled-inputs';
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+---------------------------------
+
+//1-controlled-inputs.js//
+
+import React, { useState } from 'react';
+// JS
+// const input = document.getElementById('myText');
+// const inputValue = input.value
+// React
+// value, onChange
+
+const ControlledInputs = () => {
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    console.log('hello world');
+  };
+  return(
+    <>
+    <article>
+      <form className='form' onSubmit={handleSubmit}>
+        <div className='form-control'>
+          <label htmlFor='firstName'> Name: </label>
+          <input type='text' id='firstName' name='firstName' />
+        </div>
+        
+        <div className='form-control'>
+          <label htmlFor='firstName'> Email: </label>
+          <input type='text' id='email' name='email' />
+        </div>
+
+       <button type='submit'> add Person</button>
+      </form>
+    </article>
+    </>
+  )
+};
+
+
+export default ControlledInputs;
+
+==================================================================================================
+
+
+57 (6:28:53) Controlled Inputs 
+
+
+//App.js code as above //
+
+//1-controlled-inputs.js//
+
+import React, { useState } from 'react';
+// JS
+// const input = document.getElementById('myText');
+// const inputValue = input.value
+// React
+// value, onChange
+
+const ControlledInputs = () => {
+ const [firstName, setFirstName]    = useState('');
+ const [email, setEmail] = useState('');
+ const [people, setPeople] = useState([]);
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    if(firstName && email){
+      const person = {id: new Date().getTime().toString(), firstName, email};
+      console.log(person);
+      setPeople((people) => {
+        return [...people, person];
+      });
+      setFirstName('');
+      setEmail('');
+      } else{
+        console.log('empty values');
+      }
+  };
+  return(
+    <>
+    <article>
+      <form className='form' onSubmit={handleSubmit}>
+        <div className='form-control'>
+          <label htmlFor='firstName'> Name: </label>
+          <input 
+          type='text' 
+          id='firstName' 
+          name='firstName'
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)} 
+          />
+        </div> 
+          <div className='form-control'>
+          <label htmlFor='firstName'> Email: </label>
+          <input 
+          type='text' 
+          id='email' 
+          name='email'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+           />
+        </div>
+
+       <button type='submit'> add Person</button>
+      </form>
+    </article>
+    </>
+  )
+};
+
+
+export default ControlledInputs;
+
+
+=============================================================================
+
+58 (6:38:09) Add Item To The List
+
+//App.js code same as above//
+
+//1-controlled-inputs.js//
+
+import React, { useState } from 'react';
+// JS
+// const input = document.getElementById('myText');
+// const inputValue = input.value
+// React
+// value, onChange
+
+const ControlledInputs = () => {
+ const [firstName, setFirstName]    = useState('');
+ const [email, setEmail] = useState('');
+ const [people, setPeople] = useState([]);
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    if(firstName && email){
+      const person = {id: new Date().getTime().toString(), firstName, email};
+      console.log(person);
+      setPeople((people) => {
+        return [...people, person];
+      });
+      setFirstName('');
+      setEmail('');
+      } else{
+        console.log('empty values');
+      }
+  };
+  return(
+    <>
+    <article>
+      <form className='form' onSubmit={handleSubmit}>
+        <div className='form-control'>
+          <label htmlFor='firstName'> Name: </label>
+          <input 
+          type='text' 
+          id='firstName' 
+          name='firstName'
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)} 
+          />
+        </div> 
+          <div className='form-control'>
+          <label htmlFor='firstName'> Email: </label>
+          <input 
+          type='text' 
+          id='email' 
+          name='email'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+           />
+        </div>
+
+       <button type='submit'> add Person</button>
+      </form>
+      {people.map((person, index)=>{
+        const {id, firstName, email} = person;
+        return(
+          <div className='item' key ={id}>
+            <h4>{firstName}</h4>
+            <p>{email} </p>
+          </div>
+        );
+      })}
+    </article>
+    </>
+  )
+};
+
+
+export default ControlledInputs;
+
+=====================================================
+
+59 (6:50:32) Multiple Inputs
+
+//App.js code//
+
+import React from 'react'
+import Setup from './tutorial/4-forms/setup/2-multiple-inputs';
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+-------------------------------------------------
+//2-multiple-inputs.js
+
+import React, { useState } from 'react';
+// JS
+// const input = document.getElementById('myText');
+// const inputValue = input.value
+// React
+// value, onChange
+// dynamic object keys
+
+const ControlledInputs = () => {
+  const [firstName, setFirstName] = useState('');
+  const [email, setEmail] = useState('');
+  const [people, setPeople] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (firstName && email) {
+      const person = { id: new Date().getTime().toString(), firstName, email };
+      console.log(person);
+      setPeople((people) => {
+        return [...people, person];
+      });
+      setFirstName('');
+      setEmail('');
+    } else {
+      console.log('empty values');
+    }
+  };
+  return (
+    <>
+      <article>
+        <form className='form' onSubmit={handleSubmit}>
+          <div className='form-control'>
+            <label htmlFor='firstName'>Name : </label>
+            <input
+              type='text'
+              id='firstName'
+              name='firstName'
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+          </div>
+          <div className='form-control'>
+            <label htmlFor='email'>Email : </label>
+            <input
+              type='email'
+              id='email'
+              name='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <button type='submit'>add person</button>
+        </form>
+        {people.map((person, index) => {
+          const { id, firstName, email } = person;
+          return (
+            <div className='item' key={id}>
+              <h4>{firstName}</h4>
+              <p>{email}</p>
+            </div>
+          );
+        })}
+      </article>
+    </>
+  );
+};
+
+export default ControlledInputs;
+
+================================================================
+
+60 (7:06:29) useRef 
+//App.js code//
+
+import React from 'react'
+import Setup from './tutorial/5-useRef/setup/1-useRef-basics';
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+-----------------------------------------------
+//1-useRef-basics.js code//
+
+import React, { useEffect, useRef } from 'react';
+
+// preserves value
+// DOES NOT trigger re-render
+// target DOM nodes/elements
+
+const UseRefBasics = () => {
+  
+  const refContainer = useRef(null);
+  const divContainer = useRef(null) ;
+  const handleSubmit= (e) =>{
+   e.preventDefault();
+   console.log(refContainer.current.value);
+   console.log(divContainer.current);
+  };
+  useEffect(()=>{
+    console.log(refContainer.current);
+    refContainer.current.focus();
+  });
+  return(
+    <>
+     <form className='form' onSubmit={handleSubmit}>
+       <div>
+         <input type='text' ref={refContainer}/>
+       </div>
+<button type='submit'>submit</button>
+     </form>
+     <div  ref = {divContainer} >Hello World</div>
+    </>
+  );
+};
+
+export default UseRefBasics;
+
+
+=====================================================
+
+61 (7:16:20) useReducer - UseState Setup 
+
+
+//App.js code//
+
+
+import React from 'react'
+import Setup from './tutorial/6-useReducer/setup';
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+-----------------------------------
+//code index.js //
+
+import React from 'react'
+import Setup from './tutorial/6-useReducer/setup';
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+
+-----------------------------------
+//Model.js//
+
+import React, { useEffect } from 'react';
+
+const Modal =({modelContent,closeModal}) =>{
+  return <div>i'm modal</div>
+}
+
+export default Modal;
+
+
+========================================================
+
+62 (7:37:15) useReducer - Refactor 
+
+//App.js code same as above//
+
+import React from 'react'
+import Setup from './tutorial/6-useReducer/setup';
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+
+----------------------------------------
+//index.js code//
+
+import React, { useState, useReducer } from 'react';
+import Modal from './Modal';
+import { data } from '../../../data';
+// reducer function
+const reducer = (state, action)=>{};
+const defaultState ={
+  people: [],
+  isModalOpen: false,
+  modalContent:''
+}; 
+const Index = () => {
+  const [name, setName]= useState('');
+  const [state, dispatch] = useReducer(reducer,defaultState) 
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+     if(name){
+     }else {
+    } 
+  };
+  return (
+    <>
+    {state.isModalOpen && <Modal modelContent={state.modalContent}/>} 
+    <form onSubmit={handleSubmit} className='form'>
+      <div>
+        <input
+        type='text' 
+        value={name}
+        onChange={(e)=> setName(e.target.value)}
+        />
+        
+   </div>
+  <button type='submit'> add</button>
+    </form>
+    {state.people.map((person) => {
+      return <div key ={person.id}>
+        <h4>{person.name}</h4>
+      </div>
+    })}
+    </>
+  );
+};
+
+export default Index;
+
+
+-----------------------------------------------------------------
+
+//Model.js code//
+
+import React, { useEffect } from 'react';
+
+const Modal =({modelContent,closeModal}) =>{
+  return <div className="modal" >
+    <p>{modelContent}</p>
+  </div>
+}
+
+export default Modal;
+
+
+
+===================================================================
+
+63 (7:37:15) useReducer - Add Item
+
+//App.js code same as above//
+
+//Modal.js//
+import React, { useEffect } from 'react';
+
+const Modal =({modelContent,closeModal}) =>{
+  return <div className="modal" >
+    <p>{modelContent}</p>
+  </div>
+}
+
+export default Modal;
+
+------------------------------------------------
+
+//index.js//
+
+import React, { useState, useReducer } from 'react';
+import Modal from './Modal';
+import { data } from '../../../data';
+// reducer function
+const reducer = (state, action) => {
+  
+  if(action.type === 'ADD_ITEM'){
+    const newPeople=[...state.people,action.payload]
+    return {
+      ...state,
+      people: newPeople,
+      isModalOpen: true,
+      modelContent: 'item added',
+    };
+    
+  }
+  if(action.type === "NO_VALUE") {
+    return{...state, showModalOpen: true, modelContent:
+    'please enter value'}
+  }
+  throw new Error ('no matching action type ')
+};
+const defaultState ={
+  people: [],
+  isModalOpen: false,
+  modalContent:''
+}; 
+const Index = () => {
+  const [name, setName]= useState('');
+  const [state, dispatch] = useReducer(reducer,
+    defaultState) ;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+     if(name){
+       const newItem = {id: new Date().getTime().toString(),name}
+       dispatch({type:'ADD_ITEM', payload:newItem}); 
+       setName('');
+     }else {
+       dispatch({type: 'RANDOM'});
+    } 
+  };
+  return (
+    <>
+    {state.isModalOpen && <Modal modelContent={state.modalContent}/>} 
+    <form onSubmit={handleSubmit} className='form'>
+      <div>
+        <input
+        type='text' 
+        value={name}
+        onChange={(e)=> setName(e.target.value)}
+        />
+        
+   </div>
+  <button type='submit'> add</button>
+    </form>
+    {state.people.map((person) => {
+      return <div key ={person.id} className='item'>
+        <h4>{person.name}</h4>
+      </div>
+    })}
+    </>
+  );
+};
+
+export default Index;
+
+=====================================================================
+
+64 (7:53:14) useReducer - Remove Item 
+
+//App.js code//
+import React, { useEffect } from 'react';
+
+const Modal = ({ modalContent, closeModal }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      closeModal();
+    }, 3000);
+  });
+  return (
+    <div className='modal'>
+      <p>{modalContent}</p>
+    </div>
+  );
+};
+
+export default Modal;
+
+-------------------------------
+//index.js//
+
+import React, { useState, useReducer } from 'react';
+import Modal from './Modal';
+import { data } from '../../../data';
+// reducer function
+import { reducer } from './reducer';
+const defaultState = {
+  people: [],
+  isModalOpen: false,
+  modalContent: '',
+};
+const Index = () => {
+  const [name, setName] = useState('');
+  const [state, dispatch] = useReducer(reducer, defaultState);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (name) {
+      const newItem = { id: new Date().getTime().toString(), name };
+      dispatch({ type: 'ADD_ITEM', payload: newItem });
+      setName('');
+    } else {
+      dispatch({ type: 'NO_VALUE' });
+    }
+  };
+  const closeModal = () => {
+    dispatch({ type: 'CLOSE_MODAL' });
+  };
+  return (
+    <>
+      {state.isModalOpen && (
+        <Modal closeModal={closeModal} modalContent={state.modalContent} />
+      )}
+      <form onSubmit={handleSubmit} className='form'>
+        <div>
+          <input
+            type='text'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <button type='submit'>add </button>
+      </form>
+      {state.people.map((person) => {
+        return (
+          <div key={person.id} className='item'>
+            <h4>{person.name}</h4>
+            <button
+              onClick={() =>
+                dispatch({ type: 'REMOVE_ITEM', payload: person.id })
+              }
+            >
+              remove
+            </button>
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+export default Index;
+------------------------------------------------
+
+//Model.js//
+
+import React, { useEffect } from 'react';
+
+const Modal = ({ modalContent, closeModal }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      closeModal();
+    }, 3000);
+  });
+  return (
+    <div className='modal'>
+      <p>{modalContent}</p>
+    </div>
+  );
+};
+
+export default Modal;
+-----------------------------------------------
+//reducer.js//
+import React, { useEffect } from 'react';
+
+const Modal = ({ modalContent, closeModal }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      closeModal();
+    }, 3000);
+  });
+  return (
+    <div className='modal'>
+      <p>{modalContent}</p>
+    </div>
+  );
+};
+
+export default Modal;
+
+
+=================================================
+
+65 (8:00:56) Prop Drilling 
+
+//App.js code//
+
+import React from 'react'
+import Setup from './tutorial/7-prop-drilling/setup/1-prop-drilling';
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/>
+     </div>
+  );
+}
+
+export default App
+
+
+---------------------------------------
+
+//1-prop-drilling.js code//
+
+import React, { useState } from 'react';
+import {data} from '../../../data';
+
+// more components
+// fix - context api, redux (for more complex cases)
+
+const PropDrilling = () => {
+  const [people, setPeople]= useState(data);
+  const removePerson = (id) =>{
+    setPeople((people)=>{
+      return people.filter((person)=>person.id !==id);
+    });
+  };
+  return(
+    <section>
+      <h3> prop drilling</h3>
+      <List people={people} removePerson={removePerson}/>
+    </section>
+  );
+};
+const List =({people, removePerson})=>{
+  return(
+    <>
+    {people.map((person)=>{
+    return(
+      <SinglePerson
+      key={person.id}
+      {...person}
+      removePerson={removePerson}
+    />
+      );
+    })}
+    </>
+  );
+};
+
+const SinglePerson = ({id, name, removePerson})=>{
+  return(
+   <div className='item'>
+    <h4>{name}</h4>
+     <button onClick={()=>removePerson(id) }>remove</button>
+   </div>
+  );
+}
+
+
+export default PropDrilling;
+===================================================================
+
+66 (8:14:36) Context API / - useContext 
+
+//App.js code//
+
+import React from 'react'
+import Setup from './tutorial/8-useContext/setup/1-context-api';
+
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/> 
+     </div>
+  );
+}
+
+export default App
+ 
+
+---------------------------------------
+
+//1-context.api.js//
+
+import React, { useState, useContext } from 'react';
+import { data } from '../../../data';
+// more components
+// fix - context api, redux (for more complex cases)
+
+const ContextAPI = () => {
+  const [people, setPeople] = useState(data);
+  const removePerson = (id) => {
+    setPeople((people) => {
+      return people.filter((person) => person.id !== id);
+    });
+  };
+  return (
+    <PersonContext.Provider value={{ removePerson, people }}>
+      <h3>Context API / useContext</h3>
+      <List />
+    </PersonContext.Provider>
+  );
+};
+
+const List = ({ people, removePerson }) => {
+  return (
+    <>
+      {people.map((person) => {
+        return (
+          <SinglePerson
+            key={person.id}
+            {...person}
+            removePerson={removePerson}
+          />
+        );
+      })}
+    </>
+  );
+};
+
+const SinglePerson = ({ id, name, removePerson }) => {
+  return (
+    <div className='item'>
+      <h4>{name}</h4>
+      <button onClick={() => removePerson(id)}>remove</button>
+    </div>
+  );
+};
+
+export default ContextAPI;
+
+
+
+===================================================================
+
+67 (8:26:22) Custom Hooks - useFetch 
+
+//App.js code//
+
+import React from 'react'
+import Setup from './tutorial/9-custom-hooks/setup/1-fetch-example';
+
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/> 
+     {/* <Final/> */}
+     </div>
+  );
+}
+
+export default App
+ 
+------------------------------------------------
+
+//1-fetch-example.js//
+
+import React, { useState, useEffect } from 'react'
+import { useFetch } from './2-useFetch'
+
+// ATTENTION!!!!!!!!!!
+// I SWITCHED TO PERMANENT DOMAIN
+const url = 'https://course-api.com/javascript-store-products'
+
+const Example = () => {
+  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
+
+  const getProducts = async () => {
+    const response = await fetch(url)
+    const products = await response.json()
+    setProducts(products)
+    setLoading(false)
+  }
+
+  useEffect(() => {
+    getProducts()
+  }, [url])
+  console.log(products)
+  return (
+    <div>
+      <h2>{loading ? 'loading...' : 'data'}</h2>
+    </div>
+  )
+}
+
+export default Example
+------------------------------------------------
+
+//2-useFetch.js//
+
+import { useState, useEffect, useCallback } from 'react';
+
+export const useFetch = (url) => {
+  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
+
+  const getProducts = useCallback(async () => {
+    const response = await fetch(url);
+    const products = await response.json();
+    setProducts(products);
+    setLoading(false);
+  }, [url]);
+
+  useEffect(() => {
+    getProducts();
+  }, [url, getProducts]);
+  return { loading, products };
+};
+
+=================================================================
+
+68 (8:38:09) PropTypes - Setup  
+
+//App.js code//
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+
+const Product = ({image, name, price}) => {
+  console.log(image, name, price);
+  return (
+   <article className='product'>
+     <h4> single product</h4>
+    {/* <img src={image.url}/>
+    <h4> {name} </h4> 
+    <p>${price}</p> */}
+    </article>) ;
+};
+export default Product;
+
+-------------------------------------------------
+//index.js//
+
+import React from 'react'
+import Product from './Product'
+import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
+
+// ATTENTION!!!!!!!!!!
+// I SWITCHED TO PERMANENT DOMAIN
+const url = 'https://course-api.com/react-prop-types-example';
+
+const Index = () => {
+  const { products } = useFetch(url);
+  return (
+    <div>
+      <h2>products</h2>
+      <section className='products'>
+        {products.map((product) => {
+          return <Product key={product.id} {...product} />
+        })}
+      </section>
+    </div>
+  )
+}
+
+export default Index
+
+
+-------------------------------------------------------------
+
+//Product.js//
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+
+const Product = ({image, name, price}) => {
+  console.log(image, name, price);
+  return (
+   <article className='product'>
+     <h4> single product</h4>
+    {/* <img src={image.url}/>
+    <h4> {name} </h4> 
+    <p>${price}</p> */}
+    </article>) ;
+};
+export default Product;
+
+
+========================================================================
+
+69 (8:47:48) PropTypes - Images 
+
+//App.js code//
+import React from 'react'
+import Setup from './tutorial/10-prop-types/setup';
+
+
+function App() {
+  return (
+    <div className='container'>
+     <Setup/> 
+     {/* <Final/> */}
+     </div>
+  );
+}
+
+export default App
+--------------------------------------
+
+//index.js //
+
+import React from 'react'
+import Product from './Product'
+import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
+// import defaultImage from '../../../assets/default-image.jpeg'
+
+// ATTENTION!!!!!!!!!!
+// I SWITCHED TO PERMANENT DOMAIN
+const url = 'https://course-api.com/react-prop-types-example';
+
+const Index = () => {
+  const { products } = useFetch(url);
+  return (
+    <div>
+      <h2>products</h2>
+      {/* <img src={defaultImage}/> */}
+      <section className='products'>
+        {products.map((product) => {
+          return <Product key={product.id} {...product} />
+        })}
+      </section>
+    </div>
+  )
+}
+
+export default Index
+
+--------------------------------------------
+
+//Product.js//
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import defaultImage from '../../../assets/default-image.jpeg'
+
+
+const Product = ({image, name, price}) => {
+  console.log(image, name, price);
+  return (
+   <article className='product'>
+     <img src={image.url}/>
+    <h4> {name} </h4> 
+    <p>${price}</p>
+    </article>) ;
+};
+
+Product.propTypes = {
+  image:PropTypes.object.isRequired,
+  name:PropTypes.string.isRequired,
+  price:PropTypes.number.isRequired
+};
+Product.defaultProps = {
+  name: 'default name',
+  price: 3.99,
+  image: defaultImage
+}
+export default Product;
+
+
+=========================================================
+
+70 (8:55:48) PropTypes - Default Values 
+// rafcp //
+
+//App.js code//
+import React from 'react'
+import Setup from './tutorial/10-prop-types/setup';
+function App() {
+  return (
+    <div className='container'>
+     <Setup/> 
+     {/* <Final/> */}
+     </div>
+  );
+}
+export default App
+ 
+--------------------------------------------------------- 
+//index.js//
+
+import React from 'react'
+import Product from './Product'
+import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
+// import defaultImage from '../../../assets/default-image.jpeg'
+
+// ATTENTION!!!!!!!!!!
+// I SWITCHED TO PERMANENT DOMAIN
+const url = 'https://course-api.com/react-prop-types-example';
+
+const Index = () => {
+  const { products } = useFetch(url);
+  return (
+    <div>
+      <h2>products</h2>
+      {/* <img src={defaultImage}/> */}
+      <section className='products'>
+        {products.map((product) => {
+          return <Product key={product.id} {...product} />
+        })}
+      </section>
+    </div>
+  )
+}
+
+export default Index
+
+-------------------------------------------------------------
+//Products.js//
+import React from 'react';
+import PropTypes from 'prop-types';
+import defaultImage from '../../../assets/default-image.jpeg'
+
+
+const Product = ({image, name, price}) => {
+  const url = image && image.url;
+  return (
+   <article className='product'>
+    <img src={url || defaultImage} alt={name || 'default name'}/>
+    <h4> {name} </h4> 
+    <p>${price ||3.99} </p>
+    </article>
+    );
+};
+
+Product.propTypes = {
+  image:PropTypes.object.isRequired,
+  name:PropTypes.string.isRequired,
+  price:PropTypes.number.isRequired
+};
+// Product.defaultProps = {
+//   name: 'default name',
+//   price: 3.99,
+//   image: defaultImage
+// }
+export default Product;
+---------------------------------------------------------------
+//testing.js//
+import React from 'react'
+import PropTypes from 'prop-types'
+const testing = props => {
+    return (<div></div>)
+}
+testing.propTypes = {
+    name: PropTypes.array.isRequired,
+}
+export default testing
+
+=============================================================
+
+
+71 (9:00:41) React Router Intro 
+
+//no code//
+
+//https://reactrouter.com/web/example/basic//
+
+//npm install react-router-dom//
+
+---------------------------------------------------------
+
+72 (9:05:52) React Router - Basic Setup 
+
+//No code//
+----------------------------------------------------------
+73 (9:15:50) React Router - Error And Switch Component 
+
+//App.js code//
+
+import React from 'react'
+import Setup from './tutorial/11-react-router/setup';
+function App() {
+  return (
+    <div className='container'>
+      
+     <Setup/> 
+     {/* <Final/> */}
+     </div>
+  );
+}
+export default App
+ 
+--------------------------------------- 
+
+//Home.js//
+
+import React from 'react';
+
+const Home = () => {
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <p> shake and bake</p>
+    </div>
+  );
+};
+
+export default Home;
+ 
+--------------------------------------------
+
+//index.js//
+
+import React from 'react';
+// react router
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// pages
+import Home from './Home';
+import About from './About';
+import People from './People';
+import Error from './Error';
+import Person from './Person';
+// navbar
+import Navbar from './Navbar';
+const ReactRouterSetup = () => {
+  return(
+    <Router> 
+        <Switch>
+    <Route exact path="/">
+        <Home/>
+    </Route> 
+    <Route path="/about">
+        <About/>
+    </Route>
+    <Route path="/people">
+        <People/>
+    </Route>
+    <Route path="/*">
+        <Error/>
+    </Route>
+    <Route path="/person">
+        <Person/> 
+    </Route>
+    </Switch>
+     </Router>
+  );
+};
+
+export default ReactRouterSetup;
+
+
+-----------------------------------------------
+
+//People.js//
+
+import React, { useState } from 'react';
+import { data } from '../../../data';
+import { Link } from 'react-router-dom';
+const People = () => {
+  const [people, setPeople] = useState(data);
+  return (
+    <div>
+      <h1>People Page</h1>
+      {people.map((person) => {
+        return (
+          <div key={person.id} className='item'>
+            <h4>{person.name}</h4>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default People;
+
+===========================================
+
+74 (9:18:51) React Router - Links 
+
+//App.js code same as above//
+
+//Home.js//
+import React from 'react';
+
+const Home = () => {
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <p> shake and bake</p>
+    </div>
+  );
+};
+
+export default Home;
+-----------------------------------
+
+//index.js//
+
+import React from 'react';
+// react router
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// pages
+import Home from './Home';
+import About from './About';
+import People from './People';
+import Error from './Error';
+import Person from './Person';
+// navbar
+import Navbar from './Navbar';
+const ReactRouterSetup = () => {
+  return(
+    <Router> 
+        <Navbar />
+        <Switch>
+    <Route exact path="/">
+        <Home/>
+    </Route> 
+    <Route path="/about">
+        <About/>
+    </Route>
+    <Route path="/people">
+        <People/>
+    </Route>
+    <Route path="/*">
+        <Error/>
+    </Route>
+    <Route path="/person">
+        <Person/> 
+    </Route>
+    </Switch>
+     </Router>
+  );
+};
+
+export default ReactRouterSetup;
+
+--------------------------------------
+//Navbar.js//
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+const Navbar = () => {
+  return(
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/people">People</Link>
+        </li>
+        
+      </ul>
+    
+    </nav>
+  );
+};
+
+export default Navbar;
+
+
+--------------------------------------
+//Error.js//
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+const Error = () => {
+  return (
+    <div>
+      <h1>Error Page</h1>
+      <Link to="/" className="btn">
+        Back Home 
+      </Link>
+    </div>
+  );
+};
+
+export default Error;
+
+
+======================================================
+
+75 (9:23:22) React Router - URL Params And Placeholder 
+
+//App.js code same as above//
+
+
+//index.js//
+
+import React from 'react';
+// react router
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// pages
+import Home from './Home';
+import About from './About';
+import People from './People';
+import Error from './Error';
+import Person from './Person';
+// navbar
+import Navbar from './Navbar';
+const ReactRouterSetup = () => {
+  return(
+    <Router> 
+        <Navbar />
+        <Switch>
+    <Route exact path="/" >
+        <Home/>
+    </Route> 
+    <Route path="/about">
+        <About/>
+    </Route>
+    <Route path="/people">
+        <People/>
+    </Route>
+    <Route path="/person/:id" children={<Person  />}>
+
+    </Route>
+    <Route path="/*">
+        <Error/>
+    </Route>
+    </Switch>
+     </Router>
+  );
+};
+
+export default ReactRouterSetup;
+-------------------------------------------------------
+//Person.js//
+
+import React, { useState, useEffect } from 'react';
+import { data } from '../../../data';
+import { Link, useParams } from 'react-router-dom';
+const Person = () => {
+  const [name,setName] = useState('default name')
+  const {id} = useParams();
+
+  useEffect(()=>{
+    const newPerson = data.find((person)=> person.id ===
+    parseInt(id));
+    setName(newPerson.name); 
+  },[]);
+  return (
+    <div>
+      <h1>{name}</h1>
+      <Link to="people" className="btn">
+        Back to People
+      </Link>
+    </div>
+  );
+};
+
+export default Person;
+
+
+-----------------------------------------------------
+
+//NavBar.js//
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+const Navbar = () => {
+  return(
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/people">People</Link>
+        </li>
+        
+      </ul>
+    
+    </nav>
+  );
+};
+
+export default Navbar;
+
+
+----------------------------------------
+//Error.js//
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+const Error = () => {
+  return (
+    <div>
+      <h1>Error Page</h1>
+      <Link to="/" className="btn">
+        Back Home 
+      </Link>
+    </div>
+  );
+};
+
+export default Error;
+
+
+------------------------------------------
+
+//People.js//
+
+import React, { useState } from 'react';
+import { data } from '../../../data';
+import { Link } from 'react-router-dom';
+const People = () => {
+  const [people, setPeople] = useState(data);
+  return (
+    <div>
+      <h1>People Page</h1>
+      {people.map((person) => {
+        return (
+          <div key={person.id} className='item'>
+            <h4>{person.name}</h4>
+            <Link to={`/person/${person.id}`}>
+              Learn More
+            </Link>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default People;
+======================================================
+
+76 (9:37:51) React Optimization Warning 
+
+//no code only theory//
+
+
+
+77 (9:41:21) React.memo
+
+//no code // next chapeter entire code will be come//
+
+
+
+78 (9:49:50) useCallback 
+
+//no code // next chapeter entire code will be come//
+
+
+79 (9:58:00) useMemo 
+//no code // next chapeter entire code will be come//
+
+
+80 (10:04:15) useCallback - Fetch Example
+
+//App.js code//
+
+import React from 'react'
+import Setup from './tutorial/12-memo-useMemo-useCallback/setup';
+function App() {
+  return (
+    <div className='container'>
+      
+     <Setup/> 
+     
+     </div>
+  );
+}
+export default App
+----------------------------------------------------------------
+//index.js//
+import React, { useState, useCallback, useMemo } from 'react'
+import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
+
+// ATTENTION!!!!!!!!!!
+// I SWITCHED TO PERMANENT DOMAIN
+const url = 'https://course-api.com/javascript-store-products'
+
+// every time props or state changes, component re-renders
+const calculateMostExpensive = (data) => {
+  return (
+    data.reduce((total, item) => {
+      const price = item.fields.price
+      if (price >= total) {
+        total = price
+      }
+      return total
+    }, 0) / 100
+  )
+}
+const Index = () => {
+  const { products } = useFetch(url)
+  const [count, setCount] = useState(0)
+  const [cart, setCart] = useState(0)
+
+  const addToCart = useCallback(() => {
+    
+    setCart(cart + 1)
+  }, [cart])
+
+  const mostExpensive = useMemo(() => calculateMostExpensive(products), [
+    products,
+  ])
+  return (
+    <>
+      <h1>Count : {count}</h1>
+      <button className='btn' onClick={() => setCount(count + 1)}>
+        click me
+      </button>
+      <h1 style={{ marginTop: '3rem' }}>cart : {cart}</h1>
+      <h1>Most Expensive : ${mostExpensive}</h1>
+      <BigList products={products} addToCart={addToCart} />
+    </>
+  )
+}
+
+const BigList = React.memo(({ products, addToCart }) => {
+  // useEffect(() => {
+  //   console.count('hello from big list');
+  // });
+
+  return (
+    <section className='products'>
+      {products.map((product) => {
+        return (
+          <SingleProduct
+            key={product.id}
+            {...product}
+            addToCart={addToCart}
+          ></SingleProduct>
+        )
+      })}
+    </section>
+  )
+})
+
+const SingleProduct = ({ fields, addToCart }) => {
+  let { name, price } = fields
+  price = price / 100
+  const image = fields.image[0].url
+
+  // useEffect(() => {
+  //   console.count('hello from product');
+  // });
+  return (
+    <article className='product'>
+      <img src={image} alt={name} />
+      <h4>{name}</h4>
+      <p>${price}</p>
+      <button onClick={addToCart}>add to cart</button>
+    </article>
+  )
+}
+export default Index
+
+
+=====================================================================
+
+		=====> The End <=====
+

@@ -1,0 +1,52 @@
+ Hcl 30-9-23
+1) Event handling in react
+2) What is unit testing or how to use the testing
+3) Closure
+4) how to implement the facebook or instagram or any  website
+-------------------------
+CG-VAK 4/10/2023
+
+How to upgrade the reactjs version?
+How to differ from real dom and virutal dom?
+what are the life cycle? when we are using these?
+ES5 vs ES6 Feature?
+What are the props and state?
+Reactjs featue?
+What are the typescript benefits?
+Why we are using the typescript?
+What is an event in React with example 
+------------------
+6/10/2023
+voxbaysolutions
+
+How to 
+
+1)what is useContext?
+2)How to validation for the password?
+3)Props and state?
+4)what is async and await?
+5)How many stage in await?
+6)How to secure the router in react?
+7) What is ES5 and ES6 Feature?
+
+------------------------------
+
+18/10/2023
+
+Float Careers
+
+What is curring in javascript?
+what is reconsilation in javascript?
+what is synchronous and asynchronous in javascript?
+
+
+
+-----------------------
+21-10-2023
+
+what is asychronaitio and synchronation
+
+dom vs virutal dom
+
+contolled component and uncontrolled component
+
