@@ -1,0 +1,277 @@
+﻿JAVASCRIPT INTERVIEW CODING ROUND:
+
+function f1(){
+    var calling = "sakthivel raju"
+    console.log(calling)
+}
+
+f1()
+-----------------
+Ref: codingdoctor/AccentureRound1
+-------------------------------------------------------
+Remove the duplicate value?
+
+const name = "sakthivel sarvanana ss";
+const res = [...new Set(name.split(""))];
+console.log(res)
+--------------------
+
+const stringArray = ["apple", "banana", "orange", "banana", "kiwi", "orange"];
+
+const uniqueStrings = [...new Set(stringArray)];
+
+console.log(uniqueStrings); // ["apple", "banana", "orange", "kiwi"]
+---------------------------------------------------
+model json link :https://dummyjson.com/products
+------------------------------------------------
+json link
+Print the all user of the name in reactJS?
+
+https://jsonplaceholder.typicode.com/users
+
+
+import "./styles.css";
+import React,{useState, useEffect} from "react";
+import axios from "axios";
+
+export default function App() {
+const [users, setUsers]= useState(null)
+
+useEffect(() =>{
+  axios.get("https://jsonplaceholder.typicode.com/users")
+  .then(res => setUsers(res.data))
+  .catch((err) => console.log(err))
+},[])
+
+  return (
+    users && users.map(user => <div>{user.company.name}</div>)
+  );
+}
+
+O/P working properly
+
+----------------------------------------------------------
+
+Call backs function program interview accenture :
+
+const modifyArr = (arr, cb) => {
+    arr.push(4);
+    cb()
+}
+const arr = [1,2,3];
+modifyArr(arr,() =>{
+    console.log(arr)
+})
+o/p [1, 2, 3, 4]
+
+--------------------------------------------------------
+ How to pass data child to parent in React ?  Accenture interview quetions 
+ 
+ CODING:
+ 
+ App.js :
+ 
+ import React from "react";
+import { Parent } from "./Parent";
+
+const App = () => {
+  return <Parent />;
+};
+
+export default App;
+
+-----------------------------------------------
+
+Parent.js
+import React,{useState} from "react";
+import {Child} from "./Child";
+export const Parent = () =>{
+  const [childText, setChildText] =  useState("type something in input")
+  const getChildVal = (e) =>{
+     setChildText(e.target.value)
+  };
+    return(
+      <>
+      <h1>{childText}</h1>
+      <Child  getChildVal={getChildVal}/> 
+      </>
+    )
+
+     
+}
+
+--------------------------------------------------
+Child.js
+
+import React from "react";
+
+
+export const Child = ({getChildVal}) =>{
+    return < input onChange={getChildVal}/>
+      
+    
+};
+
+----------------------------------------------------
+
+Hiting button continusly count the number in reactJS?(MosuWebX)
+
+import "./styles.css";
+import React,{useState} from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0)
+  const handleCount = () =>{
+    setCount(count+1)
+  }
+
+  return (
+    <div className="App">
+      <span>count: {count} </span>
+      <button onClick={handleCount}> count</button>
+
+    </div>
+  );
+}
+export default Counter
+
+
+-----------------------------------------------------------------------------------------------
+Write on example of closure in javascript? (The Learner)
+
+function person(){
+var name = "Purna";
+
+function getName(){
+return name
+}
+return getName;
+}
+var per = person();
+console.log(per())
+
+----------------------------------------------------------------------------------------------
+Can you write the code function add(2)(3)(4)  in javascript? (The Learner)
+
+
+function add(x){
+    function b(y){
+        function c(z){
+            return x+y+z
+        }
+        return c;
+    }
+    return b;
+}
+var t = add(2)(3)(4);
+console.log(t)
+
+
+program 2:
+
+function add(x) {
+  return function(y) {
+    if (y) {
+      return add(x + y);
+    } else {
+      return x;
+    }
+  };
+}
+
+add(2)(3)(4)()
+9
+------------------------------------------------------------------------------------------
+
+flattern(flat) function using flatten array and remove the duplicate?(The Learner)
+[1,[2,3],[1,3,5,4]]
+
+coding:
+var arry = [1,[2,3],[1,3,5,4]];
+var farr = [];
+function flat(arr){
+arr.forEach((a) =>{
+ if(typeof a == 'object'){
+    flat(a);
+} else{
+    if(farr.indexOf(a) == -1){
+    farr.push(a)
+}
+  }
+});
+    return farr;
+}
+var t = flat(arry);
+console.log(t);
+O/P (5) [1, 2, 3, 5, 4]
+
+-----------------------------------------------------------------------------------------
+(shift+6 for Caret "^")
+Can you please remove the special  character from string? (The Learner)
+ const str = "sjdjie$38(*edd$ddm*>^@)"
+ 
+1) coding: const str = "sjdjie$38(*edd$ddm*>^@)";
+console.log(str.replace(/[^a-zA-Z ]/g, ""));
+or)console.log(name.replace(/[^\w\s]/gi,""))
+ 
+2) coding:
+const str = "abc's test#s";
+console.log(str.replace(/[^a-zA-Z ]/g, ""));
+
+---------------------------------------------------------------------------
+
+let test="hello how are you" ((The Learner))
+
+Expected Output : uoy era woh olleH
+
+coding method 1:
+
+function revwrd(word){
+var sarr = word.split("");
+return sarr.reverse().join("");
+}
+
+function revstr(str){
+var warr = str.split("");
+var rstr = warr.map((w) =>{
+return revwrd(w);
+});
+return rstr.reverse().join("")
+
+}
+
+var t = revstr("Hello how are you");
+console.log(t)
+----------------------------------------------
+
+coding method 2:
+
+function ReverseString(str) {
+      
+        // Check input
+        if(!str || str.length < 2 ||
+                typeof str!== 'string') {
+            return 'Not valid';
+        }
+          
+        // Take empty array revArray
+        const revArray = [];
+        const length = str.length - 1;
+          
+        // Looping from the end
+        for(let i = length; i >= 0; i--) {
+            revArray.push(str[i]);
+        }
+          
+        // Joining the array elements
+        return revArray.join('');
+    }
+      
+    console.log(ReverseString("Hello how are you"))
+----------------------------------------------------------------------
+
+
+
+
+
+	
