@@ -1,0 +1,129 @@
+/**
+ * @jest-environment jsdom
+ */
+
+import { MSMain } from './MSMain';
+import { fixture, html } from '@open-wc/testing';
+import { screen, waitFor } from '@testing-library/dom';
+import '@testing-library/jest-dom';
+
+jest.mock('./../services/MSTeamService', () => ({
+  MSService: {
+    get_MSTeamFiltered: jest.fn().mockResolvedValue({
+      get_MSTeamFiltered: {
+        msWbMemberDtoList: [
+          { smeQueueMember: 'John', smeWorkQueue: 'Team Alpha' },
+        ],
+        currentPageNumber: 1,
+        totalCount: 1,
+      },
+    }),
+    post_addMsTeams: jest.fn().mockResolvedValue({
+      post_addMsTeams: {
+        code: '201',
+        detail: 'Team successfully created',
+      },
+    }),
+    save_amendMsTeams: jest.fn().mockResolvedValue({
+      save_amendMsTeams: {
+        code: '200',
+        detail: 'Amendment successful',
+      },
+    }),
+  },
+}));
+
+describe('MSMain Component', () => {
+  let element: MSMain;
+
+  beforeEach(async () => {
+    element = await fixture<MSMain>(html`<ms-main></ms-main>`);
+  });
+
+  it('should load data on connectedCallback', async () => {
+    const loadDataSpy = jest.spyOn(element, 'loadData');
+    element.connectedCallback();
+    await waitFor(() => {
+      expect(loadDataSpy).toHaveBeenCalled();
+      expect(element.showFullPageLoader).toBe(false);
+    });
+  });
+
+  it('should handle filter lookup for valid input', async () => {
+    const result = await element.handleFilterLookup('Te', 'smeWorkQueue');
+    expect(result).toEqual([{ label: 'Team Alpha', value: 'Team Alpha' }]);
+  });
+
+  it('should skip filter lookup for short input', async () => {
+    const result = await element.handleFilterLookup('T', 'smeWorkQueue');
+    expect(result).toBeUndefined();
+  });
+
+  it('should update state on MS team creation', async () => {
+    const mockEvent = {
+      detail: [{ name: 'X', members: ['A', 'B'] }],
+    };
+    await element.handleCreateMSTeam(mockEvent);
+    expect(element.toastStatus).toBe(true);
+    expect(element.toastTitle).toBe('MS team creation');
+    expect(element.showCreateModal).toBe(false);
+  });
+
+  it('should update state on MS team amendment', async () => {
+    const mockEvent = {
+      detail: { members: ['X'], team: 'Team Z' },
+    };
+    await element.handleAmendMSTeam(mockEvent);
+    expect(element.toastType).toBe('success');
+    expect(element.toastTitle).toBe('MS Team Amendment');
+  });
+
+  it('should open and close amend modal', () => {
+    element.openAmendModal('Team X');
+    expect(element.showAmendModal).toBe(true);
+    element._handleAmendModalClose();
+    expect(element.showAmendModal).toBe(false);
+  });
+
+  it('should open create modal', () => {
+    element._handleCreateModal();
+    expect(element.showCreateModal).toBe(true);
+  });
+
+  it('should close toast on toastClosed call', () => {
+    element.toastClosed();
+    expect(element.toastStatus).toBe(false);
+    expect(element.toastMessage).toBe('');
+  });
+
+  it('should update filter state in handleFilter', async () => {
+    const event = {
+      detail: {
+        columnFilterValues: [{ id: 'name', value: ['Test'] }],
+      },
+    };
+    await element.handleFilter(event);
+    expect(element.filterName).toBe('Test');
+  });
+
+  it('should reset filters if filter values are empty', async () => {
+    const event = {
+      detail: { columnFilterValues: [] },
+    };
+    await element.handleFilter(event);
+    expect(element.filterName).toBe('');
+    expect(element.filterMembers).toBe('');
+  });
+
+  it('should handle pagination changes', async () => {
+    const event = {
+      detail: {
+        pageSize: 10,
+        page: 1,
+      },
+    };
+    const loadDataSpy = jest.spyOn(element, 'loadData');
+    await element.handlePageChange(event);
+    expect(loadDataSpy).toHaveBeenCalled();
+  });
+});
