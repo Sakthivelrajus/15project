@@ -1,0 +1,113 @@
+advisor// in prograss =>payload
+	Advisor => Progress
+
+  
+     
+        query _55313_105_acr_plugin_exp_api {
+        _55313_105_acr_plugin_exp_api{
+         get_AcrTasks(taskSearchDTO: 
+    { 
+      data: "{\"status\":\"Under Review, Under Review-Reopened, Under Review-Pending Requestor, Pending Review\",\"isPakDataAvailable\":\"null,No\",\"caseOwnership\":\"Advisor,null\",\"advisor_id\":\"test\",\"advisorId\":\"test\"}", 
+      sortColumn:"",sortOrder:"",
+      caseId: "C000",
+       
+      pageSize: 10,
+                                pageNumber: 1
+    }
+  ) {
+    tasks {
+      caseData
+      taskCreatedDate
+      taskId
+      taskName
+      overall_Case_Age
+    }
+    totalCount
+    totalNumberOfPages
+  }
+         }
+         }
+        
+     -------
+		
+		     get_AcrTasks=>MyCaseRequestor.ts
+line 233:
+1) End point
+    return `get_AcrTasks(taskSearchDTO: 
+      { 
+        data: "${getFilterQuery}", 
+        caseId: "C000",
+        ${passString},
+        ${initiatedBy}
+        ${excludedUser}
+        ${paginationQueryParams}
+      }
+    ) {
+      tasks {
+        caseData
+        taskCreatedDate
+        taskId
+        taskName
+        overall_Case_Age
+      }
+      totalCount
+      totalNumberOfPages
+    }`;
+  };
+		
+	========================================================================
+		MS => Progress
+		
+    
+        mutation _55313_105_acr_plugin_exp_api {
+        _55313_105_acr_plugin_exp_api{
+         get_MsCaseInstances(userId: "test", caseInstanceSearchDTO:  { 
+        data: "{\"status\":\"Under Review, Under Review-Reopened\",\"caseOwnership\":\"MS\",\"msId\":\"test\"}", 
+        caseId: "C000",
+        
+        pageSize: 10,
+                                  pageNumber: 1
+      }
+    ) {
+        totalNumberOfPages
+        totalCount
+        currentPageNumber
+        caseInstances {
+            caseInstanceId
+            caseId
+            createdTime
+            caseData
+            initiatedBy
+            overall_Case_Age
+          }
+    }
+         }
+         }
+        
+        ------
+		get_MsCaseInstances => MyCaseMS.ts
+		1) End point
+		line: 375
+		return `get_MsCaseInstances(userId: "${bankId}", caseInstanceSearchDTO:  { 
+        data: "${getFilterQuery}", 
+        caseId: "C000",
+        ${excludedUser}
+        ${paginationQueryParams}
+      }
+    ) {
+        totalNumberOfPages
+        totalCount
+        currentPageNumber
+        caseInstances {
+            caseInstanceId
+            caseId
+            createdTime
+            caseData
+            initiatedBy
+            overall_Case_Age
+          }
+    }`;
+
+  };
+		
+		==========================

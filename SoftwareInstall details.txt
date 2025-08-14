@@ -1,0 +1,308 @@
+Ask Compliance Risk:
+--------------------------
+
+1)  ACR FFG UI  : ,  2) Phase 1 -Front End and Back End Connect   :  ,  3) ACR FFG UI  :,        4) Daily Scrum -FFG SQUAD 5 ) ACR - Pull Requests
+
+
+
+file:///C:/Users/8221910/Workspace/55313-105-acr-plugin-ui/coverage/index.html
+
+------------
+Snipping tool
+8221910@zone1.scb.net
+8221910@zone1.scb.net
+=====================
+1)VS CODE
+2)Node 20
+3)postman
+4)
+
+============================
+web-dev-server.config.mjs
+headers: {
+          'Authorization': 'Bearer --------'
+        }
+
+===========================
+rules
+-------------------
+Click on --> Advisory Connect --> Search "Performance" --> you will be getting "Performance_Test_Advisor" --> and fill-up the form --> if possible attach doc --> submit
+https://github.com/copilot
+https://openai.com/index/chatgpt/
+https://copilot.microsoft.com
+--------------------------
+Git command before:
+-----------
+8221910@zone1.scb.net
+-----------
+
+sc-cli 
+---
+sit - 105 
+---------------------------- 
+C:\Users\8221910\Workspace\55313-105-acr-plugin-ui>
+================================
+C:\Users\8221910\Workspace\55313-105-acr-plugin-ui>
+===============================
+
+https://jumbo-sit-graphql.servicebench.global.standardchartered.com/v1/graphql
+
+
+
+----------------
+post man : Seach: TTOQPR
+
+
+-----------
+
+-----------------------
+
+Configure Proxy:
+
+sc-cli --set-proxy
+
+sc-ado
+
+8221910
+
+
+-----------------------------------
+
+
+sc-cli -set-proxy
+ 
+sc-cli git config --global http.proxy http://10.27.210.210:443
+ 
+set GIT_SSL_NO_VERIFY=true
+ -----------------------------
+
+
+ Remote address : Remote address :http://127.0.0.1:9000
+----------------------------------------
+2/6/2025:
+
+ sc-cli git clone https://sc-ado@dev.azure.com/sc-ado/TTOQPR/_git/55313-105-acr-plugin-ui
+=>manager-core
+-------------------------------
+sc-cli git commit -m "#7932553: unsubscribe issue fix"
+---------------------
+=>develop, integritiy, test coverage, deploy
+---------------------
+ cd .\55313-105-acr-plugin-ui\  
+---------------------
+git checkout feature/develop 
+---------------------
+npm ci 
+---------------
+ACR FFG UI
+---------------------
+npm run start
+--------------
+npm run coverage
+npm run test:unit
+npm test
+--------------
+https://servicebench-sit.global.stanard.com
+
+PEGA USER :1653559
+PASS : rules
+=========
+npm install --save-dev sinon
+===================
+devtoos.glitch.me/console/log.html
+
+6/6/2025 -kalai
+
+git fetch origin
+git merge --ff-only origin/develop
+# git rebase origin/develop
+
+
+git checkout -b branchName
+stage the files needed to be commited(git add .) or (you can stage it in VS code)
+
+sc-cli git commit -m "#8466945: Ability to add MS Teams at Topic/Subtopic level"
+git push origin branchName
+
+go to devops
+=======================
+
+pega
+1653559
+rules
+================
+Uday.
+
+sc-cli git status
+sc-cli git add .
+sc-cli git commit -m "#8567613: appending-dot-as-suffix-in-ddl"
+sc-cli git push --force origin feature/8567613-appending-dot-as-suffix-in-ddl
+git branch
+
+
+10.7.2025 // sc-cli git commit -m "#6693481: feedback-advisors" 
+------------- 
+
+
+
+SIVA:
+
+git checkout feature/develop  
+
+git pull     
+
+git branch  
+
+git checkout -b feature/8466922-msteam tagging 
+
+=> git checkout -b feature/8466945-MSTeams
+// exitsing feature working
+
+feature/8466922-msteamtagging-fixed
+git branch  
+git switch feature/8466922-msteamtagging-fixed
+git fetch origin feature/8466922-msteamtagging-fixed
+git checkout -b feature/8466922-msteamtagging-fixed 
+origin/feature/8466922-msteamtagging-fixed
+ git fetch origin feature/9755270-additional-reassignment-ms
+ git checkout -b feature/9755270-additional-reassignment-ms
+4.8.2025//
+git switch feature/creatamendms-testcase
+ git switch feature/creatamendms-testcase
+
+git checkout feature/develop
+git pull 
+git pull origin feature/develop
+
+git checkout -b feature/9755270-additional-reassignment-ms
+
+--------------------------------------------
+
+git push origin feature/8466945-MSTeams
+
+\
+git pull origin feature/develop  
+
+http://10.23.233.28:35304/prweb/app/AskCompUI/8OAuBkEBB3LIbYGbUgu8mg*/!STANDARD?pzuiactionzzz=CXt0cn17U1RBTkRBUkR9NTU0ZjhlMDU5ZmY3OGUxODY5NjNhYTE2YjE1N2Q2NzA4NjdjOTRkZTM3OGYwZTYzYmNhMGNjMWNkZTk1ODA3MjYwNjZmMTgzOWI2MWQ4OTZhM2E5YTdhMmRiN2VjZWI2*&mSessionThreadName=default
+
+https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html
+
+
+http://10.23.233.28:35304/prweb/app/AskCompUI/8OAuBkEBB3LIbYGbUgu8mg*/!STANDARD?pzuiactionzzz=CXt0cn17U1RBTkRBUkR9NTU0ZjhlMDU5ZmY3OGUxODY5NjNhYTE2YjE1N2Q2NzA4NjdjOTRkZTM3OGYwZTYzYmNhMGNjMWNkZTk1ODA3MjYwNjZmMTgzOWI2MWQ4OTZhM2E5YTdhMmRiN2VjZWI2*&mSessionThreadName=default
+
+
+-----------
+5.7.25
+
+5 git push --set-upstream origin feature/8466922-tagging
+
+4 sc-cli git push  
+
+3 sc-cli git commit -m "#8466922: added ms work queue"
+
+2 git add .
+
+1 sc-cli git commit -m "#8466922: added ms work queue"
+
+
+git commit -m "#9755270-additional-reassignment"
+ 
+feature/9755270-additional-reassignment-ms
+
+
+=============
+7/7/2025 Aditya
+
+git fetch origin
+git checkout feature/ACR-phase-1
+git checkout -b feature/<branchname>
+
+//(git checkout -b feature/6693481-feedback-advisors)
+----------------
+feature/8466922-tagging = working without error 
+===
+npx create-react-app my-app
+
+JSON:
+
+Install JSON Server.
+npm install -g json-server 
+
+Check version
+json-server --version
+
+Start JSON Server
+json-server --watch db.json --port 8000
+
+
+==================================
+
+3.8.2025
+
+https://www.eu.fieldglass.cloud.sap/worker_desktop.do
+
+https://www.eu.fieldglass.cloud.sap/login.do
+
+=======4.8.2025==========
+
+git checkout <branch-name> 
+git pull
+git checkout -b feature/creatamendms-testcase
+//npm run test:unit
+npm test
+Pages
+//CreateAmendMS.ts
+
+Pages
+CreateAmendMS.test.ts
+
+
+============
+5.8.2025
+https://dev.azure.com/sc-ado/RISKQPR/_workitems/edit/9776213
+
+git checkout -b feature/9776213-mycases individualcases
+sc-cli git commit -m "#9776213: mycases-individualcases"
+
+=>feature/9776213-mycases
+https://dev.azure.com/sc-ado/TTOQPR/_git/55313-105-acr-plugin-ui/pullrequest/1832044
+
+MyCaseMain.ts  =>   Self service advisory 
+
+SelfServiceAdvisoryCase.ts => Assigned/Draft requests
+
+MyCaseRequestor.ts
+line:150
+constructQueryForCompletedStatus
+
+=======================
+6.8.2025
+
+C:\Users\8221910\goldernversions\apache-maven-3.9.6 1\apache-maven-3.9.6\bin
+
+C:\Users\8221910\goldernversions\java-17-openjdk-17.0.7.0.7-1.win.x86_64\bin
+
+=================
+8.8.2025
+
+feature/9755270-additional-reassignment-ms
+
+Madhankumar
+--
+
+
+
+
+git commit -m "#9755270-additional-reassignment"
+git add .git push
+git push --set-upstream origin feature/9755270-additional-reassignment-ms
+git fetch
+----------Once Merge conflict after resolved by Madhankumar---below comment
+git pull 
+git status
+git push
+git pull origin feature/develop
+git pull origin feature/develop --no-rebase
+sc-cli git commit -m "#9755270-additional-reassignment"
+git pull
+
